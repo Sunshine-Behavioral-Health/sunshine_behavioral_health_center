@@ -1,0 +1,135 @@
+form.customize_experience_form_wrapper {
+  margin: 0;
+}
+
+form.customize_experience_form_wrapper label {
+  color: #fff;
+  margin: 0 15px;
+}
+
+form.customize_experience_form_wrapper option {
+  color: #000;
+}
+
+form.customize_experience_form_wrapper .custom_experience_form_group {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin: 10px auto;
+}
+
+form.customize_experience_form_wrapper .custom_experience_form_group input,
+form.customize_experience_form_wrapper .custom_experience_form_group label {
+  width: auto;
+}
+
+form.customize_experience_form_wrapper .custom_experience_form_group label {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.customize_experience_container {
+  background-color: var(--secondary_color);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  position: relative;
+
+  h4 {
+    text-align: center;
+    margin-top: 0;
+    color: #fff;
+  }
+
+  h5 {
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.customize_experience_form_top {
+  display: flex;
+  flex-direction: column;
+}
+
+.customize_experience_form_bottom_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.customize_experience_form_bottom_wrapper
+  .customize_experience_label_select_wrapper {
+  width: 100%;
+}
+
+.customize_experience_container a#customize_experience_submit {
+  color: #fff;
+  background-color: var(--primary_color);
+  padding: 10px 15px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0 auto;
+  max-width: 250px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.customize_experience_reset_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 50px 15px 0 0;
+  background-color: var(--secondary_color);
+  border: none;
+
+  span {
+    color: #fff;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .customize_experience_form_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  form.customize_experience_form_wrapper
+    .customize_experience_form_top
+    .custom_experience_form_group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  form.customize_experience_form_wrapper .custom_experience_form_group {
+    width: auto;
+  }
+  form.customize_experience_form_wrapper .custom_experience_form_group input {
+    margin: 0 auto;
+  }
+  form.customize_experience_form_wrapper .custom_experience_form_group label {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+  }
+  .customize_experience_reset_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 15px;
+    background-color: var(--secondary_color);
+    border: none;
+  }
+  .customize_experience_form_bottom_wrapper
+    .customize_experience_label_select_wrapper {
+    width: 33%;
+  }
+}

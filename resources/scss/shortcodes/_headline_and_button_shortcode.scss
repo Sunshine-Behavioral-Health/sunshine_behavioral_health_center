@@ -1,0 +1,30 @@
+.headline_and_button_sidebar_shortcode_section {
+    background: rgba(228, 239, 247, 0.4);
+    border: 2px solid var(--secondary_color);
+    color: var(--secondary_color);
+    border-radius: 2px;
+    padding: 20px 10px;
+  }
+  
+  .headline_and_button_sidebar_shortcode_section h4 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .headline_and_button_sidebar_shortcode_section a {
+    color: #fff;
+    background-color: var(--secondary_color);
+    padding: 10px 15px;
+  }
+  
+  .headline_and_button_cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .headline_and_button_cta a:hover {
+    background-color: var(--tertiary_color);
+  }

@@ -1,0 +1,51 @@
+.graph_tabs_section {
+    border: 1px solid #aeaeae;
+    margin-bottom: 50px;
+  }
+  
+  .graph_tabs_section h3 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  @media (min-width: 1025px) {
+    .graph_tabs_section .tab {
+      width: 25%;
+    }
+  }
+  
+  .graph_tabs_cta_container {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .graph_tabs_cta_container h4 {
+    padding-bottom: 20px;
+  }
+  
+  .graph_tabs_cta_container a {
+    background-color: var(--primary_color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 2px;
+  }
+  
+  .graph_tabs_cta_container a:hover {
+    background-color: var(--tertiary_color);
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .formTab {
+    display: none;
+  }
+  
+  .graph_tabs_cta_container a {
+    display: flex;
+    flex-direction: column;
+  }

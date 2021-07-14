@@ -1,0 +1,161 @@
+.site {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.has-sidebar .site {
+  display: block;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.page_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  ::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary_color);
+  }
+}
+
+.page_grid aside {
+  margin-top: 15px;
+  z-index: 2;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 1025px) {
+  .has-sidebar .site {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .site-header {
+    grid-column: span 2;
+  }
+  .site-main,
+  .page_grid {
+    max-width: 1250px;
+    margin: 20px auto 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 0.5rem;
+  }
+  .maxWidth {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  .single_post_main {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 0.5rem;
+  }
+  .site-footer {
+    grid-column: span 2;
+    z-index: 3;
+    position: relative;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .primary-sidebar {
+    width: 75%;
+    margin: 50px auto 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .page_content {
+    padding: 0 20px;
+  }
+
+  .page_content section {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page_wrapper {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 15px;
+  }
+}
+
+.has-sidebar .site {
+  display: block;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.width_restriction {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .aligncenter {
+    margin: 0 auto;
+  }
+  .alignright {
+    float: right;
+    margin-left: 10px;
+  }
+  .alignleft {
+    float: left;
+    margin-right: 10px;
+  }
+  .aligncenter img {
+    margin: 0 auto;
+  }
+  .alignright img {
+    float: right;
+    margin-left: 10px;
+  }
+  .alignleft img {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aligncenter,
+  .alignleft,
+  .alignright {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom_page_noSideBar_wrapper {
+    padding: 0 20px;
+  }
+}
+
+.custom_page_noSideBar_wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.custom_page_noSideBar_wrapper h1 {
+  margin: 0.67em auto;
+}
+
+.content_container {
+  max-width: 1250px;
+  margin: 0 auto;
+}

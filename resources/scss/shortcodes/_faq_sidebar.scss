@@ -1,0 +1,29 @@
+.faq_sidebar_container {
+    padding: 15px;
+    border: 2px solid var(--secondary_color);
+    border-radius: 2px;
+  }
+  
+  .faq_sidebar_container h5 {
+    color: var(-secondary_color);
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 15px;
+  }
+  
+  .faq_sidebar_container a {
+    display: flex;
+    flex-direction: row;
+    color: var(--secondary_color);
+    margin: 10px 0;
+  }
+  
+  .faq_sidebar_container a img {
+    max-width: 25px;
+    margin: auto 7.5px auto 0;
+  }
+  
+  .faq_sidebar_container a h6 {
+    color: var(--secondary_color);
+    margin: 0;
+  }

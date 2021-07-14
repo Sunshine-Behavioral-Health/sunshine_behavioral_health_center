@@ -1,0 +1,47 @@
+.shortcode_phone_cta_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .shortcode_phone_cta_body {
+    background-color: var(--primary_color);
+    border-radius: 2px;
+    padding: 15px 0;
+    min-height: 120px;
+    height: auto;
+  }
+  
+  .shortcode_phone_cta_body a, .shortcode_phone_cta_body h4 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  .shortcode_phone_cta_headline {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px grey;
+    line-height: 1.2;
+  }
+  
+  .shortcode_phone_cta_body a {
+    background-color: var(--secondary_color);
+    padding: 10px 0;
+    border-radius: 2px;
+    font-size: 18px;
+    display: flex;
+    max-width: 200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shortcode_phone_cta_body a:hover {
+    background-color: var(--tertiary_color);
+  }
+  
+  .shortcode_phone_cta_body h4 {
+    font-size: 25px;
+    text-shadow: 2px 2px 2px grey;
+    line-height: 1.2;
+    padding: 0 10px;
+  }

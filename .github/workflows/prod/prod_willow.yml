@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - production
+name: 🚀 Deploy Production Willow on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy Production Willow
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.3.2
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          gulp compile:sass
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.production_server_ip }}
+          username: ${{ secrets.prod_willow_username }}
+          password: ${{ secrets.prod_willow_password }}
+          server-dir: /public/wp-content/themes/sbh_center_3.2/

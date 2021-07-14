@@ -1,0 +1,73 @@
+// Most of CSS is pulled from related_pages
+
+.treatment_options_section .related_pages_headline {
+  padding: 7.5px 0;
+}
+
+.treatment_options_section .related_pages_headline {
+  background-color: var(--secondary_color);
+  border-top: 2px solid var(--secondary_color);
+  border-left: 2px solid var(--secondary_color);
+  border-right: 2px solid var(--secondary_color);
+}
+
+.treatment_options_section .related_pages_wrapper {
+  background-color: #fff;
+}
+
+.related_pages_section.treatment_options_section .related_pages_wrapper {
+  border: 2px solid var(--secondary_color);
+  padding: 15px 15px 0 15px;
+}
+
+.related_pages_section.treatment_options_section .related_pages_element h6 {
+  margin: 0;
+  color: var(--secondary_color);
+}
+
+.related_pages_section.treatment_options_section .related_pages_element p {
+  margin: 0 0 0 10px;
+  font-weight: 400;
+}
+
+.related_pages_section.treatment_options_section
+  .related_pages_element
+  p:hover {
+  background-color: var(--nav_background_color);
+}
+
+.related_pages_section.treatment_options_section .related_pages_element {
+  justify-content: start;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.related_pages_section.treatment_options_section .related_pages_element a {
+  color: var(--secondary_color);
+  text-align: left;
+  width: 100%;
+}
+
+.treatment_options_section .related_pages_headline {
+  background-color: var(--secondary_color);
+  border-top: 2px solid var(--secondary_color);
+  border-left: 2px solid var(--secondary_color);
+  border-right: 2px solid var(--secondary_color);
+  padding: 7.5px 0;
+
+  h4 {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px grey;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px grey;
+  }
+}

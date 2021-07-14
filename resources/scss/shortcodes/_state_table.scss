@@ -1,0 +1,97 @@
+.state_table_wrapper {
+  background: var(--nav_background_color);
+  padding: 10px;
+  margin: 0;
+}
+
+.state_table_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.state_table_container ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.state_table_container ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2px;
+}
+
+.state_table_container ::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+.state_table_section h4 {
+  margin: 0;
+  color: var(--secondary_color);
+}
+
+.state_table_container img {
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.state_table_container .state_table_states_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.state_table_container .state_table_states_wrapper .state_table_element {
+  width: 45%;
+  display: flex;
+  margin: 5px;
+}
+
+.state_table_container .state_table_element a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--secondary_color);
+  margin: 0 auto;
+  border: 2px solid var(--secondary_color);
+  border-radius: 2px;
+  padding: 5px 30px;
+  white-space: nowrap;
+}
+
+.state_table_container .state_table_element a:hover {
+  background-color: var(--primary_color);
+}
+
+@media (min-width: 550px) {
+  .state_table_container .state_table_states_wrapper .state_table_element {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .state_table_container .state_table_element {
+    width: 18%;
+  }
+  .state_table_container .state_table_states_wrapper .state_table_element {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .state_table_container .state_table_states_wrapper .state_table_element {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .state_table_container .state_table_states_wrapper .state_table_element {
+    width: 18%;
+  }
+}

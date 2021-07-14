@@ -1,0 +1,101 @@
+.toc {
+  background-color: #f8f8f8;
+  margin-right: 25px;
+  max-width: 100%;
+  margin-top: 0;
+  position: relative;
+  color: var(--secondary_color);
+  border: outset 2px var(--secondary_color);
+  padding: 10px 25px;
+}
+
+.page_grid .page_wrapepr ol.toc {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .toc {
+    width: 100%;
+    padding: 10px 25px;
+  }
+}
+
+.toc li {
+  line-height: 1.5;
+  margin-left: 0.8em;
+  padding: 0;
+  list-style: decimal;
+}
+
+.toc li a {
+  color: var(--secondary_color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.covid_dropdown_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 3px 0 0;
+}
+
+.toc .toc_dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.covid_dropdown_icon img {
+  height: 20px;
+}
+
+.toc img {
+  height: 20px;
+}
+
+.toc li {
+  display: none;
+  list-style: decimal;
+}
+
+.toc h5 {
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  margin: 0 -5px 0 -15px;
+}
+
+.editor_container_no_medical_user .editor_wrapper {
+  justify-content: center;
+}
+
+main .page_wrapper ol.toc {
+  margin-left: 0;
+}
+
+@media (max-width: 1024px) {
+  .toc {
+    width: 100%;
+    text-align: left;
+  }
+  .toc li {
+    line-height: 1.5;
+    text-align: left;
+    list-style: decimal;
+  }
+  .page_disclosure_section {
+    padding: 0 20px;
+  }
+  .page_wrapper h1 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .toc_and_content_container {
+    padding: 0 20px;
+  }
+}

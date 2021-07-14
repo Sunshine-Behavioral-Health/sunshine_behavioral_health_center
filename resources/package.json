@@ -1,0 +1,37 @@
+{
+  "name": "sbh_center_sass2",
+  "version": "1.0.0",
+  "description": "Custom theme developed by Nathan Wilson for <?php echo get_field('site_name', 'option') ?>.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunshineBehavioralHealth/sbh_center.git"
+  },
+  "author": "Nathan Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunshineBehavioralHealth/sbh_center/issues"
+  },
+  "homepage": "https://github.com/SunshineBehavioralHealth/sbh_center#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.2.9"
+  }
+}

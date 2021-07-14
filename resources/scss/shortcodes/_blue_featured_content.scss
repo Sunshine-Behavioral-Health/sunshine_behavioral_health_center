@@ -1,0 +1,20 @@
+.blue_featured_content_container {
+    border: 5px solid var(--secondary_color)
+}
+
+.blue_featured_content_headline {
+    background-color: var(--secondary_color);
+    padding: 5px;
+    margin: -1px
+}
+
+.blue_featured_content_headline h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 0
+}
+
+.blue_featured_content_body {
+    padding: 20px
+}

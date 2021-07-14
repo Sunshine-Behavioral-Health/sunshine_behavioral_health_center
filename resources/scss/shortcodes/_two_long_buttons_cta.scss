@@ -1,0 +1,48 @@
+.two_buttons_cta_section {
+    background-color: #fff;
+  }
+  
+  .two_buttons_cta_container {
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .shortcode_two_buttons_first_cta {
+    background-color: var(--primary_color);
+  }
+  
+  .shortcode_two_buttons_second_cta {
+    background-color: var(--secondary_color);
+    margin-top: 5px;
+  }
+  
+  .shortcode_two_buttons_first_cta:hover, .shortcode_two_buttons_second_cta:hover {
+    background-color: var(--tertiary_color);
+  }
+  
+  .shortcode_two_buttons_cta {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .shortcode_two_buttons_cta a {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 2px grey;
+    letter-spacing: 1.2px;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .shortcode_two_buttons_cta {
+      min-height: 80px;
+    }
+    .shortcode_two_buttons_second_cta {
+      min-height: 40px;
+    }
+  }

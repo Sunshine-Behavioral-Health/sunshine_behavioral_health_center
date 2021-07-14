@@ -1,0 +1,43 @@
+.treatment_questions_sidebar_container {
+    background-color: var(--secondary_color);
+    color: #fff;
+    padding: 25px 10px;
+    border-radius: 2px;
+    text-shadow: 1px 1px grey;
+  }
+  
+  .treatment_questions_sidebar_container h4, .treatment_questions_sidebar_container p {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .treatment_questions_sidebar_container h4 {
+    text-shadow: 1px 1px grey;
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  .treatment_questions_sidebar_container ul {
+    padding: 0 0 0 10px;
+  }
+  
+  .treatment_questions_sidebar_container ul li {
+    list-style: none;
+  }
+  
+  .treatment_questions_sidebar_cta {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .treatment_questions_sidebar_container a {
+    padding: 10px 20px;
+    background-color: var(--primary_color);
+    color: #fff;
+    border-radius: 2px;
+  }
+  
+  .treatment_questions_sidebar_container a:hover {
+    background-color: var(--tertiary_color);
+  }
+  

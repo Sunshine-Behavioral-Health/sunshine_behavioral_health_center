@@ -1,0 +1,36 @@
+.learnAbout_sidebar_section {
+    background-color: #fff;
+    padding: 15px 10px;
+    color: #fff;
+    background-color: var(--secondary_color);
+    border-radius: 2px;
+  }
+  
+  .learnAbout_sidebar_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .learnAbout_sidebar_section h4 {
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 2px 2px 2px grey;
+  }
+  
+  .learnAbout_sidebar_links a {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .learnAbout_sidebar_links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }

@@ -1,0 +1,163 @@
+.google_web_story_section {
+  float: left;
+  padding: 20px;
+}
+@media (min-width: 1281px) {
+  .schedule_arrow_container {
+    display: none;
+  }
+}
+
+.page_404 {
+  text-align: center;
+}
+
+.page_404 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog_container h2 {
+  margin: 0 0 25px 0;
+  color: #fff;
+}
+
+.treatment_cards_container h2 {
+  margin: 0 0 25px 0;
+  color: var(--secondary_color);
+}
+
+.glide_slide {
+  width: 250px !important;
+}
+
+#insurance h2 {
+  color: rgb(48, 44, 44);
+}
+
+.insurance_form_section_1_buttons,
+.insurance_form_section_2_buttons,
+.insurance_form_section_3_buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.insurance_form_section_1 .insurance_form_section_1_buttons button,
+.insurance_form_section_2 .insurance_form_section_2_buttons button,
+.insurance_form_section_3 .insurance_form_section_3_buttons button {
+  width: 40%;
+  max-width: 200px;
+  color: var(--primary_color);
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+@media (min-width: 1025px) {
+  .insurance_form_section_1 .insurance_form_section_1_buttons button,
+  .insurance_form_section_2 .insurance_form_section_2_buttons button,
+  .insurance_form_section_3 .insurance_form_section_3_buttons button {
+    width: 40%;
+    max-width: 200px;
+    font-size: 25px;
+  }
+}
+
+.insurance_form_section_1 .insurance_form_section_1_buttons button:hover,
+.insurance_form_section_2 .insurance_form_section_2_buttons button:hover,
+.insurance_form_section_3 .insurance_form_section_3_buttons button:hover {
+  color: var(--secondary_color);
+  text-decoration: underline;
+}
+
+.sliding_insurance_form_shortcode_container
+  .insurance_form_textarea_button_container
+  textarea {
+  margin-bottom: 25px;
+}
+
+.comments-area,
+.entry-content > *,
+.entry-footer,
+.entry-header,
+.entry-summary > *,
+.page-content > *,
+.page-header,
+.page-navigation,
+.post-navigation,
+.site-info {
+  max-width: 100%;
+}
+
+.entry-header a {
+  color: var(--secondary_color);
+}
+
+.has-sidebar .site {
+  display: block;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.learn_centers_sidebar_bottom_cta {
+  background-color: #0076be;
+  max-width: 300px;
+  color: #fff;
+}
+
+.learn_centers_sidebar_bottom_cta h5 {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  text-shadow: 1px 1px grey;
+  padding: 0 10px 20px 10px;
+}
+
+.learn_centers_sidebar_bottom_cta p {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 25px auto;
+  line-height: 1.2;
+}
+
+.primary_color_cta {
+  display: flex;
+  background-color: var(--primary_color);
+  align-items: center;
+  border-radius: 2px;
+}
+
+.secondary_color_cta {
+  display: flex;
+  background-color: var(--primary_color);
+  align-items: center;
+  border-radius: 2px;
+}
+
+.full_width {
+  width: 100% !important;
+}
+
+// Search style overwrites
+
+.navigation_wrapper #ajaxsearchlite1 .probox,
+.navigation_wrapper div.asl_w .probox {
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  box-shadow: 0 0 0 0 #b5b5b5 inset;
+}
+
+@media (max-width: 768px) {
+  .promagnifier {
+    display: none !important;
+  }
+
+  div.asl_r.vertical {
+    left: 20% !important;
+  }
+}

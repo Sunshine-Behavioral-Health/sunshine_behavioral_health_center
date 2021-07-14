@@ -1,0 +1,171 @@
+/*!
+Theme Name: SBH Center 3.2
+Theme URI: https://sunshinebehavioralhealth.com/
+Developer:  Nathan Wilson
+Designer:   Michelle Lopez-McKay
+Author URI: https://sunshinebehavioralhealth.com/
+Description: An evolving theme for Sunshine Behavioral Health Centers.
+Version: 3.0.0
+License: GNU General Public License v3.0 (or later)
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: <?php echo get_field('site_name', 'option') ?> Theme
+Tags: translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+//Main
+@import "scss/header";
+@import "scss/typography";
+@import "scss/front_page";
+@import "scss/hero";
+@import "scss/layout";
+@import "scss/sidebar";
+@import "scss/footer";
+@import "scss/glide";
+@import "scss/blog";
+@import "scss/forms";
+@import "scss/bootstrap_whats_left";
+@import "scss/accessibility";
+@import "scss/spacers";
+@import "scss/other";
+
+// Template Specific
+@import "scss/template_specific/activity";
+@import "scss/template_specific/careers";
+@import "scss/template_specific/contact";
+@import "scss/template_specific/insurance";
+@import "scss/template_specific/schedule";
+@import "scss/template_specific/staff";
+@import "scss/template_specific/custom_page_no_sidebar";
+@import "scss/template_specific/thank_you";
+@import "scss/template_specific/no_hero_no_sidebar_main";
+@import "scss/template_specific/about";
+
+//components
+@import "scss/components/table_of_contents";
+@import "scss/components/sources";
+@import "scss/components/author_and_medical_reviewer";
+@import "scss/components/covid";
+@import "scss/components/phone_treatment_cta";
+@import "scss/components/pagination";
+@import "scss/components/google_translate";
+@import "scss/components/page_disclosure";
+
+//Shortcodes
+@import "scss/shortcodes/blue_featured_content";
+@import "scss/shortcodes/career_opportunities";
+@import "scss/shortcodes/contact_form_cta";
+@import "scss/shortcodes/content_left_box_right";
+@import "scss/shortcodes/customize_experience";
+@import "scss/shortcodes/customized_map";
+@import "scss/shortcodes/data_cards";
+@import "scss/shortcodes/expandable_rows";
+@import "scss/shortcodes/gallery_shortcodes";
+@import "scss/shortcodes/gallery_sidebar";
+@import "scss/shortcodes/graph_tabs";
+@import "scss/shortcodes/headline_and_button_shortcode";
+@import "scss/shortcodes/image_cta_headline_sub_headline_two_buttons";
+@import "scss/shortcodes/image_left_cta_right_shortcode";
+@import "scss/shortcodes/insurance_list_and_cta-all";
+@import "scss/shortcodes/insurance_slider_sidebar_shortcode";
+@import "scss/shortcodes/learn_about_sidebar";
+@import "scss/shortcodes/phone_cta";
+@import "scss/shortcodes/related_pages";
+@import "scss/shortcodes/search_query";
+@import "scss/shortcodes/spacers";
+@import "scss/shortcodes/state_table";
+@import "scss/shortcodes/treatment_options";
+@import "scss/shortcodes/treatment_questions_sidebar";
+@import "scss/shortcodes/two_column_bullet_list";
+@import "scss/shortcodes/two_cta_btn_sidebar_shortcode";
+@import "scss/shortcodes/two_long_buttons_cta";
+@import "scss/shortcodes/two_sentence_cta_no_btn_no_background";
+@import "scss/shortcodes/video_cta";
+@import "scss/shortcodes/faq_sidebar";
+@import "scss/shortcodes/accordion_with_toc";
+@import "scss/shortcodes/recommendations";
+@import "scss/shortcodes/gallery";
+@import "scss/shortcodes/treatment_step_progress_bar";
+@import "scss/shortcodes/treatment_step_carousel";
+
+// Very bottom css for specificity reasons
+.show {
+  display: block !important;
+}
+
+.show_flex {
+  display: flex !important;
+}
+
+.toc .showTOC {
+  display: list-item;
+}
+
+.dropdown_active {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.showAllQueryResults {
+  display: flex !important;
+}
+
+@media (max-width: 1024px) {
+  .hide_on_mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hide_on_desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hide_on_tablet {
+    display: none;
+  }
+  .show_on_tablet {
+    display: block !important;
+  }
+}
+
+.sub-menu {
+  display: none;
+}
+
+.showNav {
+  display: flex !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.show_flex {
+  display: flex !important;
+}
+
+.toc .showTOC {
+  display: list-item;
+}
+
+.dropdown_active {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.showAllQueryResults {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.gfield_visibility_hidden,
+.gform_validation_container {
+  display: none !important;
+}

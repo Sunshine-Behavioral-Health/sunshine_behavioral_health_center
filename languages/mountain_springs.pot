@@ -1,0 +1,370 @@
+# Copyright (C) 2020 <?php echo get_field('site_name', 'option') ?>
+# This file is distributed under the same license as the <?php echo get_field('site_name', 'option') ?> package.
+msgid ""
+msgstr ""
+"Project-Id-Version: <?php echo get_field('site_name', 'option') ?>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Michelle Lopez-Mckay and Nathan Wilson\n"
+"Report-Msgid-Bugs-To: <?php echo get_field('site_name', 'option') ?>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: 1: title.
+#: ../sbh_center/comments.php:38
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: ../sbh_center/comments.php:44
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../sbh_center/comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: ../sbh_center/custom-page-noheader.php:3
+msgid "Custom Noheader nosidebar"
+msgstr ""
+
+#: ../sbh_center/custom-page-nosidebar.php:3
+msgid "Custom Page Nosidebar"
+msgstr ""
+
+#: ../sbh_center/header-new.php:41, ../sbh_center/header-new2.php:43, ../sbh_center/header.php:41
+msgid "Skip to content"
+msgstr ""
+
+#: ../sbh_center/inc/Accessibility/Component.php:69
+msgid "Expand child menu"
+msgstr ""
+
+#: ../sbh_center/inc/Accessibility/Component.php:70
+msgid "Collapse child menu"
+msgstr ""
+
+#. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
+#: ../sbh_center/inc/back-compat.php:25
+msgid "<?php echo get_field('site_name', 'option') ?> requires at least WordPress version %1$s and PHP version %2$s. You are running versions %3$s and %3$s respectively. Please update and try again."
+msgstr ""
+
+#. translators: 1: required WP version number, 2: available WP version number
+#: ../sbh_center/inc/back-compat.php:30
+msgid "<?php echo get_field('site_name', 'option') ?> requires at least WordPress version %1$s. You are running version %2$s. Please update and try again."
+msgstr ""
+
+#. translators: 1: required PHP version number, 2: available PHP version number
+#: ../sbh_center/inc/back-compat.php:35
+msgid "<?php echo get_field('site_name', 'option') ?> requires at least PHP version %1$s. You are running version %2$s. Please update and try again."
+msgstr ""
+
+#: ../sbh_center/inc/Comments/Component.php:132
+msgid "New comment(s)"
+msgstr ""
+
+#: ../sbh_center/inc/Customizer/Component.php:77
+msgid "Theme Options"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:65, ../sbh_center/inc/Nav_Menus/Component.php:74
+msgid "Primary"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:70
+msgid "Secondary"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:75
+msgid "Red"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:80
+msgid "Green"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:85
+msgid "Blue"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:90
+msgid "Yellow"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:95
+msgid "Black"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:100
+msgid "Grey"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:105
+msgid "White"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:110
+msgid "Dusty daylight"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:115
+msgid "Dusty sun"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:132
+msgid "Small"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:133
+msgid "S"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:138
+msgid "Medium"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:139
+msgid "M"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:144
+msgid "Large"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:145
+msgid "L"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:150
+msgid "Larger"
+msgstr ""
+
+#: ../sbh_center/inc/Editor/Component.php:151
+msgid "XL"
+msgstr ""
+
+#: ../sbh_center/inc/Lazyload/Component.php:89
+msgid "Lazy-load on (default)"
+msgstr ""
+
+#: ../sbh_center/inc/Lazyload/Component.php:90
+msgid "Lazy-load off"
+msgstr ""
+
+#: ../sbh_center/inc/Lazyload/Component.php:111
+msgid "Lazy-load images"
+msgstr ""
+
+#: ../sbh_center/inc/Lazyload/Component.php:114
+msgid "Lazy-loading images means images are loaded only when they are in view. Improves performance, but can result in content jumping around on slower connections."
+msgstr ""
+
+#: ../sbh_center/inc/Sidebars/Component.php:69
+msgid "Sidebar"
+msgstr ""
+
+#: ../sbh_center/inc/Sidebars/Component.php:71
+msgid "Add widgets here."
+msgstr ""
+
+#. translators: %s: stylesheet handle
+#: ../sbh_center/inc/Styles/Component.php:245
+msgid "Invalid theme stylesheet handle: %s"
+msgstr ""
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: ../sbh_center/inc/Template_Tags.php:54
+msgid "The theme templating component %1$s does not implement the %2$s interface."
+msgstr ""
+
+#. translators: %s: template tag name
+#: ../sbh_center/inc/Template_Tags.php:81
+msgid "The template tag %s does not exist."
+msgstr ""
+
+#. translators: 1: template tag method name, 2: component class name
+#: ../sbh_center/inc/Template_Tags.php:110
+msgid "The template tag method %1$s registered by theme component %2$s must either be a callable or an array."
+msgstr ""
+
+#. translators: 1: template tag method name, 2: component class name
+#: ../sbh_center/inc/Template_Tags.php:121
+msgid "The template tag method %1$s registered by theme component %2$s conflicts with an already registered template tag of the same name."
+msgstr ""
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: ../sbh_center/inc/Theme.php:57
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr ""
+
+#. translators: %s: slug
+#: ../sbh_center/inc/Theme.php:120
+msgid "No theme component with the slug %s exists."
+msgstr ""
+
+#: ../sbh_center/newTemplate.php:3
+msgid "Carousel Playground"
+msgstr ""
+
+#: ../sbh_center/post-with-sidebar.php:3
+msgid "Standard post w/ Sidebar"
+msgstr ""
+
+#: ../sbh_center/postFixedSidebar.php:3
+msgid "Standard post, Fixed Sidebar"
+msgstr ""
+
+#: ../sbh_center/single.php:3
+msgid "Single Blog Post W/ Sidebar"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/entry-attachment.php:33, ../sbh_center/template-parts/content/entry.php:32
+msgid "Previous:"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/entry-attachment.php:43, ../sbh_center/template-parts/content/entry.php:33
+msgid "Next:"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/entry-attachment.php:49
+msgid "Post navigation"
+msgstr ""
+
+#. translators: %s: post title
+#: ../sbh_center/template-parts/content/entry_actions.php:21
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: post title
+#: ../sbh_center/template-parts/content/entry_actions.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: ../sbh_center/template-parts/content/entry_content.php:18
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/entry_content.php:31
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: post date
+#: ../sbh_center/template-parts/content/entry_meta.php:64
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author
+#: ../sbh_center/template-parts/content/entry_meta.php:77
+msgctxt "post author"
+msgid "By %s"
+msgstr ""
+
+#. translators: %s: post author
+#: ../sbh_center/template-parts/content/entry_meta.php:80
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: %s: post parent title
+#: ../sbh_center/template-parts/content/entry_meta.php:96
+msgctxt "post parent"
+msgid "In %s"
+msgstr ""
+
+#. translators: %s: post parent title
+#: ../sbh_center/template-parts/content/entry_meta.php:99
+msgctxt "post parent"
+msgid "in %s"
+msgstr ""
+
+#. translators: separator between taxonomy terms
+#: ../sbh_center/template-parts/content/entry_taxonomies.php:24
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: %s: list of taxonomy terms
+#: ../sbh_center/template-parts/content/entry_taxonomies.php:31
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: list of taxonomy terms
+#: ../sbh_center/template-parts/content/entry_taxonomies.php:37
+msgid "Tagged %s"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: ../sbh_center/template-parts/content/entry_taxonomies.php:44
+msgid "%s:"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/error-404.php:16
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/error-404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: ../sbh_center/template-parts/content/error-404.php:45
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/error-500.php:14
+msgid "Oops! Something went wrong."
+msgstr ""
+
+#: ../sbh_center/template-parts/content/error-offline.php:14
+msgid "Oops! It looks like you&#8217;re offline."
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: ../sbh_center/template-parts/content/error.php:23
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../sbh_center/template-parts/content/error.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: ../sbh_center/template-parts/content/error.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: ../sbh_center/template-parts/content/page_header.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../sbh_center/template-parts/content/page_header.php:22
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: %s: search query
+#: ../sbh_center/template-parts/content/page_header.php:41
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/pagination.php:13
+msgctxt "previous set of search results"
+msgid "Previous"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/pagination.php:14
+msgctxt "next set of search results"
+msgid "Next"
+msgstr ""
+
+#: ../sbh_center/template-parts/content/pagination.php:15
+msgid "Page navigation"
+msgstr ""

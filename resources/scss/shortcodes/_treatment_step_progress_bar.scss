@@ -1,0 +1,94 @@
+$white: hsl(0, 0%, 100%);
+$grey: hsl(226, 10%, 55%);
+$disa: hsl(226, 15%, 83%);
+
+.treatment_step_progress_bar_section {
+  width: 100%;
+  #steps {
+    width: 100%;
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border: 4px solid;
+    border-radius: 50%;
+    color: $disa;
+    font-weight: 600;
+    text-align: center;
+    line-height: 35px;
+    img {
+      margin: 2.5px auto 0 auto;
+    }
+    &:first-child {
+      line-height: 40px;
+    }
+    &:nth-child(n + 2) {
+      margin: 0 0 0 75px;
+      transform: translate(0, -4px);
+    }
+    &:nth-child(n + 2):before {
+      width: 75px;
+      height: 3px;
+      display: block;
+      background-color: #fff;
+      transform: translate(-95px, 21px);
+      content: "";
+      border: 2px solid;
+      margin-left: 16px;
+      margin-top: -5px;
+    }
+    &:after {
+      width: 150px;
+      display: block;
+      transform: translate(-55px, 3px);
+      color: $grey;
+      content: attr(data-desc);
+      font-weight: 400;
+      font-size: 13px;
+    }
+    &:first-child:after {
+      transform: translate(-55px, -1px);
+    }
+    &.active {
+      border-color: var(--primary_color);
+      color: var(--primary_color);
+      &:before {
+        background: linear-gradient(
+          to right,
+          var(--secondary_color) 0%,
+          var(--primary_color) 100%
+        );
+      }
+      &:after {
+        color: var(--primary_color);
+      }
+    }
+    &.done {
+      background-color: var(--secondary_color);
+      border-color: var(--secondary_color);
+      color: var(--secondary_color);
+      &:before {
+        background-color: var(--secondary_color);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .treatment_step_progress_bar_section {
+    #steps {
+      width: 75%;
+    }
+  }
+}
