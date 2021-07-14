@@ -13,6 +13,7 @@
       border-radius: 5px;
       h3 {
         margin: 0 0 15px 0;
+        color: var(--secondary_color);
       }
       .recommendations_repeater_element {
         flex: 0 1 250px;
@@ -20,7 +21,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 auto 25px auto;
+        margin: 0 auto;
         padding: 10px;
         a {
           display: flex;
