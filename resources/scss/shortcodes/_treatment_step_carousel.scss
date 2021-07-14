@@ -1,6 +1,13 @@
 .treatment_step_carousel_section {
   width: 100%;
   background-color: #f8f8f8;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--secondary_color);
+  }
   .treatment_step_carousel_container {
     padding: 15px;
     .treatment_step_carousel_element {
