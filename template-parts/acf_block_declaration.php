@@ -1,7 +1,7 @@
 
 
 <?php
-$pageContent = get_field('page_content');
+$pageContent = get_field('block_editor');
 
 if (have_rows($pageContent)) :
     while (have_rows($pageContent) : the_row();
