@@ -4,6 +4,8 @@ $disa: hsl(226, 15%, 83%);
 
 .treatment_step_progress_bar_section {
   width: 100%;
+  background-color: #fff;
+  z-index: 3;
   #steps {
     width: 100%;
     padding: 15px;
@@ -64,11 +66,7 @@ $disa: hsl(226, 15%, 83%);
       border-color: var(--primary_color);
       color: var(--primary_color);
       &:before {
-        background: linear-gradient(
-          to right,
-          var(--secondary_color) 0%,
-          var(--primary_color) 100%
-        );
+        background: linear-gradient(to right, var(--secondary_color) 0%, var(--primary_color) 100%);
       }
       &:after {
         color: var(--primary_color);
