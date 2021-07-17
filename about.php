@@ -23,5 +23,7 @@ $centerValue = get_field('site_name', 'option');
 
 <main id="primary" class="maxWidth about_page">
     
+    <?php get_template_part('template-parts/acf_block_declaration'); ?>
+
 </main> <?php
         get_footer();

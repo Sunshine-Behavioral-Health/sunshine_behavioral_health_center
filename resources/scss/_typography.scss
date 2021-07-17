@@ -63,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: $headlineFont;
 }
 
 h1,
@@ -125,7 +125,7 @@ h6 {
 }
 
 p {
-  font-family: Asap, sans-serif;
+  font-family: $paragraphFont;
   font-size: 16px;
   color: #000;
   margin-top: 0;
@@ -298,4 +298,3 @@ input {
 .no_wrap a {
   white-space: nowrap !important;
 }
-

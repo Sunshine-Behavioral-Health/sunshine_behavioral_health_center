@@ -1,6 +1,10 @@
+
+
 <?php
-if (have_rows('page_content')) :
-    while (have_rows('page_content')) : the_row();
+$pageContent = get_field('page_content');
+
+if (have_rows($pageContent)) :
+    while (have_rows($pageContent) : the_row();
         // Content
         if (get_row_layout() == 'content--image') :
 
