@@ -1,5 +1,5 @@
 <section class="hero_section">
-    <?php if ($type == 'full_width') : ?>
+    <?php if (get_sub_field('type') == 'full_width') : ?>
         <div class="full_width_hero_container">
             <p>Full Width Hero TOP</p>
             <?php if (get_sub_field('desktop_image')) : ?>
@@ -24,7 +24,7 @@
         </div>
     <?php endif ?>
 
-    <?php if ($type == 'content_width') : ?>
+    <?php if (get_sub_field('type') == 'content_width') : ?>
         <div class="content_width_hero_container">
             <img src="" alt="">
             <img src="" alt="">
