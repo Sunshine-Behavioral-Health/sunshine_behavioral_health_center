@@ -30,6 +30,9 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/spacers";
 @import "scss/other";
 @import "scss/flexboxgrid";
+@import "scss/editor";
+@import "sass/grids";
+@import "sass/helper";
 
 // Template Specific
 @import "scss/template_specific/activity";

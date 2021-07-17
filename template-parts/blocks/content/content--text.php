@@ -1,1 +1,11 @@
-<p class="text_bottom_spacing"><?php echo get_sub_field('content'); ?></p>
+<?php
+
+$content = get_sub_field('content');
+
+?>
+
+<div class="wrapper">
+    <div class="editor-content">
+        <?php echo $content; ?>
+    </div>
+</div>
