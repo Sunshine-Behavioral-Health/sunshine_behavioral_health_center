@@ -1,4 +1,5 @@
 <section class="hero_section">
+    <h2>Hero section</h2>
     <?php if (get_sub_field('type') == 'full_width') : ?>
         <div class="full_width_hero_container">
             <p>Full Width Hero TOP</p>
