@@ -19,7 +19,8 @@
                 $('.treatment_step_progress_bar_section').css({ // scroll to that element or below it
                     position: 'fixed',
                     top: '150px',
-                    left: '0'
+                    left: '0',
+                    margin: '-10px 0 0 0'
                 });
             } else { // apply position: static
                 $('.treatment_step_progress_bar_section').css({ // if you scroll above it
