@@ -1,12 +1,36 @@
-<div class="column-content <?php echo $classes; ?>" style="<?= !empty($background_color) ? "background:{$background_color};" : "" ?><?= !empty($padding) ? $padding : '' ?>">
-    <?php echo !empty($background_image) ? wp_image($background_image, 'full', ['class' => 'column-content--background']) : ''; ?>
-    <div class="wrapper">
-        <div class="row align-<?= $column_alignment ?> <?= !empty($reverse_order_on_mobile) ? 'mobile-reverse' : '' ?>">
-            <?php foreach ($columns as $col) : ?>
-                <div class="<?= $col_class ?> editor-content">
-                    <?php echo $col['content']; ?>
-                </div>
-            <?php endforeach; ?>
+<section class="hero_section">
+    <?php if ($type == 'full_width') : ?>
+        <div class="full_width_hero_container">
+            <p>Full Width Hero TOP</p>
+            <?php if (get_sub_field('desktop_image')) : ?>
+                <img class="hide_on_mobile show_on_tablet" src="<?php echo get_sub_field('desktop_image')['url']; ?>">
+            <?php endif; ?>
+
+            <?php if (get_sub_field('mobile_image')) : ?>
+                <img class="hide_on_desktop hide_on_tablet" src="<?php echo get_sub_field('mobile_image')['url']; ?>">
+            <?php endif; ?>
+
+            <?php if (get_sub_field('headline')) : ?>
+                <h1><?= get_sub_field('headline'); ?></h1>
+            <?php endif; ?>
+
+            <?php if (get_sub_field('subheadline')) : ?>
+                <p><?= get_sub_field('subheadline'); ?></p>
+            <?php endif; ?>
+
+            <?php if (get_sub_field('link')) : ?>
+                <a href="<?= get_sub_field('link')['url']; ?>" target="<?= get_sub_field('link')['target'] ?>"><?= get_sub_field('')['title']; ?></a>
+            <?php endif; ?>
         </div>
-    </div>
-</div>
+    <?php endif ?>
+
+    <?php if ($type == 'content_width') : ?>
+        <div class="content_width_hero_container">
+            <img src="" alt="">
+            <img src="" alt="">
+            <h1><?= get_sub_field('headline'); ?></h1>
+            <p><?= get_sub_field('subheadline'); ?></p>
+            <a href="<?= get_sub_field('link')['url']; ?>" target="<?= get_sub_field('link')['target'] ?>"><?= get_sub_field('')['title']; ?></a>
+        </div>
+    <?php endif ?>
+</section>
