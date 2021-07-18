@@ -23,9 +23,13 @@
                         <p><?= get_sub_field('subheadline'); ?></p>
                     <?php endif; ?>
 
-                    <?php if (get_sub_field('link')) : ?>
-                        <a class="button" href="<?= get_sub_field('link')['url']; ?>" target="<?= get_sub_field('link')['target'] ?>"><?= get_sub_field('link')['title']; ?></a>
-                    <?php endif; ?>
+                    <?php if (get_sub_field('add_cta')) :
+                        if (get_sub_field('cta_type') == "link") : ?>
+                            <a class="button" href="<?= get_sub_field('link')['url']; ?>" target="<?= get_sub_field('link')['target'] ?>"><?= get_sub_field('link')['title']; ?></a>
+                        <?php else : ?>
+                            <a class="invocaNumber button" href="tel:949-276-2886">949-276-2886</a>
+                    <?php endif;
+                    endif; ?>
                 </div>
             </div>
 

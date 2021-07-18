@@ -23,6 +23,10 @@ if (have_rows('block_editor')) :
 
             get_template_part('template-parts/blocks/image/image');
 
+        elseif (get_row_layout() == 'location_and_accordion') :
+
+            get_template_part('template-parts/blocks/location-and-accordion/location-and-accordion');
+
         endif;
 
     endwhile;

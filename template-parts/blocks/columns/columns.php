@@ -27,13 +27,13 @@ switch ($columnsPerRow) {
 
 if ($columns) : ?>
     <section class="columns_content_section" style="<?= !empty($backgroundColor) ? "background:{$backgroundColor};" : "" ?>">
-        <div class="columns_content-wrapper">
+        <div class="columns_content-wrapper wrapper">
             <h2><? echo $headline; ?></h2>
             <p><?= $subheadline; ?></p>
             <div class="row <?= !empty($reverseOnMobile) ? 'mobile-reverse' : '' ?>">
 
                 <?php foreach ($columns as $column) : ?>
-                    <div class="<?= $columnClass ?> editor-content" style="<?= !empty($column['background_color']) ? "background:{$column['background_color']};" : "" ?> <?php echo !empty($column['background_image']) ? "background: url({$column['background_image']});" : "" ?>">
+                    <div class="<?= $columnClass ?> editor-content" style="<?= !empty($column['background_color']) ? "background:{$column['background_color']};" : "" ?> <?php echo !empty($column['background_image']) ? "background: url({$column['background_image']['url']});" : "" ?>">
                         <?= $column['content']; ?>
                     </div>
                 <?php endforeach; ?>
