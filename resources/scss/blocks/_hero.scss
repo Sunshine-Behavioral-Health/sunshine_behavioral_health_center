@@ -1,0 +1,36 @@
+.hero_section {
+    .full_width_hero_container {
+        .hero-image {
+            min-height: 300px;
+            max-height: 400px;
+        }
+        .hero_section-content_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+            }
+        }
+        h1,
+        p {
+            color: #fff;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .hero_section {
+        .full_width_hero_container {
+            .hero-image {
+                max-height: 500px;
+            }
+            .hero_section-content_wrapper {
+                align-items: flex-start;
+                h1 {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

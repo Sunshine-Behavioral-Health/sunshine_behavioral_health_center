@@ -23,7 +23,8 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "gulp-watch": "^5.0.1"
   },
   "dependencies": {
     "gulp-clean-css": "^4.3.0",

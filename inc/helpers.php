@@ -39,7 +39,6 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-
 //Remove all classes and IDs from Nav Menu
 function wp_nav_menu_remove($var)
 {
@@ -254,3 +253,19 @@ function my_acf_input_admin_head()
         });
     </script>
 <?php }
+
+function pr($args)
+{
+    echo '<pre class="debug" style="background:grey;color:white;padding:1em;font-family:Courier;white-space:pre-wrap;">';
+    echo '<div style="color:lime;">Debug:</div>';
+    foreach (func_get_args() as $arg) {
+        echo '<div>' . print_r($arg, true) . '</div>';
+    }
+    echo '</pre>';
+}
+
+function dd($args)
+{
+    pr($args);
+    die;
+}

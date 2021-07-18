@@ -34,6 +34,8 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/grids";
 @import "scss/helper";
 @import "scss/resets";
+@import "scss/block_editor";
+@import "scss/button";
 
 // Template Specific
 @import "scss/template_specific/activity";
@@ -95,10 +97,11 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/shortcodes/treatment_step_carousel";
 
 // Blocks
-@import "scss/blocks/content--image";
-@import "scss/blocks/content--spacer";
-@import "scss/blocks/content--text";
-@import "scss/blocks/content--wysiwyg";
+@import "scss/blocks/accordion";
+@import "scss/blocks/columns";
+@import "scss/blocks/content";
+@import "scss/blocks/hero";
+@import "scss/blocks/image";
 
 
 // Very bottom css for specificity reasons
