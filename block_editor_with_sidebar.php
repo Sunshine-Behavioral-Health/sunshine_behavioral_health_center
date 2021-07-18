@@ -21,7 +21,7 @@ $centerValue = get_field('site_name', 'option');
 ?>
 
 
-<main id="primary" class="maxWidth about_page">
+<main id="primary" class="block_editor--sidebar">
     <?php get_template_part('template-parts/content/acf_block_declaration'); ?>
     <?php get_sidebar(); ?>
 
