@@ -114,7 +114,7 @@ $centerValue = get_field('site_name', 'option');
                     <iframe src="<?php echo get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
                     <div class="about_page_location_address">
-                        <a href="<?php echo get_field('about_page_iframe') ?>"><span>Address: </span>27123 Calle Arroyo #2121, San Juan Capistrano, CA 92675</a>
+                        <a href="<?php echo get_field('about_page_iframe') ?>"><span>Address: </span><?= get_field('center_address', 'option') ?></a>
                     </div>
                 </div>
             </div>

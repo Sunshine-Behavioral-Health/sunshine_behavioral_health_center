@@ -1,0 +1,26 @@
+.accordion {
+    border-right: 2px solid $primaryColor;
+    border-bottom: 2px solid $primaryColor;
+    border-left: 2px solid $primaryColor;
+    padding: 5px;
+    &:first-child {
+        border-top: 2px solid $primaryColor;
+    }
+    .accordion_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img.accordion_icon {
+            height: 30px;
+            width: auto;
+        }
+    }
+    .accordion_bottom {
+        display: none;
+    }
+
+    .show {
+        display: flex !important;
+    }
+}

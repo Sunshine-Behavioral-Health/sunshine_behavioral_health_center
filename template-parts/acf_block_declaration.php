@@ -7,6 +7,10 @@ if (have_rows('block_editor')) :
 
             get_template_part('template-parts/blocks/accordion/accordion');
 
+        elseif (get_row_layout() == 'accreditation_and_testimonial') :
+
+            get_template_part('template-parts/blocks/accreditation_and_testimonial/accreditation_and_testimonial');
+
         elseif (get_row_layout() == 'columns') :
 
             get_template_part('template-parts/blocks/columns/columns');

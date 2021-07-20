@@ -1,11 +1,36 @@
-<div class="accordion <?php echo $classes; ?>" style="<?= !empty($background_color) ? "background:{$background_color};" : "" ?><?= !empty($padding) ? $padding : '' ?>">
-    <?php echo !empty($background_image) ? wp_image($background_image, 'full', ['class' => 'accordion--background']) : ''; ?>
-    <div class="wrapper">
-        <?php foreach ($rows as $row) : ?>
-            <ada-toggler id="toggle-<?= $row['id'] ?>" for="content-<?= $row['id'] ?>" group="<?= $group_id ?>">
-                <h3><?= $row['title'] ?></h3>
-            </ada-toggler>
-            <div id="content-<?= $row['id'] ?>" class="editor-content"><?php echo $row['content']; ?></div>
-        <?php endforeach; ?>
+<?php
+$accordions = get_sub_field('accordions');
+$accordionSectionHeadline = get_sub_field('accordion_section_headline');
+$accordionSectionSubheadline = get_sub_field('accordion_section_subheadline');
+$backgroundColor = get_sub_field('background_color');
+$accordionBorderColor = get_sub_field('border_color');
+
+
+?>
+
+<?php if ($accordions) : ?>
+    <div class="accordion" style="<?= !empty($backgroundColor) ? "background:{$backgroundColor};" : "" ?>">
+        <div class="wrapper">
+            <?php if ($accordionSectionHeadline) : ?>
+                <h2><?= $accordionSectionHeadline ?></h2>
+            <?php endif; ?>
+
+            <?php if ($accordionSectionSubheadline) : ?>
+                <p><?= $accordionSectionSubheadline ?></p>
+            <?php endif; ?>
+
+            <?php foreach ($accordions as $accordion) : ?>
+                <div class="accordion" style="<?= !empty($accordionBorderColor) ? "border-color:{$accordionBorderColor} !important;" : "" ?>">
+                    <div class="accordion_top">
+                        <h5 style="<?= !empty($accordionBorderColor) ? "color:{$accordionBorderColor} !important;" : "" ?>"><?= $accordion['headline'] ?></h5>
+                        <img class="accordion_icon" src="<?php echo get_field('plus_icon', 'option')['url'] ?>" loading="lazy" alt="Plus icon">
+                    </div>
+
+                    <div class="accordion_bottom">
+                        <p><?= $accordion['content'] ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
+<?php endif;  ?>

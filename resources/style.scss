@@ -15,6 +15,7 @@ This theme, like WordPress, is licensed under the GPL.
 */
 
 //Main
+@import "scss/mixins";
 @import "scss/variables";
 @import "scss/header";
 @import "scss/typography";
@@ -102,7 +103,8 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/blocks/content";
 @import "scss/blocks/hero";
 @import "scss/blocks/image";
-
+@import "scss/blocks/location-and-accordion";
+@import "scss/blocks/accreditation_and_testimonial";
 
 // Very bottom css for specificity reasons
 .show {

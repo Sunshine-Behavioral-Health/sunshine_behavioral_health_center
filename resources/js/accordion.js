@@ -1,6 +1,7 @@
 jQuery (document).ready (function ($) {
-  $ ('.accordion').click (function () {
-    $ ('.accordion_hidden_content').toggleClass ('hide');
-    $ ('.accordion_dropdown_icon').toggleClass ('dropdown_active');
+  $ ('.accordion').click (function (event) {
+    event.stopImmediatePropagation ();
+    $ (this).find ('.accordion_icon').toggleClass ('dropdown_active');
+    $ (this).find ('.accordion_bottom').toggleClass ('show');
   });
 });

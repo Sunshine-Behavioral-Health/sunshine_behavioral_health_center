@@ -1,0 +1,15 @@
+.accreditation_and_testimonial {
+    margin-top: 50px;
+    &--badges {
+        background-color: $white;
+        top: -50px;
+        background-color: #fff;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 10px;
+        @include tabletup {
+            width: 40%;
+        }
+    }
+}

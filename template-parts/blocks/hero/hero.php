@@ -1,3 +1,10 @@
+<?
+/* 
+* Add width restriction on headline/subheadlien so doesn't overlap image
+*/
+
+?>
+
 <section class="hero_section">
     <?php if (get_sub_field('type') == 'full_width') : ?>
         <div class="full_width_hero_container relative">
