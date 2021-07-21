@@ -12,9 +12,10 @@ const concat = require ('gulp-concat');
 const minify = require ('gulp-minify');
 
 const SASS_SOURCES = [
+  '../template-parts/blocks/**/*.scss', //Blocks
   './*.scss', // This picks up our style.scss file at the root of the theme
-  'css/**/*.scss', // All other Sass files in the /css directory,
-  '../template-parts/blocks/**/*.scss' //Blocks
+  'css/**/*.scss' // All other Sass files in the /css directory,
+  
 ];
 
 /**
