@@ -1,13 +1,15 @@
 <?php
+// Content
 $headline = get_sub_field('list_items_section_headline');
-$subheadline = get_sub_field('columns_section_subheadline');
-$listItems = get_sub_field('list_items');
-$columnContent = $columns['content'];
-$columnBackgroundImage = $columns['background_image'];
-$columnBackgroundColor = $columns['background_color'];
+$subheadline = get_sub_field('list_items_section_subheadline');
+$listItems = get_sub_field('list_items'); // ['list_item']
+$listItemIcon = get_sub_field('list_item_icon')['url'];
 $columnsPerRow = get_sub_field('columns_per_row');
+
+// Styles
+$backgroundImage = get_sub_field('background_image')['url'];
 $backgroundColor = get_sub_field('background_color');
-$reverseOnMobile = get_sub_field('reverse_order_on_mobile');
+$listItemColor = get_sub_field('list_item_color');
 
 
 switch ($columnsPerRow) {
@@ -25,19 +27,17 @@ switch ($columnsPerRow) {
         break;
 }
 
-if ($columns) : ?>
-    <section class="list-items" style="<?= !empty($backgroundColor) ? "background:{$backgroundColor};" : "" ?>">
-        <div class="columns_content-wrapper wrapper">
-            <h2><? echo $headline; ?></h2>
+if ($listItems) : ?>
+    <section class="list-items" style="<?= !empty($backgroundColor) ? "background:{$backgroundColor};" : "" ?> <?= !empty($backgroundColor) ? "background-image:{$backgroundImage};" : "" ?>">
+        <div class="wrapper">
+            <h2><?= $headline; ?></h2>
             <p><?= $subheadline; ?></p>
-            <div class="row <?= !empty($reverseOnMobile) ? 'mobile-reverse' : '' ?>">
-
-                <?php foreach ($columns as $column) : ?>
-                    <div class="<?= $columnClass ?> editor-content" style="<?= !empty($column['background_color']) ? "background:{$column['background_color']};" : "" ?> <?php echo !empty($column['background_image']) ? "background: url({$column['background_image']['url']});" : "" ?>">
-                        <?= $column['content']; ?>
-                    </div>
-                <?php endforeach; ?>
-
+            <div class="row">
+                <ul class="flex">
+                    <?php foreach ($listItems as $listItem) : ?>
+                        <li class="flex <?= $columnClass ?>" style="<?= !empty($listItemColor) ? "color:{$listItemColor};" : "" ?>"><img src="<?= $listItemIcon ?>" alt=""> <?= $listItem['list_item'] ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </div>
     </section>
