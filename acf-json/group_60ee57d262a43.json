@@ -77,6 +77,65 @@
                             "new_lines": ""
                         },
                         {
+                            "key": "field_60f63093c8c5d",
+                            "label": "Accordions",
+                            "name": "accordions",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f630b7c8c5f",
+                                    "label": "Headline",
+                                    "name": "headline",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60f630bbc8c60",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        },
+                        {
                             "key": "field_60f312d600243",
                             "label": "Styles",
                             "name": "",
@@ -96,6 +155,21 @@
                             "key": "field_60f312da00244",
                             "label": "Background Color",
                             "name": "background_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_60f62fa7c8c5c",
+                            "label": "Border Color",
+                            "name": "border_color",
                             "type": "color_picker",
                             "instructions": "",
                             "required": 0,
@@ -157,7 +231,7 @@
                             "label": "Testimonial",
                             "name": "testimonial",
                             "type": "wysiwyg",
-                            "instructions": "",
+                            "instructions": "Color may be white.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -172,10 +246,10 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_60f61db83b57c",
+                            "key": "field_60f6351c2e718",
                             "label": "Testimonial Name",
                             "name": "testimonial_name",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -186,9 +260,9 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
                         },
                         {
                             "key": "field_60f61db83b57d",
@@ -882,6 +956,30 @@
                             "endpoint": 0
                         },
                         {
+                            "key": "field_60f7810f234e4",
+                            "label": "Section Background Image",
+                            "name": "section_background_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
                             "key": "field_60f3a9acf4bc5",
                             "label": "iframe",
                             "name": "iframe",
@@ -993,7 +1091,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "60",
                                         "class": "",
                                         "id": ""
                                     },
@@ -1002,6 +1100,86 @@
                                     "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0
+                                },
+                                {
+                                    "key": "field_60f7813e234e5",
+                                    "label": "Add CTA",
+                                    "name": "add_cta",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_60f78964a8e05",
+                                    "label": "CTA Type",
+                                    "name": "cta_type",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60f7813e234e5",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "phone": "Phone",
+                                        "link": "Link"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_60f787a1285ad",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60f7813e234e5",
+                                                "operator": "==",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "field": "field_60f78964a8e05",
+                                                "operator": "==",
+                                                "value": "link"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
                                 }
                             ]
                         },
@@ -1026,8 +1204,8 @@
                 },
                 "layout_60f619e5c1865": {
                     "key": "layout_60f619e5c1865",
-                    "name": "toast_block",
-                    "label": "Toast Block",
+                    "name": "treatment_steps",
+                    "label": "Treatment Steps",
                     "display": "block",
                     "sub_fields": [],
                     "min": "",
@@ -1058,5 +1236,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1626745071
+    "modified": 1626835420
 }

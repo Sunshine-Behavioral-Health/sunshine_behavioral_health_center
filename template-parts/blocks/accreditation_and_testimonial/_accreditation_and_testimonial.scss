@@ -1,0 +1,34 @@
+.accreditation_and_testimonial {
+    margin-top: 100px;
+    padding-bottom: 25px;
+    &--badges {
+        background-color: $white;
+        background-color: #fff;
+        width: 100%;
+        margin: -50px auto 15px auto;
+        border-radius: 5px;
+        padding: 10px;
+        @include tabletup {
+            width: 40%;
+        }
+    }
+
+    .accreditation_and_testimonial--testimonial {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: $white;
+        }
+        .five-stars {
+            max-width: 100px;
+            margin: 0 auto;
+        }
+
+        &-name {
+            text-align: center;
+        }
+    }
+}

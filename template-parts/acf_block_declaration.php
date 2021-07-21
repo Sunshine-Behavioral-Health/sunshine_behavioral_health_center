@@ -27,9 +27,21 @@ if (have_rows('block_editor')) :
 
             get_template_part('template-parts/blocks/image/image');
 
+        elseif (get_row_layout() == 'list_items') :
+
+            get_template_part('template-parts/blocks/list-items/list-items');
+
         elseif (get_row_layout() == 'location_and_accordion') :
 
             get_template_part('template-parts/blocks/location-and-accordion/location-and-accordion');
+
+        elseif (get_row_layout() == 'testimonials') :
+
+            get_template_part('template-parts/blocks/testimonials/testimonials');
+
+        elseif (get_row_layout() == 'treatment_steps') :
+
+            get_template_part('template-parts/blocks/treatment-steps/treatment-steps');
 
         endif;
 

@@ -14,6 +14,7 @@ const minify = require ('gulp-minify');
 const SASS_SOURCES = [
   './*.scss', // This picks up our style.scss file at the root of the theme
   'css/**/*.scss', // All other Sass files in the /css directory,
+  '../template-parts/blocks/**/*.scss' //Blocks
 ];
 
 /**
@@ -47,14 +48,8 @@ const SASS_SOURCES = [
 // Minifies JS into build file
 gulp.task ('js', function () {
   return gulp
-    .src (['js/*.js'])
+    .src (['js/*.js', '../template-parts/blocks/**/*.js'])
     .pipe (concat ('main.js'))
     .pipe (minify ())
     .pipe (gulp.dest ('../js/'));
-});
-
-gulp.task('watch', () => {
-  gulp.watch(SASS_SOURCES, (done) => {
-      gulp.start('css')(done);
-  });
 });

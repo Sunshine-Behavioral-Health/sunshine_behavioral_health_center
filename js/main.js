@@ -1,11 +1,3 @@
-jQuery (document).ready (function ($) {
-  $ ('.accordion').click (function (event) {
-    event.stopImmediatePropagation ();
-    $ (this).find ('.accordion_icon').toggleClass ('dropdown_active');
-    $ (this).find ('.accordion_bottom').toggleClass ('show');
-  });
-});
-
 // function validateFooterForm() {
 //   let e = document.querySelector(".footer_form_fn").value,
 //     t = document.querySelector(".footer_form_ln").value,
@@ -424,4 +416,18 @@ jQuery(document).ready(function (e) {
 "use strict";
 jQuery(document).ready(function ($) {
     // Image CTA Headline Sub Headline Two Buttons
+});
+
+jQuery (document).ready (function ($) {
+  console.log("We inside accordion block")
+  $ ('.accordion').click (function (event) {
+    event.stopImmediatePropagation ();
+    $ (this).find ('.accordion_icon').toggleClass ('dropdown_active');
+    $ (this).find ('.accordion_bottom').toggleClass ('show');
+  });
+});
+
+jQuery(document).ready(function($) {
+    
+    const testimonialName = $('.accreditation_and_testimonial--testimonial-name');
 });

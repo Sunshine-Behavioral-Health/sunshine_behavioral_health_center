@@ -9,8 +9,8 @@ $badgesBorderColor = get_sub_field('accreditation_border_color'); //color
 
 <?php if ($testimonial) : ?>
     <section class="accreditation_and_testimonial" style="<?= !empty($testimonialBackgroundColor) ? "background:{$testimonialBackgroundColor};" : "" ?>">
-        <div class="wrapper relative flex justify-center">
-            <div class="absolute accreditation_and_testimonial--badges flex flex-column justify-center align-center" style="<?= !empty($badgesBorderColor) ? "border: 2px solid {$badgesBorderColor};" : "" ?>">
+        <div class="wrapper relative flex justify-center flex-column">
+            <div class="accreditation_and_testimonial--badges flex flex-column justify-center align-center" style="<?= !empty($badgesBorderColor) ? "border: 2px solid {$badgesBorderColor};" : "" ?>">
                 <h2 class="text-center"><?= $sectionHeadline ?></h2>
                 <div class="flex accreditation_and_testimonial--badges--wrapper">
                     <?php echo get_field('legitscript_html', 'option') ?>
@@ -26,14 +26,14 @@ $badgesBorderColor = get_sub_field('accreditation_border_color'); //color
                     ?>
                 </div>
             </div>
-            <div class="row accreditation_and_testimonial--testimonial">
+            <div class="row accreditation_and_testimonial--testimonial flex-column wrapper">
                 <?php if ($testimonial) : ?>
                     <?= $testimonial; ?>
                 <?php endif; ?>
                 <?php if ($testimonialName) : ?>
-                    <p><?= $testimonialName; ?></p>
+                    <p class="accreditation_and_testimonial--testimonial-name"><?= $testimonialName; ?></p>
                 <?php endif; ?>
-                <img src="<?php echo get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
+                <img class="five-stars" src="<?php echo get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
             </div>
         </div>
     </section>
