@@ -7,7 +7,7 @@
 
 <section class="hero_section">
     <?php if (get_sub_field('type') == 'full_width') : ?>
-        <div class="full_width_hero_container relative">
+        <div class="full_width_hero relative">
             <?php if (get_sub_field('desktop_image')) : ?>
                 <img class="hide_on_mobile show_on_tablet width100 hero-image" src="<?php echo get_sub_field('desktop_image')['url']; ?>">
             <?php endif; ?>
@@ -23,11 +23,11 @@
                         <img src="<?= get_sub_field('image')['url']; ?>" alt="">
                     <?php endif; ?>
                     <?php if (get_sub_field('headline')) : ?>
-                        <h1><?= get_sub_field('headline'); ?></h1>
+                        <h1 class="full_width_hero--headline"><?= get_sub_field('headline'); ?></h1>
                     <?php endif; ?>
 
                     <?php if (get_sub_field('subheadline')) : ?>
-                        <p><?= get_sub_field('subheadline'); ?></p>
+                        <p class="full_width_hero--subheadline"><?= get_sub_field('subheadline'); ?></p>
                     <?php endif; ?>
 
                     <?php if (get_sub_field('add_cta')) :

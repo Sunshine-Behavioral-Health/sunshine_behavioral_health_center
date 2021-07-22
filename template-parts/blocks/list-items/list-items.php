@@ -32,13 +32,11 @@ if ($listItems) : ?>
         <div class="wrapper">
             <h2><?= $headline; ?></h2>
             <p><?= $subheadline; ?></p>
-            <div class="row">
-                <ul class="flex">
-                    <?php foreach ($listItems as $listItem) : ?>
-                        <li class="flex <?= $columnClass ?>" style="<?= !empty($listItemColor) ? "color:{$listItemColor};" : "" ?>"><img src="<?= $listItemIcon ?>" alt=""> <?= $listItem['list_item'] ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
+            <ul class="flex">
+                <?php foreach ($listItems as $listItem) : ?>
+                    <li class="flex <?= $columnClass ?>" style="<?= !empty($listItemColor) ? "color:{$listItemColor};" : "" ?>"><img src="<?= $listItemIcon ?>" alt=""> <?= $listItem['list_item'] ?></li>
+                <?php endforeach; ?>
+            </ul>
         </div>
     </section>
 <?php endif; ?>

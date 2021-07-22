@@ -228,28 +228,9 @@
                         },
                         {
                             "key": "field_60f61db83b57b",
-                            "label": "Testimonial",
-                            "name": "testimonial",
-                            "type": "wysiwyg",
-                            "instructions": "Color may be white.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_60f6351c2e718",
-                            "label": "Testimonial Name",
-                            "name": "testimonial_name",
-                            "type": "textarea",
+                            "label": "Testimonials",
+                            "name": "testimonials",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -258,11 +239,32 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f8db969c2fa",
+                                    "label": "Testimonial",
+                                    "name": "testimonial",
+                                    "type": "wysiwyg",
+                                    "instructions": "Include quote, name, and five star image. Can change color in WYSIWYG",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
                         },
                         {
                             "key": "field_60f61db83b57d",
@@ -1512,7 +1514,7 @@
                                     "label": "Testimonial",
                                     "name": "testimonial",
                                     "type": "wysiwyg",
-                                    "instructions": "",
+                                    "instructions": "Include quote, name, and five star image. Can change color in WYSIWYG",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -1525,25 +1527,6 @@
                                     "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0
-                                },
-                                {
-                                    "key": "field_60f79005a24e6",
-                                    "label": "Testimonial Name",
-                                    "name": "testimonial_name",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
                                 }
                             ]
                         },
@@ -1640,5 +1623,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1626839863
+    "modified": 1626921963
 }

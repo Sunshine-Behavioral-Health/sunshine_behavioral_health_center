@@ -419,7 +419,6 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery (document).ready (function ($) {
-  console.log("We inside accordion block")
   $ ('.accordion').click (function (event) {
     event.stopImmediatePropagation ();
     $ (this).find ('.accordion_icon').toggleClass ('dropdown_active');
@@ -427,19 +426,15 @@ jQuery (document).ready (function ($) {
   });
 });
 
-jQuery(document).ready(function($) {
-    
-    const testimonialName = $('.accreditation_and_testimonial--testimonial-name');
-});
 var slideIndex = 1;
 showSlides (slideIndex);
 
-// Next/previous controls
 function plusSlides (n) {
+  console.log ('plus clicked');
+
   showSlides ((slideIndex += n));
 }
 
-// Thumbnail image controls
 function currentSlide (n) {
   showSlides ((slideIndex = n));
 }
@@ -464,20 +459,34 @@ function showSlides (n) {
   dots[slideIndex - 1].className += ' active';
 }
 
-var slideIndex = 0;
-showSlides ();
+var slideIndex = 1;
+showSlides (slideIndex);
 
-function showSlides () {
-  var i;
-  var slides = document.getElementsByClassName ('carousel-slide');
+function plusSlides (n) {  
+  showSlides ((slideIndex += n));
+}
+
+function currentSlide (n) {
+  showSlides ((slideIndex = n));
+}
+
+function showSlides (n) {
+  let i;
+  let slides = document.getElementsByClassName ('carousel-slide');
+  let dots = document.getElementsByClassName ('dot');
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace (' active', '');
   }
   slides[slideIndex - 1].style.display = 'block';
-    //Time between slide change   
-  setTimeout (showSlides, 6000);
+  dots[slideIndex - 1].className += ' active';
 }
+

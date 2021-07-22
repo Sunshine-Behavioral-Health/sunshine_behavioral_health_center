@@ -1,13 +1,13 @@
 <?php
 $sectionHeadline = get_sub_field('accreditation_and_testimonial_headline');
-$testimonial = get_sub_field('testimonial'); // wysiwyg
-$testimonialName = get_sub_field('testimonial_name'); //string
+$testimonials = get_sub_field('testimonials'); // ['testimonial']
+
 $testimonialBackgroundColor = get_sub_field('testimonial_background_color'); //color
 $badgesBorderColor = get_sub_field('accreditation_border_color'); //color
 
 ?>
 
-<?php if ($testimonial) : ?>
+<?php if ($testimonials) : ?>
     <section class="accreditation_and_testimonial" style="<?= !empty($testimonialBackgroundColor) ? "background:{$testimonialBackgroundColor};" : "" ?>">
         <div class="wrapper relative flex justify-center flex-column">
             <div class="accreditation_and_testimonial--badges flex flex-column justify-center align-center" style="<?= !empty($badgesBorderColor) ? "border: 2px solid {$badgesBorderColor};" : "" ?>">
@@ -26,14 +26,23 @@ $badgesBorderColor = get_sub_field('accreditation_border_color'); //color
                     ?>
                 </div>
             </div>
-            <div class="row accreditation_and_testimonial--testimonial flex-column wrapper">
-                <?php if ($testimonial) : ?>
-                    <?= $testimonial; ?>
+            <div class="accreditation_and_testimonial--testimonial flex-column wrapper">
+                <?php foreach ($testimonials as $testimonial) : ?>
+                    <div class="editor-content carousel-slide">
+                        <?= $testimonial['testimonial']; ?>
+                        
+                    </div>
+                <?php endforeach; ?>
+                <?php if (count($testimonials) > 1) : ?>
+                    <div style="text-align:center">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+                        <?php foreach ($testimonials as $testimonial) : ?>
+                            <span class="dot" onclick="currentSlide(<?= $testimonialSlideNumber++ ?>)"></span>
+                        <?php endforeach; ?>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
                 <?php endif; ?>
-                <?php if ($testimonialName) : ?>
-                    <p class="accreditation_and_testimonial--testimonial-name"><?= $testimonialName; ?></p>
-                <?php endif; ?>
-                <img class="five-stars" src="<?php echo get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
             </div>
         </div>
     </section>

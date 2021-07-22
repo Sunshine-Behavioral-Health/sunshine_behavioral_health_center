@@ -1,5 +1,5 @@
 .hero_section {
-    .full_width_hero_container {
+    .full_width_hero {
         .hero-image {
             min-height: 300px;
             max-height: 400px;
@@ -9,7 +9,10 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            h1 {
+        }
+        @include tablet-up {
+            &--subheadline {
+                width: 60%;
             }
         }
         h1,
@@ -21,7 +24,7 @@
 
 @media (min-width: 768px) {
     .hero_section {
-        .full_width_hero_container {
+        .full_width_hero {
             .hero-image {
                 max-height: 500px;
             }
