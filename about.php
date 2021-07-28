@@ -42,7 +42,7 @@ $centerValue = get_field('site_name', 'option');
 
         <!-- Treatment List -->
         <section class="about_page_treatment_list_section">
-            <div class="about_page_treatment_list_container" <?= !empty(get_field('about_page_treatment_list_background_image')) ? 'style= url(' . get_field('about_page_treatment_list_background_image') .  ');' : '' ?>>
+            <div class="about_page_treatment_list_container" <?= !empty(get_field('about_page_treatment_list_background_image')) ? 'style= url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>>
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
