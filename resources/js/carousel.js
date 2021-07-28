@@ -2,13 +2,16 @@ var slideIndex = 1;
 showSlides (slideIndex);
 
 function plusSlides (n) {
-  console.log ('plus clicked');
 
   showSlides ((slideIndex += n));
+  console.log("finished PlusSlide()")
+
 }
 
 function currentSlide (n) {
   showSlides ((slideIndex = n));
+  console.log("finished currentSlide()")
+
 }
 
 function showSlides (n) {
@@ -29,4 +32,8 @@ function showSlides (n) {
   }
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
+
+  console.log("finished showSlides()")
 }
+
+console.log("All of carousel.js has run")

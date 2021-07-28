@@ -17,6 +17,7 @@ get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
 
 
 $centerValue = get_field('site_name', 'option');
+$testimonialSlideNumber = 0;
 
 ?>
 
@@ -42,7 +43,7 @@ $centerValue = get_field('site_name', 'option');
 
         <!-- Treatment List -->
         <section class="about_page_treatment_list_section">
-            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center/80%url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center/url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
@@ -133,7 +134,7 @@ $centerValue = get_field('site_name', 'option');
                 <?php if (count($about_testimonials) > 1) : ?>
                     <div style="text-align:center">
                         <a class="prev m-r-150" onclick="plusSlides(-1)">&#10094;</a>
-                        <?php foreach ($testimonials as $testimonial) : ?>
+                        <?php foreach ($about_testimonials as $testimonial) : ?>
                             <span class="dot" onclick="currentSlide(<?= $testimonialSlideNumber++ ?>)"></span>
                         <?php endforeach; ?>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>

@@ -2,7 +2,6 @@ var slideIndex = 1;
 showSlides (slideIndex);
 
 function plusSlides (n) {
-  console.log ('plus clicked');
 
   showSlides ((slideIndex += n));
 }

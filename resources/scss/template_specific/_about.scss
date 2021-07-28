@@ -596,7 +596,9 @@ h5 {
 }
 
 .about_page_testimonial_section {
-  .about_page_testimonial_container .pre,
+  .about_page_testimonial_container .prev {
+    margin: 0 100px;
+  }
   .next {
     margin: 0 100px;
   }
