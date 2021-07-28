@@ -43,7 +43,7 @@ $testimonialSlideNumber = 0;
 
         <!-- Treatment List -->
         <section class="about_page_treatment_list_section">
-            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center/url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
