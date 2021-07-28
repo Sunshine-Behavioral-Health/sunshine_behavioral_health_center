@@ -132,7 +132,7 @@ $centerValue = get_field('site_name', 'option');
                 <img src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
                 <?php if (count($about_testimonials) > 1) : ?>
                     <div style="text-align:center">
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="prev m-r-150" onclick="plusSlides(-1)">&#10094;</a>
                         <?php foreach ($testimonials as $testimonial) : ?>
                             <span class="dot" onclick="currentSlide(<?= $testimonialSlideNumber++ ?>)"></span>
                         <?php endforeach; ?>
