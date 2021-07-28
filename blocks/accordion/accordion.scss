@@ -16,6 +16,9 @@
     }
     .accordion_bottom {
         display: none;
+        .button{
+            align-self: flex-start;
+        }
     }
 
     .show {

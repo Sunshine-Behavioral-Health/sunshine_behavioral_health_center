@@ -8,12 +8,9 @@ $link = get_sub_field('link');
 $address = get_field('center_address', 'option');
 $addressBackgroundColor = get_sub_field('address_background_color');
 $backgroundImage = get_sub_field('section_background_image')['url'];
-
-//dd($accordions);
-
 ?>
 
-<section class="location-and-accordion" style="<?= !empty($backgroundImage) ? "background-image:{$backgroundImage} !important;" : "" ?>">
+<section class="location-and-accordion" style="<?= !empty($backgroundImage) ? "background-image:url({$backgroundImage}) !important;" : "" ?>">
     <div class="row wrapper">
         <div class="col-xs-12 col-md-5">
             <div class="center_location flex flex-column justify-center">

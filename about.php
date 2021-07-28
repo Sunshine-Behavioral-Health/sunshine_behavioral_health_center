@@ -23,7 +23,6 @@ $centerValue = get_field('site_name', 'option');
 
 <main id="primary" class="maxWidth about_page">
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
-<h1>I am here</h1>
     <div class="content_container">
         <!-- Content Left Drawing Right -->
         <section class="about_page_location_section">
@@ -61,30 +60,7 @@ $centerValue = get_field('site_name', 'option');
             </div>
         </section>
 
-        <!-- Accreditation and Testimonial -->
-        <section class="about_page_testimonial_section">
-            <div class="about_page_badge_container">
-                <h2>Our Accreditation</h2>
-                <div class="center_page_badges_wrapper">
-                    <?php echo get_field('legitscript_html', 'option') ?>
 
-                    <?php
-                    if (have_rows('footer_badges', 'option')) :
-                        while (have_rows('footer_badges', 'option')) : the_row();
-                    ?>
-                            <img loading="lazy" src="<?php echo get_sub_field('badge', 'option')['url']; ?>" alt="">
-                    <?php
-                        endwhile;
-                    endif;
-                    ?>
-                </div>
-            </div>
-            <div class="about_page_testimonial_container">
-                <p><?php echo get_field('about_page_testimonial') ?></p>
-                <p><?php echo get_field('about_page_testimonial_name') ?></p>
-                <img src="<?php echo get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
-            </div>
-        </section>
 
         <!-- Expandable Rows and Location iframe -->
         <section class="about_page_expandable_row_section">
@@ -122,6 +98,32 @@ $centerValue = get_field('site_name', 'option');
 
         <!-- Treatment Step Carousel -->
         <?php echo do_shortcode('[treatment_step_carousel]') ?>
+
+        <!-- Accreditation and Testimonial -->
+        <section class="about_page_testimonial_section">
+            <div class="about_page_badge_container">
+                <h2>Our Accreditation</h2>
+                <div class="center_page_badges_wrapper">
+                    <?php echo get_field('legitscript_html', 'option') ?>
+
+                    <?php
+                    if (have_rows('footer_badges', 'option')) :
+                        while (have_rows('footer_badges', 'option')) : the_row();
+                    ?>
+                            <img loading="lazy" src="<?php echo get_sub_field('badge', 'option')['url']; ?>" alt="">
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
+                </div>
+            </div>
+            <div class="about_page_testimonial_container">
+                <p><?php echo get_field('about_page_testimonial') ?></p>
+                <p><?php echo get_field('about_page_testimonial_name') ?></p>
+                <img src="<?php echo get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
+            </div>
+        </section>
+
     </div>
 </main> <?php
         get_footer();

@@ -12,9 +12,7 @@
 namespace WP_Rig\WP_Rig;
 
 get_header();
-get_template_part('template-parts/javascrblock_editoript/navigationJs');
-get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
-
+get_template_part('template-parts/javascript/navigationJs');
 
 $centerValblock_editorue = get_field('site_name', 'option');
 
