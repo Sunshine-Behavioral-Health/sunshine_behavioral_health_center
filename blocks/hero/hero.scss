@@ -10,7 +10,7 @@
             align-items: center;
             flex-direction: column;
         }
-        @include tablet-up {
+        @include desktop {
             &--subheadline {
                 width: 60%;
             }
