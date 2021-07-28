@@ -13,8 +13,6 @@ namespace WP_Rig\WP_Rig;
 
 get_header();
 get_template_part('template-parts/javascript/navigationJs');
-get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
-
 
 $centerValue = get_field('site_name', 'option');
 
@@ -42,7 +40,7 @@ $centerValue = get_field('site_name', 'option');
 
         <!-- Treatment List -->
         <section class="about_page_treatment_list_section">
-            <div class="about_page_treatment_list_container">
+            <div class="about_page_treatment_list_container" <?= !empty(get_field('about_page_treatment_list_background_image')) ? 'style= url(' . get_field('about_page_treatment_list_background_image') .  ');' : '' ?>>
                 <h2><?php echo get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
@@ -63,35 +61,36 @@ $centerValue = get_field('site_name', 'option');
 
 
         <!-- Expandable Rows and Location iframe -->
-        <section class="about_page_expandable_row_section">
-            <div class="about_page_expandable_row_container">
-                <div class="about_page_expandable_row_wrapper">
-                    <?php
-                    if (have_rows('about_page_expandable_rows')) :
-                        while (have_rows('about_page_expandable_rows')) : the_row();
-                    ?>
-                            <div class="expandable_row_element">
-                                <div class="expandable_row_element_headline_img_wrapper">
-                                    <h5><?php echo get_sub_field('headline') ?></h5>
-                                    <img src="<?php echo get_field('plus_icon', 'option')['url'] ?>" alt="">
-                                </div>
+        <section class="location-and-accordion" style="<?= !empty($backgroundImage) ? "background-image:url({$backgroundImage}) !important;" : "" ?>">
+            <div class="row wrapper">
+                <div class="col-xs-12 col-md-5">
+                    <div class="center_location flex flex-column justify-center">
+                        <iframe src="<?= $iframe ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-                                <div class="expandable_row_content hide">
-                                    <p><?php echo get_sub_field('content') ?></p>
-                                    <p></p>
-                                </div>
-                            </div>
-                    <?php
-                        endwhile;
-                    endif;
-                    ?>
-                </div>
-                <div class="about_page_expandable_row_location_container">
-                    <iframe src="<?php echo get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                    <div class="about_page_location_address">
-                        <a href="<?php echo get_field('about_page_iframe') ?>"><span>Address: </span><?= get_field('center_address', 'option') ?></a>
+                        <a href="<?= $link['url'] ?>" style="<?= !empty($addressBackgroundColor) ? "background-color:{$addressBackgroundColor} !important;" : "" ?>"><span>Address: </span><?= $address ?></a>
                     </div>
+                </div>
+                <div class="col-xs-12 col-md-7 flex flex-column justify-center">
+                    <?php foreach ($accordions as $accordion) : ?>
+                        <div class="accordion" style="<?= !empty($borderColor) ? "border-color:{$borderColor} !important;" : "" ?>">
+                            <div class="accordion_top">
+                                <h5 style="<?= !empty($borderColor) ? "color:{$borderColor} !important;" : "" ?>"><?= $accordion['headline'] ?></h5>
+                                <img class="accordion_icon" src="<?php echo get_field('plus_icon', 'option')['url'] ?>" loading="lazy" alt="Plus icon">
+                            </div>
+
+                            <div class="accordion_bottom flex flex-column">
+                                <p><?= $accordion['content'] ?></p>
+
+                                <?php if ($accordion['add_cta']) : ?>
+                                    <?php if ($accordion['cta_type'] == "link") : ?>
+                                        <a class="button" href="<?= $accordion['link']['url'] ?>" target="<?= $accordion['link']['target'] ?>"><?= $accordion['link']['title'] ?></a>
+                                    <?php else : ?>
+                                        <a class="invocaNumber button" href="tel:949-276-2886">949-276-2886</a>
+                                <?php endif;
+                                endif; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
