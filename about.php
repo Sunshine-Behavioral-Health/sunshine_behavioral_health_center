@@ -14,13 +14,13 @@ namespace WP_Rig\WP_Rig;
 get_header();
 get_template_part('template-parts/javascript/navigationJs');
 get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
+get_template_part('template-parts/javascript/about');
 
 
 $centerValue = get_field('site_name', 'option');
 $testimonialSlideNumber = 0;
 
 ?>
-
 
 <main id="primary" class="maxWidth about_page">
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
@@ -43,7 +43,7 @@ $testimonialSlideNumber = 0;
 
         <!-- Treatment List -->
         <section class="about_page_treatment_list_section">
-            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat centerurl(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
