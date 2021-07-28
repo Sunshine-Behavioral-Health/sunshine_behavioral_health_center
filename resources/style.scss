@@ -97,17 +97,6 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/shortcodes/treatment_step_progress_bar";
 @import "scss/shortcodes/treatment_step_carousel";
 
-// Blocks
-@import "../template-parts/blocks/accordion/accordion";
-@import "../template-parts/blocks/accreditation_and_testimonial/accreditation_and_testimonial";
-@import "../template-parts/blocks/columns/columns";
-@import "../template-parts/blocks/content/content";
-@import "../template-parts/blocks/hero/hero";
-@import "../template-parts/blocks/image/image";
-@import "../template-parts/blocks/list-items/list-items";
-@import "../template-parts/blocks/location-and-accordion/location-and-accordion";
-@import "../template-parts/blocks/treatment-steps/treatment-steps";
-@import "../template-parts/blocks/testimonials/testimonials";
 
 // Very bottom css for specificity reasons
 .show {
