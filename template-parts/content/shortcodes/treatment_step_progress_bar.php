@@ -28,6 +28,12 @@ function treatment_step_progress_bar($atts)
     $output .= '</ul>';
     $output .= '</div>';
     $output .= '</section>';
+
+    ob_start();
+    get_template_part('template-parts/javascript/treatmentStepsJS');
+    $output .= ob_get_clean();
+
+    
     return $output;
 }
 
