@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -33,4 +33,4 @@
         dots[slideIndex - 1].className += ' active';
 
     }
-</script>
+</script> -->
