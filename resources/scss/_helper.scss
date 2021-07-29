@@ -159,10 +159,22 @@ $step: 5;
     position: relative;
 }
 
-.color-primary{
+.color-primary {
     color: $primaryColor;
 }
 
-.color-secondary{
+.color-secondary {
     color: $secondaryColor;
+}
+
+@include mobile {
+    .mobile_full_width {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile_full_width {
+        width: 100%;
+    }
 }
