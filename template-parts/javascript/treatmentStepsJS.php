@@ -9,14 +9,15 @@
             if (currentScroll >= fixmeTop) { // apply position: fixed if you
                 $('.treatment_step_progress_bar_section').css({ // scroll to that element or below it
                     position: 'fixed',
-                    top: '75px',
+                    top: '151px',
+                    border: '2px solid red',
                     left: '0',
                     margin: '-17px 0 0 0',
                     background: '#fff'
                 });
             } else { // apply position: static
                 $('.treatment_step_progress_bar_section').css({ // if you scroll above it
-                    position: 'static'
+                    position: 'block'
                 });
             }
 
