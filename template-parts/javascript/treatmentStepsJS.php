@@ -10,7 +10,6 @@
                 $('.treatment_step_progress_bar_section').css({ // scroll to that element or below it
                     position: 'fixed',
                     top: '151px',
-                    border: '2px solid red',
                     left: '0',
                     margin: '-17px 0 0 0',
                     background: '#fff'
