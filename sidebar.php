@@ -22,7 +22,7 @@ sbh_center()->print_styles('sbh_center-sidebar', 'sbh_center-widgets');
 ?>
 <aside id="secondary" class="primary-sidebar widget-area sidebar_margin_top">
 	<?php
-	if (!is_page_template('index.php')) : get_template_part('template-parts/content/authorMedicalReviewSidebar');
+	if (!is_page_template('index.php')) : get_template_part('template-parts/content/author-and-medical-review--desktop');
 	endif; ?>
 	<?php sbh_center()->display_primary_sidebar(); ?>
 </aside><!-- #secondary -->

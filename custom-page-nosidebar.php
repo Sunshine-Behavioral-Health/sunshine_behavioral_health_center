@@ -46,7 +46,7 @@ sbh_center()->print_styles('sbh_center-content');
 
 			<!-- Medical Review -->
 			<section class="editor_and_review_section">
-				<?php get_template_part('template-parts/content/mobile_author_and_medical_review'); ?>
+				<?php get_template_part('template-parts/content/author-and-medical-review--mobile'); ?>
 			</section>
 
 			<section class="page_content list_styling ">

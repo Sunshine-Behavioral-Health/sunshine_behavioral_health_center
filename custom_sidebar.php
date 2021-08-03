@@ -43,7 +43,7 @@ get_template_part('template-parts/javascript/navigationJs');
 
 			<!-- Medical Review -->
 			<section class="editor_and_review_section hide_on_desktop">
-				<?php get_template_part('template-parts/content/mobile_author_and_medical_review'); ?>
+				<?php get_template_part('template-parts/content/author-and-medical-review--mobile'); ?>
 			</section>
 
 			<!-- Page Content -->
