@@ -34,7 +34,7 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
         <?php if (get_field("medical_review_user")) : ?>
             <div class="medical-reviewer_container flex">
                 <img id="medical_review_avatar_reference" src="<?= $medicalReviewAvatar['url']; ?>" alt="">
-                <div class="medical-reviewer_content relative flex flex-column">
+                <div class="medical-reviewer_content relative flex flex-wrap">
                     <p class="last-edited">Last Edited:</p>
                     <p class="date"><?= get_field('clinically_reviewed_date'); ?></p>
                     <p class="title">Medical Reviewer:</p>

@@ -43,18 +43,48 @@
         border-radius: 2px;
         padding: 10px;
         top: 80%;
+        right: 50%;
         max-height: 250px;
         overflow-y: auto;
-        min-width: 200px;
+        min-width: 300px;
     }
+
     &--mobile {
         @include desktop {
             display: none;
+        }
+        @include mobile {
+            img {
+                display: none;
+            }
+            .author_container,
+            .medical-reviewer_container {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .medical-reviewer_content {
+                .last-edited {
+                    width: 130px;
+                }
+                .date {
+                    flex: 1;
+                }
+                .title {
+                    width: 130px;
+                }
+                .name {
+                    flex: 1;
+                }
+            }
         }
     }
     &--desktop {
         @include mobile-and-tablet {
             display: none;
+        }
+
+        .medical-reviewer_content {
+            flex-direction: column;
         }
     }
 }
