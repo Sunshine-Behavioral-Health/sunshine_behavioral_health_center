@@ -53,38 +53,14 @@
         @include desktop {
             display: none;
         }
-        @include mobile {
-            img {
-                display: none;
-            }
-            .author_container,
-            .medical-reviewer_container {
-                width: 80%;
-                margin: 0 auto;
-            }
-            .medical-reviewer_content {
-                .last-edited {
-                    width: 130px;
-                }
-                .date {
-                    flex: 1;
-                }
-                .title {
-                    width: 130px;
-                }
-                .name {
-                    flex: 1;
-                }
-            }
+        .author_container,
+        .medical-reviewer_container {
+            padding: 0 20px;
         }
     }
     &--desktop {
         @include mobile-and-tablet {
             display: none;
-        }
-
-        .medical-reviewer_content {
-            flex-direction: column;
         }
     }
 }
