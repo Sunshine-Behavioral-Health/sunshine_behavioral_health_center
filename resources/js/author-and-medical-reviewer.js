@@ -8,7 +8,7 @@ jQuery (document).ready (function ($) {
   let screenWidth = $ (window).width ();
   if (screenWidth > 1024) {
     $ ('.author_content .name').hover (function () {
-      $ ('.author_content bio').removeClass ('hide');
+      $ ('.author_content .bio').removeClass ('hide');
     });
 
     $ ('.author_content .bio').mouseleave (function () {

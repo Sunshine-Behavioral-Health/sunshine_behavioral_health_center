@@ -8,7 +8,9 @@
     }
     img {
         width: 115px;
+        max-width: 115px;
         height: 115px;
+        max-height: 115px;
         border-radius: 50%;
         margin-right: 10px;
     }
@@ -29,6 +31,10 @@
         color: $secondaryColor;
         font-size: 14px;
         font-weight: 600;
+    }
+    .bio{
+        position: absolute;
+        top: 100%;
     }
     &--mobile {
         @include desktop {
