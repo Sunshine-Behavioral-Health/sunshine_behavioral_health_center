@@ -6,11 +6,10 @@ $AuthorMetaData = get_user_meta($AuthorUser['ID']);
 $authorAvatar = get_field('tsm_local_avatar', 'user_' . $AuthorUser['ID']);
 
 // Medical Reviewer
+$medicalReviewUser = get_field("medical_review_user");
 $medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
 $medicalReviewAvatar = get_field('tsm_local_avatar', 'user_' . $medicalReviewUser['ID']);
 $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
-$medicalReviewUser = get_field("medical_review_user");
-
 
  dd($medicalReviewAvatar); 
 ?>

@@ -5,10 +5,11 @@ $authorAvatar = get_field('tsm_local_avatar', 'user_' . $AuthorUser['ID']);
 $AuthorMetaData = get_user_meta($AuthorUser['ID']);
 
 // Medical Reviewer
+$medicalReviewUser = get_field("medical_review_user");
 $medicalReviewAvatar = get_field('tsm_local_avatar', 'user_' . $medicalReviewUser['ID']);
 $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
 $medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
-$medicalReviewUser = get_field("medical_review_user");
+
 ?>
 
 <div class="author-and-medical-review--mobile">
