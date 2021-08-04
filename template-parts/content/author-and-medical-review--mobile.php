@@ -27,7 +27,7 @@ $medicalReviewUser = get_field("medical_review_user");
     <?php if (get_field("medical_review_user")) : ?>
         <div class="author-and-medical-review--mobile--medical-reviewer">
 
-        <?php dd($medicalReviewAvatar); ?>
+        
             <img id="medical_review_avatar_reference" src="<?= $medicalReviewAvatar['url']; ?>" alt="">
             <div class="author-and-medical-review--mobile--medical-reviewer--content flex flex-column">
                 <p>Last Edited:</p>

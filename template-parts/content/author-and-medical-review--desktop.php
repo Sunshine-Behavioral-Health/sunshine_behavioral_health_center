@@ -10,6 +10,9 @@ $medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
 $medicalReviewAvatar = get_field('tsm_local_avatar', 'user_' . $medicalReviewUser['ID']);
 $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
 $medicalReviewUser = get_field("medical_review_user");
+
+
+ dd($medicalReviewAvatar); 
 ?>
 
 <?php if (get_field('editor_user') || get_field('medical_review_user')) : ?>
@@ -23,7 +26,7 @@ $medicalReviewUser = get_field("medical_review_user");
                     <p><?= get_field('last_edited_date'); ?></p>
                     <p>Author:</p>
                     <a href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"><?= $AuthorUser['display_name'] ?></a>
-                    
+
                     <div class="editor_meta_bio_container hide hide_on_mobile">
                         <h6 class="">Meet <?php echo $AuthorUser['display_name'] ?></h6>
 
