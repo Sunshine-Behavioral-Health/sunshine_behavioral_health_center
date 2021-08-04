@@ -1,23 +1,35 @@
 .author-and-medical-review {
     background-color: $navColor;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 32px;
     p {
         margin: 0;
     }
     img {
-        width: 100px;
-        height: 100px;
+        width: 115px;
+        height: 115px;
         border-radius: 50%;
+        margin-right: 10px;
     }
-    .last-edited{
-        color: blue
+    .last-edited {
+        color: $black;
+        font-weight: 600;
     }
-    .date{
-        color: green;
+    .date {
+        color: $grey;
+        font-size: 14px;
+        font-weight: 600;
     }
-    .title{
-        color: purple;
+    .title {
+        color: $black;
+        font-weight: 600;
     }
-    &
+    .name {
+        color: $secondaryColor;
+        font-size: 14px;
+        font-weight: 600;
+    }
     &--mobile {
         @include desktop {
             display: none;
