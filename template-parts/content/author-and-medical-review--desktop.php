@@ -15,14 +15,14 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
 <?php if (get_field('editor_user') || get_field('medical_review_user')) : ?>
     <div class="author-and-medical-review author-and-medical-review--desktop">
         <?php if (get_field("editor_user")) : ?>
-            <div class="author-and-medical-review--desktop--author flex">
+            <div class="author_container flex">
                 <img id="author_avatar" src="<?= $authorAvatar['url']; ?>" alt="">
-                <div class="author-and-medical-review--desktop--author--content flex flex-column">
-                    <p class="author-and-medical-review--desktop--author--content--last-edited">Last Edited:</p>
-                    <p class="author-and-medical-review--desktop--author--content--date"><?= get_field('last_edited_date'); ?></p>
-                    <p class="author-and-medical-review--desktop--author--content--title">Author:</p>
-                    <p class="author-and-medical-review--desktop--author--content--name"><?= $AuthorUser['display_name'] ?></p>
-                    <div class="author-and-medical-review--desktop--author--bio hide">
+                <div class="author_content flex flex-column">
+                    <p class="last-edited">Last Edited:</p>
+                    <p class="date"><?= get_field('last_edited_date'); ?></p>
+                    <p class="title">Author:</p>
+                    <p class="name"><?= $AuthorUser['display_name'] ?></p>
+                    <div class="bio hide">
                         <h6 class="">Meet <?= $AuthorUser['display_name'] ?></h6>
 
                         <div> <?= shorten_string($AuthorMetaData['description'][0], 30); ?>... <a href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"> Read More</a></div>
@@ -32,16 +32,14 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
         <?php endif; ?>
 
         <?php if (get_field("medical_review_user")) : ?>
-            <div class="author-and-medical-review--desktop--medical-reviewer flex">
+            <div class="medical-reviewer_container flex">
                 <img id="medical_review_avatar_reference" src="<?= $medicalReviewAvatar['url']; ?>" alt="">
-                <div class="author-and-medical-review--desktop--medical-reviewer--content flex flex-column">
-                    <p class="author-and-medical-review--desktop--medical-reviewer--content--last-edited">Last Edited:</p>
-                    <p class="author-and-medical-review--desktop--medical-reviewer--content--date"><?= get_field('clinically_reviewed_date'); ?></p>
-                    <p class="author-and-medical-review--desktop--medical-reviewer--content--title">Medical Reviewer:</p>
-                    <p class="author-and-medical-review--desktop--medical-reviewer--content--medical-reviewer-title">Medical Reviewer:</p>
-                    <p class="author-and-medical-review--desktop--medical-reviewer--content--name"><?php echo $medicalReviewUser['display_name'] ?></p>
-
-                    <div class="author-and-medical-review--desktop--medical-reviewer--bio hide">
+                <div class="medical-reviewer_content flex flex-column">
+                    <p class="last-edited">Last Edited:</p>
+                    <p class="date"><?= get_field('clinically_reviewed_date'); ?></p>
+                    <p class="title">Medical Reviewer:</p>
+                    <p class="name"><?php echo $medicalReviewUser['display_name'] ?></p>
+                    <div class="bio hide">
                         <h6 class="">Meet <?= $medicalReviewUser['display_name'] ?></h6>
                         <div> <?= shorten_string($medicalReviewerMetaData['description'][0], 30); ?>...<a href="/contributors#<?= $medicalReviewerMetaData['first_name'][0] . '_' . $medicalReviewerMetaData['last_name'][0] ?>"> Read More</a></div>
                     </div>

@@ -7,34 +7,20 @@ jQuery (document).ready (function ($) {
 
   let screenWidth = $ (window).width ();
   if (screenWidth > 1024) {
-    $ (
-      '.author-and-medical-review--desktop--editor--content--author-name'
-    ).hover (function () {
-      $ ('.author-and-medical-review--desktop--author--bio').removeClass (
-        'hide'
-      );
+    $ ('.author_content .name').hover (function () {
+      $ ('.author_content bio').removeClass ('hide');
     });
 
-    $ (
-      '.author-and-medical-review--desktop--author--bio'
-    ).mouseleave (function () {
-      $ ('.author-and-medical-review--desktop--author--bio').addClass ('hide');
+    $ ('.author_content .bio').mouseleave (function () {
+      $ ('.author_content .bio').addClass ('hide');
     });
 
-    $ (
-      '.author-and-medical-review--desktop--medical-reviewer--content--name'
-    ).hover (function () {
-      $ (
-        '.author-and-medical-review--desktop--medical-reviewer--bio'
-      ).removeClass ('hide');
+    $ ('.medical-reviewer_content .name').hover (function () {
+      $ ('.medical-reviewer_content .bio').removeClass ('hide');
     });
 
-    $ (
-      '.author-and-medical-review--desktop--medical-reviewer--bio'
-    ).mouseleave (function () {
-      $ (
-        '.author-and-medical-review--desktop--medical-reviewer--bio'
-      ).addClass ('hide');
+    $ ('.medical-reviewer_content .bio').mouseleave (function () {
+      $ ('.medical-reviewer_content .bio').addClass ('hide');
     });
   }
 });

@@ -1,29 +1,31 @@
 .author-and-medical-review {
     background-color: $navColor;
+    p {
+        margin: 0;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .last-edited{
+        color: blue
+    }
+    .date{
+        color: green;
+    }
+    .title{
+        color: purple;
+    }
+    &
     &--mobile {
         @include desktop {
             display: none;
-        }
-        &--author,
-        &--medical-reviewer {
-            img {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-            }
         }
     }
     &--desktop {
         @include mobile-and-tablet {
             display: none;
-        }
-        &--author,
-        &--medical-reviewer {
-            img {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-            }
         }
     }
 }
