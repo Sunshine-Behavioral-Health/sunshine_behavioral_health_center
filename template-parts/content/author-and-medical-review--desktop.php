@@ -14,7 +14,6 @@ $medicalReviewUser = get_field("medical_review_user");
 
 <?php if (get_field('editor_user') || get_field('medical_review_user')) : ?>
     <div class="author-and-medical-review--desktop">
-        <h2>AUTHOR AND MEDICAL REVIEW MOBILE</h2>
         <?php if (get_field("editor_user")) : ?>
 
             <div class="author-and-medical-review--desktop--editor">
@@ -24,6 +23,12 @@ $medicalReviewUser = get_field("medical_review_user");
                     <p><?= get_field('last_edited_date'); ?></p>
                     <p>Author:</p>
                     <a href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"><?= $AuthorUser['display_name'] ?></a>
+                    
+                    <div class="editor_meta_bio_container hide hide_on_mobile">
+                        <h6 class="">Meet <?php echo $AuthorUser['display_name'] ?></h6>
+
+                        <div> <?php echo shorten_string($AuthorMetaData['description'][0], 30); ?>... <a href="/contributors#<?php echo $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"> Read More</a></div>
+                    </div>
                 </div>
             </div>
         <?php endif; ?>
@@ -38,6 +43,13 @@ $medicalReviewUser = get_field("medical_review_user");
                     <a class="" href="/contributors#<?= $medicalReviewerMetaData['first_name'][0] . '_' . $medicalReviewerMetaData['last_name'][0] ?>">
                         <?= $medicalReviewUser['display_name'] ?>
                     </a>
+
+                    <p></p>
+
+                    <div class="medical_review_meta_bio_container hide hide_on_mobile">
+                        <h6 class="">Meet <?= $medicalReviewUser['display_name'] ?></h6>
+                        <div> <?= shorten_string($medicalReviewerMetaData['description'][0], 30); ?>...<a href="/contributors#<?= $medicalReviewerMetaData['first_name'][0] . '_' . $medicalReviewerMetaData['last_name'][0] ?>"> Read More</a></div>
+                    </div>
                 </div>
             </div>
         <?php endif; ?>
