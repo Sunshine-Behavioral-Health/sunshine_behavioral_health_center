@@ -15,26 +15,24 @@ $medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
 <div class="author-and-medical-review--mobile">
     <?php if (get_field("editor_user")) : ?>
         <div class="author-and-medical-review--mobile--editor">
-            <img id="editor_avatar_reference" src="<?= $authorAvatar['url']; ?>" alt="">
+            <img id="author_avatar" src="<?= $authorAvatar['url']; ?>" alt="">
             <div class="author-and-medical-review--mobile--editor--content flex flex-column">
-                <p>Last Edited:</p>
-                <p><?= get_field('last_edited_date'); ?></p>
-                <p>Author:</p>
-                <a href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"><?= $AuthorUser['display_name'] ?></a>
+                <p class="author-and-medical-review--mobile--editor--content--last-edited">Last Edited:</p>
+                <p class="author-and-medical-review--mobile--editor--content--date"><?= get_field('last_edited_date'); ?></p>
+                <p class="author-and-medical-review--mobile--editor--content--author-title">Author:</p>
+                <a class="author-and-medical-review--mobile--editor--content--author-name" href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"><?= $AuthorUser['display_name'] ?></a>
             </div>
         </div>
     <?php endif; ?>
 
     <?php if (get_field("medical_review_user")) : ?>
         <div class="author-and-medical-review--mobile--medical-reviewer">
-
-        
-            <img id="medical_review_avatar_reference" src="<?= $medicalReviewAvatar['url']; ?>" alt="">
+            <img id="medical-reviewer_avatar" src="<?= $medicalReviewAvatar['url']; ?>" alt="">
             <div class="author-and-medical-review--mobile--medical-reviewer--content flex flex-column">
-                <p>Last Edited:</p>
-                <p><?= get_field('clinically_reviewed_date'); ?></p>
-                <p>Medical Reviewer:</p>
-                <a class="" href="/contributors#<?= $medicalReviewerMetaData['first_name'][0] . '_' . $medicalReviewerMetaData['last_name'][0] ?>">
+                <p class="author-and-medical-review--mobile--medical-reviewer--content--last-edited">Last Edited:</p>
+                <p class="author-and-medical-review--mobile--medical-reviewer--content--last-edited"><?= get_field('clinically_reviewed_date'); ?></p>
+                <p class="author-and-medical-review--mobile--medical-reviewer--content--last-edited">Medical Reviewer:</p>
+                <a class="author-and-medical-review--mobile--medical-reviewer--content--last-edited" href="/contributors#<?= $medicalReviewerMetaData['first_name'][0] . '_' . $medicalReviewerMetaData['last_name'][0] ?>">
                     <?= $medicalReviewUser['display_name'] ?>
                 </a>
             </div>

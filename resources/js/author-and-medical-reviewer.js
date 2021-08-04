@@ -1,29 +1,18 @@
 jQuery (document).ready (function ($) {
-  $ ('.medical_review_meta_about').click (function () {
-    $ ('.medical_review_meta_about_paragraph_container').toggleClass (
-      'hide_bio'
-    );
-  });
+  let authorImageDataSrc = $ ('#author_avatar').attr ('data-src');
+  let medicalImageDataSrc = $ ('#medical-reviewer_avatar').attr ('data-src');
 
-  $ ('.editor_meta_about').click (function () {
-    $ ('.editor_meta_about_paragraph_container').toggleClass ('hide_bio');
-  });
-
-  let authorImageDataSrc = $ ('#editor_avatar_reference').attr ('data-src');
-  let medicalImageDataSrc = $ ('#medical_review_avatar_reference').attr (
-    'data-src'
-  );
-  $ ('#editor_avatar_reference img').attr ('src', authorImageDataSrc);
-  $ ('#medical_review_avatar_reference img').attr ('src', medicalImageDataSrc);
+  $ ('#author_avatar').attr ('src', authorImageDataSrc);
+  $ ('#medical-reviewer_avatar').attr ('src', medicalImageDataSrc);
 
   let screenWidth = $ (window).width ();
   if (screenWidth > 1024) {
-    $ ('.editor_meta_name').hover (function () {
-      $ ('.editor_meta_bio_container').removeClass ('hide');
+    $ ('.author-and-medical-review--desktop--editor--content--author-name').hover (function () {
+      $ ('.author-and-medical-review--desktop--author--bio').removeClass ('hide');
     });
 
-    $ ('.editor_container').mouseleave (function () {
-      $ ('.editor_meta_bio_container').addClass ('hide');
+    $ ('.author-and-medical-review--desktop--author--bio').mouseleave (function () {
+      $ ('.author-and-medical-review--desktop--author--bio').addClass ('hide');
     });
 
     $ ('.medical_review_meta_name').hover (function () {
