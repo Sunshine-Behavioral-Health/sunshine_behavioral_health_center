@@ -14,6 +14,7 @@ $medicalReviewUser = get_field("medical_review_user");
 
 
 <section class="author-and-medical-review--desktop">
+<h2>AUTHOR AND MEDICAL REVIEW DESKTOP</h2>
     <div class="wrapper">
         <?php if (get_field("editor_user")) : ?>
 

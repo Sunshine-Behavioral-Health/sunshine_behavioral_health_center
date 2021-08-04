@@ -12,6 +12,7 @@ $medicalReviewUser = get_field("medical_review_user");
 ?>
 
 <div class="author-and-medical-review--mobile">
+    <h2>AUTHOR AND MEDICAL REVIEW MOBILE</h2>
     <?php if (get_field("editor_user")) : ?>
 
         <div class="author-and-medical-review--mobile--editor">
