@@ -14,7 +14,7 @@ $medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
 <?php if (get_field('editor_user') || get_field('medical_review_user')) : ?>
     <div class="author-and-medical-review author-and-medical-review--mobile">
         <?php if (get_field("editor_user")) : ?>
-            <div class="author_container flex">
+            <div class="author_container flex m-b-15">
                 <img id="author_avatar" src="<?= $authorAvatar['url']; ?>" alt="">
                 <div class="author_content flex flex-column">
                     <p class="last-edited">Last Edited:</p>
