@@ -21,7 +21,7 @@ $medicalReviewUser = get_field("medical_review_user");
                 <p>Last Edited:</p>
                 <p><?= get_field('last_edited_date'); ?></p>
                 <p>Author:</p>
-                <a href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>">><?= $AuthorUser['display_name'] ?></a>
+                <a href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"><?= $AuthorUser['display_name'] ?></a>
             </div>
         </div>
     <?php endif; ?>
