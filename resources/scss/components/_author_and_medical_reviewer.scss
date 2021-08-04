@@ -5,7 +5,7 @@
     margin-bottom: 32px;
     p {
         margin: 0;
-        line-height: 1.2;
+        line-height: 1.5;
     }
     img {
         width: 115px;
@@ -42,7 +42,10 @@
         border: 2px solid $secondaryColor;
         border-radius: 2px;
         padding: 10px;
-        top: 100%;
+        top: 80%;
+        max-height: 250px;
+        overflow-y: auto;
+        min-width: 200px;
     }
     &--mobile {
         @include desktop {
