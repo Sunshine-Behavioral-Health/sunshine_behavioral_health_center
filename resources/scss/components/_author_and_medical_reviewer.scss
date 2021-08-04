@@ -34,7 +34,15 @@
     }
     .bio{
         position: absolute;
+        -webkit-box-shadow: 0 8px 16px 0 #000;
+        box-shadow: 0 8px 16px 0 #000;
+        z-index: 10;
+        background: #fff;
+        border: 2px solid $secondaryColor;
+        border-radius: 2px;
+        padding: 10px;
         top: 100%;
+    }
     }
     &--mobile {
         @include desktop {

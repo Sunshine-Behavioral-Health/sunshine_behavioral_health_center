@@ -9,6 +9,7 @@ jQuery (document).ready (function ($) {
   if (screenWidth > 1024) {
     $ ('.author_content .name').hover (function () {
       $ ('.author_content .bio').removeClass ('hide');
+      $ ('.medical-reviewer_content .bio').addClass('hide');
     });
 
     $ ('.author_content .bio').mouseleave (function () {
@@ -17,10 +18,16 @@ jQuery (document).ready (function ($) {
 
     $ ('.medical-reviewer_content .name').hover (function () {
       $ ('.medical-reviewer_content .bio').removeClass ('hide');
+      $ ('.author_content .bio').addClass('hide');
     });
 
     $ ('.medical-reviewer_content .bio').mouseleave (function () {
       $ ('.medical-reviewer_content .bio').addClass ('hide');
+    });
+
+    $ ('.author-and-medical-review').mouseleave (function () {
+      $ ('.medical-reviewer_content .bio').addClass ('hide');
+      $ ('.author_content .bio').addClass ('hide');
     });
   }
 });
