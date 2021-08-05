@@ -14,6 +14,12 @@ $grey-light: #ededed;
     z-index: 3;
     background-color: #fff;
 }
+
+.treatment-step--sticky{
+    position: fixed;
+    top: 145px;
+    border: 2px solid red;
+}
 .multi-steps {
     display: table;
     table-layout: fixed;

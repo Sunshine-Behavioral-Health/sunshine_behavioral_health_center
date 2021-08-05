@@ -4,11 +4,9 @@
 
     window.onscroll = function() {
         if (window.pageYOffset > currStickyPos) {
-            stickyElem.style.position = "fixed";
-            stickyElem.style.top = "145px";
+            stickyElem.classList.add("treatment-step--sticky");
         } else {
-            stickyElem.style.position = "relative";
-            stickyElem.style.top = "initial";
+            stickyElem.classList.remove("treatment-step--sticky");
         }
     }
 </script>
