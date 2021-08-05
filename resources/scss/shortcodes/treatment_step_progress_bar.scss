@@ -10,15 +10,14 @@ $grey-light: #ededed;
         background-color: $grey-light;
     }
 }
-.treatment_step_progress_bar_section{
-    z-index: 3;
-    background-color: #fff;
+.treatment_step_progress_bar_section {
+    position: relative;
 }
 
-.treatment-step--sticky{
+.treatment-step--sticky {
     position: fixed;
+    z-index: 99;
     top: 145px;
-    border: 2px solid red;
 }
 .multi-steps {
     display: table;
@@ -26,7 +25,7 @@ $grey-light: #ededed;
     width: 100%;
     margin: 0 !important;
     padding: 0;
-    li{
+    li {
         list-style: none;
     }
     > a {

@@ -5,6 +5,7 @@
     window.onscroll = function() {
         if (window.pageYOffset > currStickyPos) {
             stickyElem.classList.add("treatment-step--sticky");
+            console.log("new")
         } else {
             stickyElem.classList.remove("treatment-step--sticky");
         }
