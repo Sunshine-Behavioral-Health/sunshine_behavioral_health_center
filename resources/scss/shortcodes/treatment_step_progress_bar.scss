@@ -38,6 +38,12 @@ $grey-light: #ededed;
     width: 100%;
     margin: 0 !important;
     padding: 0;
+    a {
+        width: 75px;
+        @include desktop {
+            width: 25px;
+        }
+    }
     li {
         list-style: none;
     }
@@ -47,10 +53,6 @@ $grey-light: #ededed;
         display: table-cell;
         position: relative;
         color: $secondaryColor;
-        width: 125px;
-        @include mobile-and-tablet {
-            width: 75px;
-        }
 
         &:before {
             content: "\f00c";
