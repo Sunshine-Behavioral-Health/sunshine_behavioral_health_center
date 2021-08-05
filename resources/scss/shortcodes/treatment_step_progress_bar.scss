@@ -28,6 +28,12 @@ $grey-light: #ededed;
     }
 }
 
+@include screenQuery(400) {
+    .treatment-step--sticky {
+        top: 125px;
+    }
+}
+
 .treatment_step_progress_bar_container {
     width: 100%;
     overflow-x: auto;
