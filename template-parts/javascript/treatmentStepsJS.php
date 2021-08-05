@@ -4,9 +4,8 @@
 
     window.onscroll = function() {
         if (window.pageYOffset > currStickyPos) {
-            console.log("added fixed position")
             stickyElem.style.position = "fixed";
-            stickyElem.style.top = "150px";
+            stickyElem.style.top = "145px";
         } else {
             stickyElem.style.position = "relative";
             stickyElem.style.top = "initial";

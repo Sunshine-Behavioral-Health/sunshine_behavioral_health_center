@@ -10,6 +10,10 @@ $grey-light: #ededed;
         background-color: $grey-light;
     }
 }
+.treatment_step_progress_bar_section{
+    z-index: 3;
+    background-color: #fff;
+}
 .multi-steps {
     display: table;
     table-layout: fixed;
