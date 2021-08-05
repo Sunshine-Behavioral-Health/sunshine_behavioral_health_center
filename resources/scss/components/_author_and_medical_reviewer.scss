@@ -53,6 +53,10 @@
         @include desktop {
             display: none;
         }
+
+        .author_content_titles{
+            width: 115px;
+        }
     }
     &--desktop {
         @include mobile-and-tablet {
