@@ -28,9 +28,10 @@ $grey-light: #ededed;
     }
 }
 
-@include screenQuery(400) {
+@media (max-width: 400px) {
     .treatment-step--sticky {
-        top: 125px;
+        top: 105px;
+        border: 2px solid green;
     }
 }
 
