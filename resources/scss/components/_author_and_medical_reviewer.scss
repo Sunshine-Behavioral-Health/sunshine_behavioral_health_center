@@ -1,8 +1,4 @@
 .author-and-medical-review {
-    background-color: $navColor;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 32px;
     p {
         margin: 0;
         line-height: 1.5;
@@ -53,12 +49,18 @@
         @include desktop {
             display: none;
         }
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
 
-        .author_content_titles{
-            width: 115px;
+        .author_container {
+            border-bottom: 1px solid;
         }
     }
     &--desktop {
+        background-color: $navColor;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 32px;
         @include mobile-and-tablet {
             display: none;
         }
