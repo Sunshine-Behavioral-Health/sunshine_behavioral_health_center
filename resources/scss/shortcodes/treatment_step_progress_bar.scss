@@ -12,19 +12,19 @@ $grey-light: #ededed;
 }
 .treatment_step_progress_bar_section {
     position: relative;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .treatment-step--sticky {
     position: fixed;
     z-index: 99;
-    top: 135px;
+    top: 130px;
     margin-left: -20px;
     background-color: #fff;
 }
 @include desktop {
     .treatment-step--sticky {
-        top: 140px;
+        top: 135px;
     }
 }
 
