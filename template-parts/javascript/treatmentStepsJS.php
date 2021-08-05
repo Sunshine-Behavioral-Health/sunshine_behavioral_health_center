@@ -6,7 +6,7 @@
         if (window.pageYOffset > currStickyPos) {
             console.log("added fixed position")
             stickyElem.style.position = "fixed";
-            stickyElem.style.top = "300px";
+            stickyElem.style.top = "150px";
         } else {
             stickyElem.style.position = "relative";
             stickyElem.style.top = "initial";
