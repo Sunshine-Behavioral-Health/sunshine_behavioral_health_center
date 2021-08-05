@@ -12,6 +12,7 @@ $grey-light: #ededed;
 }
 .treatment_step_progress_bar_section {
     position: relative;
+    padding: 0;
 }
 
 .treatment-step--sticky {
@@ -27,6 +28,10 @@ $grey-light: #ededed;
     }
 }
 
+.treatment_step_progress_bar_container {
+    width: 100%;
+    overflow-x: auto;
+}
 .multi-steps {
     display: table;
     table-layout: fixed;
@@ -42,6 +47,10 @@ $grey-light: #ededed;
         display: table-cell;
         position: relative;
         color: $secondaryColor;
+        width: 125px;
+        @include mobile-and-tablet {
+            width: 75px;
+        }
 
         &:before {
             content: "\f00c";
