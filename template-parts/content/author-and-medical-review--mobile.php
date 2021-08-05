@@ -12,15 +12,15 @@ $medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
 
 ?>
 <?php if (get_field('editor_user') || get_field('medical_review_user')) : ?>
-    <div class="author-and-medical-review author-and-medical-review--mobile">
+    <div class="author-and-medical-review author-and-medical-review--mobile p-t-15 p-b-15">
         <?php if (get_field("editor_user")) : ?>
-            <div class="author_container flex m-b-15">
+            <div class="author_container flex m-b-15 p-b-10">
                 <div class="author_content flex flex-column">
-                    <div class="flex">
+                    <div class="flex flex-column">
                         <p class="last-edited m-r-15">Last Edited:</p>
                         <p class="date"><?= get_field('last_edited_date'); ?></p>
                     </div>
-                    <div class="flex">
+                    <div class="flex flex-column">
                         <p class="title m-r-15">Author:</p>
                         <a class="name" href="/contributors#<?= $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"><?= $authorUser['display_name'] ?></a>
                     </div>
