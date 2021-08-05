@@ -1,32 +1,15 @@
 <script>
-    jQuery(document).ready(function($) {
-        var fixmeTop = $('.treatment_step_progress_bar_section').offset().top; // get initial position of the element
+    stickyElem = document.querySelector(".treatment_step_progress_bar_section");
+    currStickyPos = stickyElem.getBoundingClientRect().top + window.pageYOffset;
 
-        $(window).scroll(function() { // assign scroll event listener
-
-            var currentScroll = $(window).scrollTop(); // get current position
-
-            if (currentScroll >= fixmeTop) { // apply position: fixed if you
-                $('.treatment_step_progress_bar_section').css({ // scroll to that element or below it
-                    position: 'fixed',
-                    top: '151px',
-                    left: '0',
-                    margin: '-17px 0 0 0',
-                    background: '#fff'
-                });
-            } else { // apply position: static
-                $('.treatment_step_progress_bar_section').css({ // if you scroll above it
-                    position: 'block'
-                });
-            }
-
-        });
-    });
+    window.onscroll = function() {
+        if (window.pageYOffset > currStickyPos) {
+            console.log("added fixed position")
+            stickyElem.style.position = "fixed";
+            stickyElem.style.top = "300px";
+        } else {
+            stickyElem.style.position = "relative";
+            stickyElem.style.top = "initial";
+        }
+    }
 </script>
-
-
-position: fixed;
-    top: 75px;
-    left: 0px;
-    margin: -10px 0px 0px;
-    background-color: #fff;
