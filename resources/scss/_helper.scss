@@ -98,34 +98,34 @@ $step: 5;
 @for $i from 1 through (ceil($max/$step) + $step) {
     $value: ($i - 1) * $step;
     .m-#{$value} {
-        margin: #{$value}px;
+        margin: #{$value}px !important;
     }
     .m-t-#{$value} {
-        margin-top: #{$value}px;
+        margin-top: #{$value}px !important;
     }
     .m-r-#{$value} {
-        margin-right: #{$value}px;
+        margin-right: #{$value}px !important;
     }
     .m-b-#{$value} {
-        margin-bottom: #{$value}px;
+        margin-bottom: #{$value}px !important;
     }
     .m-l-#{$value} {
-        margin-left: #{$value}px;
+        margin-left: #{$value}px !important;
     }
     .p-#{$value} {
-        padding: #{$value}px;
+        padding: #{$value}px !important;
     }
     .p-t-#{$value} {
-        padding-top: #{$value}px;
+        padding-top: #{$value}px !important;
     }
     .p-r-#{$value} {
-        padding-right: #{$value}px;
+        padding-right: #{$value}px !important;
     }
     .p-b-#{$value} {
-        padding-bottom: #{$value}px;
+        padding-bottom: #{$value}px !important;
     }
     .p-l-#{$value} {
-        padding-left: #{$value}px;
+        padding-left: #{$value}px !important;
     }
 }
 
