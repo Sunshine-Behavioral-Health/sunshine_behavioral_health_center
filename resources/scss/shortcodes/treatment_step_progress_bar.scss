@@ -28,10 +28,15 @@ $grey-light: #ededed;
     }
 }
 
+@media (max-width: 480px) {
+    .treatment-step--sticky {
+        top: 115px;
+    }
+}
+
 @media (max-width: 400px) {
     .treatment-step--sticky {
         top: 105px;
-        border: 2px solid green;
     }
 }
 
