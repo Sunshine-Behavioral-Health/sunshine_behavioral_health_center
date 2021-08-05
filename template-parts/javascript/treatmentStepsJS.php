@@ -10,4 +10,5 @@
             stickyElem.classList.remove("treatment-step--sticky");
         }
     }
+
 </script>

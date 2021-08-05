@@ -17,8 +17,15 @@ $grey-light: #ededed;
 .treatment-step--sticky {
     position: fixed;
     z-index: 99;
-    top: 145px;
+    top: 135px;
+    margin-left: -20px;
 }
+@include desktop {
+    .treatment-step--sticky {
+        top: 140px;
+    }
+}
+
 .multi-steps {
     display: table;
     table-layout: fixed;
