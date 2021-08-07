@@ -89,31 +89,27 @@ if (is_home()) {
 
 
 	<!-- CTA Banner -->
-	<section class="background-color-secondary p-t-20 p-b-20">
+	<section class="background-color-secondary p-t-20 p-b-20 flex flex-column justify-center align-center">
 		<h2 class="text-center"><?= get_field('interjection_cta_one_headline') ?></h2>
-		<a href="tel:949-276-2886" class="invocaNumber button"></a>
+		<a href="tel:949-276-2886" class="invocaNumber button">949-276-2886</a>
 	</section>
 
+
 	<!-- Badges -->
-	<section>
-		<div class="">
-			<div class="row  badge_container">
-				<div class="badge_image">
-					<?php echo get_field('legitscript_html', 'option') ?>
-					<p><?php echo get_field('badge_1_text'); ?></p>
-				</div>
-				<div class="badge_image">
-					<img loading="lazy" src="<?php echo get_field('badge_2')['url'] ?>" alt="">
-					<p><?php echo get_field('badge_2_text'); ?></p>
-				</div>
-				<div class="badge_image">
-					<img loading="lazy" src="<?php echo get_field('badge_3')['url'] ?>" alt="">
-					<p><?php echo get_field('badge_3_text'); ?></p>
-				</div>
-			</div>
-			<div class="badge_paragraph_container">
-				<p><?php echo get_field('badge_subtext') ?></p>
-			</div>
+	<section class="flex flex-wrap">
+		<div class="flex flex-column">
+			<?= get_field('legitscript_html', 'option') ?>
+			<p><?php echo get_field('badge_1_text'); ?></p>
+
+		</div>
+		<div class="flex flex-column">
+			<img loading="lazy" src="<?php echo get_field('badge_2')['url'] ?>" alt="">
+			<p><?php echo get_field('badge_2_text'); ?></p>
+
+		</div>
+		<div class="flex flex-column">
+			<img loading="lazy" src="<?php echo get_field('badge_3')['url'] ?>" alt="">
+			<p><?php echo get_field('badge_3_text'); ?></p>
 		</div>
 	</section>
 
