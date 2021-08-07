@@ -156,7 +156,6 @@ if (is_home()) {
 	<section class="services-cards section-padding">
 		<h2 class="text-center">OUR SERVICES</h2>
 		<div class="flex">
-			<?php dd(get_field('inpatient_cards')); ?>
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
 				<h2>there is a service cards</h2>
 				<div class="col-xs-12 col-sm-6 col-md-12 flex flex-column align-center">
