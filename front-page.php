@@ -72,33 +72,22 @@ if (is_home()) {
 	<?php get_template_part('template-parts/content/homeCovidNotice'); ?>
 
 	<!-- Inpatient Treatment -->
+	<h2>Before Cards</h2>
 	<section>
-		<div class="treatment_programs_container row  width_restriction">
-			<h2 class="col-12"><?php echo get_field('inpatient_treatment_headline') ?></h2>
-			<div class="treatment_program_container row">
-
-				<?php
-				if (have_rows('inpatient_treatment_programs')) :
-					while (have_rows('inpatient_treatment_programs')) : the_row();
-				?>
-						<div class="col-md-6 col-lg-3 inpatient_treatment_card">
-							<a href="<?php echo get_sub_field('link') ?>">
-								<div class="icon_container"><img class="icon" src="<?php echo get_sub_field('icon')['url'] ?>"></div>
-							</a>
-							<h3><?php the_sub_field('title') ?></h3>
-							<p><?php the_sub_field('content') ?></p>
-						</div>
-				<?php
-					endwhile;
-				endif;
-				?>
-
-			</div>
-
+		<h2 class=""><?= get_field('inpatient_treatment_headline') ?></h2>
+		<div class="row">
+			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
+				<div class="col-xs-12 col-sm-6 flex flex-column align-center">
+					<a href="<?= $column['link'] ?>">
+						<div class="icon_container"><img class="icon" src="<?= get_sub_field('icon')['url'] ?>"></div>
+					</a>
+					<h3><?= $column['title'] ?></h3>
+					<p><?= $column['content'] ?></p>
+				</div>
+			<?php endforeach; ?>
 		</div>
 	</section>
-
-	<!-- End Treatment -->
+	<h2>After cards</h2>
 
 	<!-- Healing Interjection -->
 	<section>
