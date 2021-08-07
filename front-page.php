@@ -242,16 +242,18 @@ if (is_home()) {
 
 	<!-- Treatment Resources -->
 	<section class="section-padding treatment-resources-columns">
-		<img src="" alt="">
-		<h2></h2>
-		<div class="row">
-			<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
-				<div class="col-xs-12 col-sm-6 treatment-resources-columns--column">
-					<h3><?= $treatmentColumns['headline'] ?></h3>
-					<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
-					<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary"></a>
-				</div>
-			<?php endforeach; ?>
+		<div class="wrapper">
+			<img src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>" alt="">
+			<h2><?= get_field('addiction_treatment_headline') ?></h2>
+			<div class="row">
+				<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
+					<div class="col-xs-12 col-sm-6 treatment-resources-columns--column">
+						<h3 class="color-secondary"><?= $treatmentColumns['headline'] ?></h3>
+						<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
+						<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary"><?= get_sub_field('link_text') ?></a>
+					</div>
+				<?php endforeach; ?>
+			</div>
 		</div>
 	</section>
 
