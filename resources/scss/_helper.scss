@@ -175,6 +175,14 @@ $step: 5;
     color: #000;
 }
 
+.background-color-primary{
+    background-color: $primaryColor;
+}
+
+.background-color-secondary{
+    background-color: $secondaryColor;
+}
+
 @include mobile {
     .mobile_full_width {
         width: 100%;

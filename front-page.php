@@ -89,22 +89,9 @@ if (is_home()) {
 
 
 	<!-- CTA Banner -->
-	<section>
-		<h2 class="text-center"><?php echo get_field('interjection_cta_one_headline') ?></h2>
-
-	</section>
-
-	<!-- Healing Interjection -->
-	<section>
-		<div class="">
-			<div class="healing_background">
-				<h2 class="section_headline healing_headline"><?php echo get_field('interjection_cta_one_headline') ?></h2>
-				<?php
-				$interjectionCTAOne = get_field('interjection_cta_button')
-				?>
-				<div class="cta_btn secondary_color_cta interjection_cta"><a class="invocaNumber hpPhone" href="<?php echo $interjectionCTAOne['url'] ?>"><?php echo $interjectionCTAOne['title'] ?></a></div>
-			</div>
-		</div>
+	<section class="background-color-secondary p-t-20 p-b-20">
+		<h2 class="text-center"><?= get_field('interjection_cta_one_headline') ?></h2>
+		<a href="tel:949-276-2886" class="invocaNumber button"></a>
 	</section>
 
 	<!-- Badges -->
