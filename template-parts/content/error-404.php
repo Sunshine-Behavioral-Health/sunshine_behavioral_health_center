@@ -14,7 +14,7 @@ namespace WP_Rig\WP_Rig;
 	<h2>You can still get the help you need</h2>
 
 	<div>
-		<?php echo do_shortcode('[phone_cta_shortcode]') ?>
+		<?= do_shortcode('[phone_cta_shortcode]') ?>
 	</div>
 
 	<div class="page-content">

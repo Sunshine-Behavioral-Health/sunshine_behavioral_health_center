@@ -28,8 +28,8 @@ namespace WP_Rig\WP_Rig;
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<?php echo get_field('meta') ?>
-	<?php echo get_field('google_header_meta', 'option') ?>
+	<?= get_field('meta') ?>
+	<?= get_field('google_header_meta', 'option') ?>
 
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -50,13 +50,13 @@ namespace WP_Rig\WP_Rig;
 				j.src =
 					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', '<?php echo get_field('google_tag_manger_tracking_id', 'option') ?>');
+			})(window, document, 'script', 'dataLayer', '<?= get_field('google_tag_manger_tracking_id', 'option') ?>');
 		}, 1000);
 	</script>
 
 	<!-- End Google Tag Manager -->
 
-	<?php echo get_field('other_header_scripts', 'option') ?>
+	<?= get_field('other_header_scripts', 'option') ?>
 
 
 
@@ -68,7 +68,7 @@ namespace WP_Rig\WP_Rig;
 
 <body <?php body_class(); ?>>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo get_field('google_tag_manger_tracking_id', 'option') ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= get_field('google_tag_manger_tracking_id', 'option') ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
 	<?php wp_body_open(); ?>

@@ -26,8 +26,8 @@ get_template_part('template-parts/javascript/navigationJs');
 <main id="primary" class="">
 	<div class="page_wrapper">
 		<div class="page_content_below_image">
-			<h1><?php echo get_field('page_headline') ?></h1>
-			<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+			<h1><?= get_field('page_headline') ?></h1>
+			<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
 
 			<!-- Covid Notice -->
 			<section class="covid_section hide_on_desktop">
@@ -35,7 +35,7 @@ get_template_part('template-parts/javascript/navigationJs');
 			</section>
 
 			<section class="page_content list_styling ">
-				<?php echo get_field('content') ?>
+				<?= get_field('content') ?>
 				<div class="author_container">
 					<h3>Authors</h3>
 					<?php
@@ -55,19 +55,19 @@ get_template_part('template-parts/javascript/navigationJs');
 						// print_r($userdata)			
 
 					?>
-						<li id="<?php echo esc_html($user->first_name) . '_' .  esc_html($user->last_name) ?>" class="author_element">
+						<li id="<?= esc_html($user->first_name) . '_' .  esc_html($user->last_name) ?>" class="author_element">
 							<div class="author_image_wrapper">
-								<img src="<?php echo $authorAvater['url'] ?>" alt="" loading="lazy">
+								<img src="<?= $authorAvater['url'] ?>" alt="" loading="lazy">
 							</div>
 							<div class="author_content_wrapper">
-								<h5>Meet <?php echo esc_html($user->display_name) ?></h5>
+								<h5>Meet <?= esc_html($user->display_name) ?></h5>
 								<?php if ($authorTitle) : ?>
-									<p class="author_title"><?php echo $authorTitle ?></p>
+									<p class="author_title"><?= $authorTitle ?></p>
 								<?php endif; ?>
-								<p><?php echo $userdata['description'][0]; ?></p>
+								<p><?= $userdata['description'][0]; ?></p>
 								<div class="author_posts_wrapper">
 									<h6>Articles by the Author</h6>
-									<?php echo get_related_author_posts(); ?>
+									<?= get_related_author_posts(); ?>
 								</div>
 							</div>
 
@@ -97,16 +97,16 @@ get_template_part('template-parts/javascript/navigationJs');
 
 						// print_r($medicalReviewerAvater)
 					?>
-						<li id="<?php echo esc_html($user->first_name) . '_' .  esc_html($user->last_name) ?>" class="medical_reviewer_element">
+						<li id="<?= esc_html($user->first_name) . '_' .  esc_html($user->last_name) ?>" class="medical_reviewer_element">
 							<div class="medical_reviewer_image_wrapper">
-								<img src="<?php echo $medicalReviewerAvater['url'] ?>" loading="lazy">
+								<img src="<?= $medicalReviewerAvater['url'] ?>" loading="lazy">
 							</div>
 							<div class="medical_reviewer_content_wrapper">
-								<h5><?php echo esc_html($user->display_name) ?></h5>
+								<h5><?= esc_html($user->display_name) ?></h5>
 								<?php if ($medicalReviewerTitle) : ?>
-									<p class="medical_review_title"><?php echo $medicalReviewerTitle ?></p>
+									<p class="medical_review_title"><?= $medicalReviewerTitle ?></p>
 								<?php endif; ?>
-								<p><?php echo $userdata['description'][0]; ?></p>
+								<p><?= $userdata['description'][0]; ?></p>
 							</div>
 						</li>
 						<div class="contributor_spacer"></div>

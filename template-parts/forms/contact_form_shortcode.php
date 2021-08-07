@@ -30,7 +30,7 @@
                         <input placeholder="Phone*" id="hwzqcmxh" class="contact_us_form_ph" maxlength="40" name="hwzqcmxh" size="20" type="tel">
                     </div>
                 </div>
-                <input type="hidden" id="lead_source" name="lead_source" value="<?php echo get_field('site_name', 'option') ?>">
+                <input type="hidden" id="lead_source" name="lead_source" value="<?= get_field('site_name', 'option') ?>">
                 <input type="hidden" id="00N4P000009WDIn" name="00N4P000009WDIn" value="Web">
                 <input type="hidden" id="00N4P000009WDIu" maxlength="255" name="00N4P000009WDIu" value="SS Website">
                 <input type="hidden" id="00N4P000009WDGc" name="00N4P000009WDGc" value="SS Contact Form 4">

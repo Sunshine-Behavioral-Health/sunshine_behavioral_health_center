@@ -27,14 +27,14 @@ $centerValue = get_field('center')
     <div class="thank_you_page_main_content">
         <!-- Page Content -->
         <section class="page_content list_styling">
-            <?php echo get_field('thank_you_top_content') ?>
+            <?= get_field('thank_you_top_content') ?>
         </section>
     </div>
 
     <div class="page_grid">
         <div class="page_wrapper thank_you_page_wrapper">
             <section class="page_content thank_you_infographic_container">
-                <?php echo get_field('thank_you_infographic_wysiwyg') ?>
+                <?= get_field('thank_you_infographic_wysiwyg') ?>
             </section>
         </div>
         <?php get_sidebar('dynamic'); ?>

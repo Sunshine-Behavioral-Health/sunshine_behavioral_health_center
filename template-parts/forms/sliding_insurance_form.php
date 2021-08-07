@@ -59,7 +59,7 @@
                     <textarea placeholder="Additional Notes:" id="00N4P000009WDFw" name="00N4P000009WDFw" class="insurance_form_textarea" type="text"></textarea>
 
 
-                    <input type="hidden" id="lead_source" name="lead_source" value="<?php echo get_field('site_name', 'option') ?>">
+                    <input type="hidden" id="lead_source" name="lead_source" value="<?= get_field('site_name', 'option') ?>">
 
                     <input type="hidden" id="00N4P000009WDIn" name="00N4P000009WDIn" value="Web">
 

@@ -9,12 +9,12 @@
                 ?>
                     <div class="treatment_step_carousel_element fade">
                         <div class="treatment_step_carousel_element_content">
-                            <h4><?php echo get_sub_field('step_subheadline', 'option') ?></h4>
-                            <h3><?php echo get_sub_field('step_headline', 'option') ?></h3>
-                            <p><?php echo get_sub_field('step_paragraph', 'option') ?></p>
-                            <a href="<?php echo get_sub_field('step_url', 'option') ?>"><?php echo get_sub_field('step_cta_text', 'option') ?><img src="<?php echo get_template_directory_uri() . '/icons/right_arrow.png' ?>" alt=""></a>
+                            <h4><?= get_sub_field('step_subheadline', 'option') ?></h4>
+                            <h3><?= get_sub_field('step_headline', 'option') ?></h3>
+                            <p><?= get_sub_field('step_paragraph', 'option') ?></p>
+                            <a href="<?= get_sub_field('step_url', 'option') ?>"><?= get_sub_field('step_cta_text', 'option') ?><img src="<?= get_template_directory_uri() . '/icons/right_arrow.png' ?>" alt=""></a>
                         </div>
-                        <div class="treatment_step_carousel_element_image" style="background-image: url(' <?php echo get_sub_field('step_image', 'option')['url'] ?>');">
+                        <div class="treatment_step_carousel_element_image" style="background-image: url(' <?= get_sub_field('step_image', 'option')['url'] ?>');">
                         </div>
                     </div>
                 <?php endwhile; ?>

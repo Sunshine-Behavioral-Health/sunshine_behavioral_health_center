@@ -186,8 +186,16 @@ $step: 5;
     background-color: $secondaryColor;
 }
 
-.cta-banner{
-    padding: 25px 20px;    
+.section-padding{
+    padding: 25px 0;    
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.italic{
+    font-style: italic;
 }
 
 @include mobile {

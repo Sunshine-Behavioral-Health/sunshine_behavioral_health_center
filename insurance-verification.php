@@ -27,7 +27,7 @@ sbh_center()->print_styles('sbh_center-custom-page-nosidebar', 'sbh_center-conte
             <!-- Page Content -->
             <section class="page_content">
                 <?php get_template_part('template-parts/content/googleTranslate'); ?>
-                <?php echo get_field('content') ?>
+                <?= get_field('content') ?>
             </section>
 
             <section class="insurance_form_section">

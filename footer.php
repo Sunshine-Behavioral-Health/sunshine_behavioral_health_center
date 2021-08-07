@@ -19,7 +19,7 @@ namespace WP_Rig\WP_Rig;
 
 <footer id="colophon" class="site-footer non_home_footer">
 
-    <div class="banner_top_image" style="background-image: url(<?php echo get_field('above_footer_image_desktop', 'option')['url']; ?>);"></div>
+    <div class="banner_top_image" style="background-image: url(<?= get_field('above_footer_image_desktop', 'option')['url']; ?>);"></div>
 
     <?php get_template_part('template-parts/footer/info'); ?>
 
@@ -32,10 +32,10 @@ namespace WP_Rig\WP_Rig;
             s.src = ('https:' === n.location.protocol ? 'https://' : 'http://') + v;
             var fs = n.getElementsByTagName('script')[0];
             fs.parentNode.insertBefore(s, fs);
-        })(window, document, 'solutions.invocacdn.com/js/pnapi_integration-latest.min.js', '<?php echo get_field('invoca_tracking_id', 'option') ?>');
+        })(window, document, 'solutions.invocacdn.com/js/pnapi_integration-latest.min.js', '<?= get_field('invoca_tracking_id', 'option') ?>');
     </script>
 
-    <?php echo get_field('google_footer_meta', 'option') ?>
+    <?= get_field('google_footer_meta', 'option') ?>
 
 </footer><!-- #colophon -->
 </div><!-- #page -->

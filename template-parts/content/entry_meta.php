@@ -73,7 +73,7 @@ if (!empty($post->post_parent) && 'attachment' === get_post_type()) {
 		</span>
 		<span> | </span>
 		<span class="posted-on">
-			Posted on <?php echo get_the_date(); ?>
+			Posted on <?= get_the_date(); ?>
 		</span>
 	<?php
 	}

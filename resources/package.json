@@ -1,7 +1,7 @@
 {
   "name": "sbh_center_sass2",
   "version": "1.0.0",
-  "description": "Custom theme developed by Nathan Wilson for <?php echo get_field('site_name', 'option') ?>.",
+  "description": "Custom theme developed by Nathan Wilson for <?= get_field('site_name', 'option') ?>.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

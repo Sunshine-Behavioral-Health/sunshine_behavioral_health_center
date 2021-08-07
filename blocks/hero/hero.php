@@ -9,11 +9,11 @@
     <?php if (get_sub_field('type') == 'full_width') : ?>
         <div class="full_width_hero relative">
             <?php if (get_sub_field('desktop_image')) : ?>
-                <img class="hide_on_mobile show_on_tablet width100 hero-image" src="<?php echo get_sub_field('desktop_image')['url']; ?>">
+                <img class="hide_on_mobile show_on_tablet width100 hero-image" src="<?= get_sub_field('desktop_image')['url']; ?>">
             <?php endif; ?>
 
             <?php if (get_sub_field('mobile_image')) : ?>
-                <img class="hide_on_desktop hide_on_tablet width100 hero-image" src="<?php echo get_sub_field('mobile_image')['url']; ?>">
+                <img class="hide_on_desktop hide_on_tablet width100 hero-image" src="<?= get_sub_field('mobile_image')['url']; ?>">
             <?php endif; ?>
 
             <div class="absolute absolute-top-left full-cover flex flex-column justify-center">

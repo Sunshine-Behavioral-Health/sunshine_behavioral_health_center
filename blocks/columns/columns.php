@@ -33,7 +33,7 @@ if ($columns) : ?>
             <div class="row <?= !empty($reverseOnMobile) ? 'mobile-reverse' : '' ?>">
 
                 <?php foreach ($columns as $column) : ?>
-                    <div class="<?= $columnClass ?> editor-content" style="<?= !empty($column['background_color']) ? "background:{$column['background_color']};" : "" ?> <?php echo !empty($column['background_image']) ? "background: url({$column['background_image']['url']});" : "" ?>">
+                    <div class="<?= $columnClass ?> editor-content" style="<?= !empty($column['background_color']) ? "background:{$column['background_color']};" : "" ?> <?= !empty($column['background_image']) ? "background: url({$column['background_image']['url']});" : "" ?>">
                         <?= $column['content']; ?>
                     </div>
                 <?php endforeach; ?>

@@ -25,10 +25,10 @@ get_template_part('template-parts/javascript/navigationJs');
 
 <main id="primary" class="">
 	<div class="hero_banner_container">
-		<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?php echo get_field('mobile_image')['url']; ?>">
+		<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?= get_field('mobile_image')['url']; ?>">
 		<div class="hero_banner_headlines_container">
-			<h1><?php echo get_field('page_headline') ?></h1>
-			<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+			<h1><?= get_field('page_headline') ?></h1>
+			<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
 		</div>
 
 	</div>
@@ -45,7 +45,7 @@ get_template_part('template-parts/javascript/navigationJs');
 
 			<!-- Page Content -->
 			<section class="page_content list_styling ">
-				<?php echo get_field('content') ?>
+				<?= get_field('content') ?>
 			</section>
 
 			<!-- Sources -->

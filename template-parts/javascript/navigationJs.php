@@ -21,29 +21,29 @@
         function addNavIcons() {
             let navIcon1 = '<img class="nav_icon_1 " src="" alt="" width="35" height="35">';
             $(".top_level_nav_1").prepend(navIcon1);
-            $(".nav_icon_1").attr("src", "<?php echo $navIcon1 ?>");
+            $(".nav_icon_1").attr("src", "<?= $navIcon1 ?>");
 
             let navIcon2 = '<img class="nav_icon_2 " src="" alt="" width="35" height="35">';
             $(".top_level_nav_2").prepend(navIcon2);
-            $(".nav_icon_2").attr("src", "<?php echo $navIcon2 ?>");
+            $(".nav_icon_2").attr("src", "<?= $navIcon2 ?>");
 
             let navIcon3 = '<img class="nav_icon_3 " src="" alt="" width="35" height="35">';
             $(".top_level_nav_3").prepend(navIcon3);
-            $(".nav_icon_3").attr("src", "<?php echo $navIcon3 ?>");
+            $(".nav_icon_3").attr("src", "<?= $navIcon3 ?>");
 
-            let navIcon4 = <?php if (get_field('nav_icon_link_4', 'option')) : ?> '<a href="<?php echo get_field('nav_icon_link_4', 'option') ?>"><img class="nav_icon_4 " src="" alt="" width="35" height="35"></a>';
+            let navIcon4 = <?php if (get_field('nav_icon_link_4', 'option')) : ?> '<a href="<?= get_field('nav_icon_link_4', 'option') ?>"><img class="nav_icon_4 " src="" alt="" width="35" height="35"></a>';
         <?php else : ?> '<img class="nav_icon_4 " src="" alt="" width="35" height="35">';
         <?php endif; ?>
         $(".top_level_nav_4").prepend(navIcon4);
-        $(".nav_icon_4").attr("src", "<?php echo $navIcon4 ?>");
+        $(".nav_icon_4").attr("src", "<?= $navIcon4 ?>");
 
         <?php if ($navIcon5) : ?>
-            let navIcon5 = <?php if (get_field('nav_icon_link_5', 'option')) : ?> '<a href="<?php echo get_field('insurance_url', 'option') ?>"><img class="nav_icon_5 " src="" alt="" width="35" height="35"></a>';
+            let navIcon5 = <?php if (get_field('nav_icon_link_5', 'option')) : ?> '<a href="<?= get_field('insurance_url', 'option') ?>"><img class="nav_icon_5 " src="" alt="" width="35" height="35"></a>';
         <?php else : ?> '<img class="nav_icon_5 " src="" alt="" width="35" height="35">';
         <?php endif; ?>
 
         $(".top_level_nav_5").prepend(navIcon5);
-        $(".nav_icon_5").attr("src", "<?php echo $navIcon5 ?>");
+        $(".nav_icon_5").attr("src", "<?= $navIcon5 ?>");
         <?php endif; ?>
         }
         addNavIcons();

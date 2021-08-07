@@ -31,7 +31,7 @@ get_template_part('template-parts/javascript/navigationJs');
 			<!-- Page Content -->
 			<section class="page_content list_styling">
 				<section class="staff_page_content">
-					<?php echo get_field('page_content'); ?>
+					<?= get_field('page_content'); ?>
 				</section>
 
 				<?php get_template_part('template-parts/content/universal_staff'); ?>

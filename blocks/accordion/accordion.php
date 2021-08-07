@@ -23,7 +23,7 @@ $accordionBorderColor = get_sub_field('border_color');
                 <div class="accordion" style="<?= !empty($accordionBorderColor) ? "border-color:{$accordionBorderColor} !important;" : "" ?>">
                     <div class="accordion_top">
                         <h5 style="<?= !empty($accordionBorderColor) ? "color:{$accordionBorderColor} !important;" : "" ?>"><?= $accordion['headline'] ?></h5>
-                        <img class="accordion_icon" src="<?php echo get_field('plus_icon', 'option')['url'] ?>" loading="lazy" alt="Plus icon">
+                        <img class="accordion_icon" src="<?= get_field('plus_icon', 'option')['url'] ?>" loading="lazy" alt="Plus icon">
                     </div>
 
                     <div class="accordion_bottom">

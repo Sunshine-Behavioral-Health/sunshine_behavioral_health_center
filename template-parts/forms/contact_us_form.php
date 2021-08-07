@@ -36,7 +36,7 @@
                             <label class="contact_text_area_span_label" for="">Additional Notes:</label>
                             <textarea id="00N4P000009WDFw" name="00N4P000009WDFw" class="contact_text_area" type="text"></textarea>
                             <div class="contact_submit_container">
-                                <input type="hidden" id="lead_source" name="lead_source" value="<?php echo get_field('site_name', 'option') ?>">
+                                <input type="hidden" id="lead_source" name="lead_source" value="<?= get_field('site_name', 'option') ?>">
                                 <input type="hidden" id="00N4P000009WDIn" name="00N4P000009WDIn" value="Web">
                                 <input type="hidden" id="00N4P000009WDIu" maxlength="255" name="00N4P000009WDIu" value="SS Website">
                                 <input type="hidden" id="00N4P000009WDGc" name="00N4P000009WDGc" value="SS Contact Form 2">

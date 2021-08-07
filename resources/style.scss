@@ -8,7 +8,7 @@ Description: An evolving theme for Sunshine Behavioral Health Centers.
 Version: 3.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: <?php echo get_field('site_name', 'option') ?> Theme
+Text Domain: <?= get_field('site_name', 'option') ?> Theme
 Tags: translation-ready
 
 This theme, like WordPress, is licensed under the GPL.

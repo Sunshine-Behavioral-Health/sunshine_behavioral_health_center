@@ -8,20 +8,20 @@ if (is_page_template('staff.php')) : ?>
                     <div class="staff_card">
                         <div class="staff_card_wrapper">
                             <div class="staff_card_image">
-                                <img src="<?php echo get_sub_field('staff_image')['url'] ?>" alt="">
+                                <img src="<?= get_sub_field('staff_image')['url'] ?>" alt="">
                             </div>
                             <div class="staff_card_content">
-                                <h5 class="staff_name"><?php echo get_sub_field('staff_name'); ?></h5>
-                                <h6><?php echo get_sub_field('staff_title', 'option'); ?></h6>
-                                <p><?php echo get_sub_field('staff_team', 'option') ?></p>
+                                <h5 class="staff_name"><?= get_sub_field('staff_name'); ?></h5>
+                                <h6><?= get_sub_field('staff_title', 'option'); ?></h6>
+                                <p><?= get_sub_field('staff_team', 'option') ?></p>
                                 <?php if (get_sub_field('staff_bio')) : ?>
-                                    <button class="read_more_button" type="button" data-toggle="collapse" data-target="#staff_bio<?php echo get_sub_field('card_number') ?>" aria-expanded="false" aria-controls="staff_bio<?php echo get_sub_field('card_number', 'option') ?>">Read Bio</button>
+                                    <button class="read_more_button" type="button" data-toggle="collapse" data-target="#staff_bio<?= get_sub_field('card_number') ?>" aria-expanded="false" aria-controls="staff_bio<?= get_sub_field('card_number', 'option') ?>">Read Bio</button>
                                 <?php endif; ?>
                                 <div class="bio collapse multi-collapse 
 							<?php if (get_sub_field('staff_bio', 'option')) {
                                 echo 'hide_bio';
-                            } ?> " id="staff_bio<?php echo $staffCounter++; ?>">
-                                    <p><?php echo get_sub_field('staff_bio', 'option'); ?></p>
+                            } ?> " id="staff_bio<?= $staffCounter++; ?>">
+                                    <p><?= get_sub_field('staff_bio', 'option'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -43,13 +43,13 @@ if (is_page_template('staff.php')) : ?>
                         if (get_sub_field('on_home_page', 'option')) : ?>
                             <div class="staff_individual_card">
                                 <div class="staff_card_image">
-                                    <img src="<?php echo get_sub_field('staff_image')['url'] ?>" alt="">
+                                    <img src="<?= get_sub_field('staff_image')['url'] ?>" alt="">
 
                                 </div>
                                 <div class="staff_card_content">
-                                    <h5 class="staff_name"><?php echo get_sub_field('staff_name'); ?></h5>
-                                    <p><?php echo get_sub_field('staff_title', 'option'); ?></p>
-                                    <p><?php echo get_sub_field('staff_team', 'option') ?></p>
+                                    <h5 class="staff_name"><?= get_sub_field('staff_name'); ?></h5>
+                                    <p><?= get_sub_field('staff_title', 'option'); ?></p>
+                                    <p><?= get_sub_field('staff_team', 'option') ?></p>
                                 </div>
 
                             </div>

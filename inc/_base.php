@@ -21,7 +21,7 @@ function wd_acf_color_palette()
         (function($) {
             acf.add_filter('color_picker_args', function(args, $field) {
                 // add the hexadecimal codes here for the colors you want to appear as swatches
-                args.palettes = ['<?php echo $primaryColor ?>', '<?php echo $secondaryColor ?>', '<?php echo $tertiaryColor ?>', '<?php echo $fourthColor ?>', '<?php echo $navBackgroundColor ?>', '#fffff', '#000000']
+                args.palettes = ['<?= $primaryColor ?>', '<?= $secondaryColor ?>', '<?= $tertiaryColor ?>', '<?= $fourthColor ?>', '<?= $navBackgroundColor ?>', '#fffff', '#000000']
                 // return colors
                 return args;
             });

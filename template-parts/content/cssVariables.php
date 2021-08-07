@@ -9,14 +9,14 @@ $navBackgroundColor = get_field('nav_background_color', 'options');
 ?>
 <style>
     :root {
-        --primary_color: <?php echo $primaryColor ?>;
+        --primary_color: <?= $primaryColor ?>;
         /* Secondary */
-        --secondary_color: <?php echo $secondaryColor ?>;
+        --secondary_color: <?= $secondaryColor ?>;
         /* PRIMARY */
-        --tertiary_color: <?php echo $tertiaryColor ?>;
+        --tertiary_color: <?= $tertiaryColor ?>;
         /* Tertiary */
-        --fourth_color: <?php echo $fourthColor ?>;
+        --fourth_color: <?= $fourthColor ?>;
 
-        --nav_background_color: <?php echo $navBackgroundColor ?>;
+        --nav_background_color: <?= $navBackgroundColor ?>;
     }
 </style>

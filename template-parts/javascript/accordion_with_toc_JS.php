@@ -9,6 +9,6 @@
       return e("html, body").animate({
         scrollTop: e(t).offset().top + -300
       }, 500), !1
-    }), e(".toc").prepend(`<div class='toc_dropdown'>` + `<img src='<?php echo get_field('plus_icon', 'option')['url'] ?>'>` + `</div>`), e(".toc").prepend("<h5>I have a question regarding:</h5>")
+    }), e(".toc").prepend(`<div class='toc_dropdown'>` + `<img src='<?= get_field('plus_icon', 'option')['url'] ?>'>` + `</div>`), e(".toc").prepend("<h5>I have a question regarding:</h5>")
   });
 </script>

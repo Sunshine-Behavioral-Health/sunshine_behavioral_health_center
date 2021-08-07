@@ -51,7 +51,7 @@ $taxonomies = wp_list_filter(
 			continue;
 		}
 	?>
-		<span class="<?php echo esc_attr($class); ?>">
+		<span class="<?= esc_attr($class); ?>">
 			<?php
 			printf(
 				esc_html($placeholder_text),

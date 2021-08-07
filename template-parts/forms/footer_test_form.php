@@ -17,7 +17,7 @@
 			<input id="mgkbysfp" class="standard_page_footer_form_em footer_form_em" placeholder="Email" maxlength="80" name="mgkbysfp" size="20" type="text">
 			<input id="hwzqcmxh" class="standard_page_footer_form_ph footer_form_ph" placeholder="Phone" maxlength="40" name="hwzqcmxh" size="20" type="tel">
 
-			<input type="hidden" id="lead_source" name="lead_source" value="<?php echo get_field('site_name', 'option') ?>">
+			<input type="hidden" id="lead_source" name="lead_source" value="<?= get_field('site_name', 'option') ?>">
 			<input type="hidden" id="00N4P000009WDIn" name="00N4P000009WDIn" value="Web">
 			<input type="hidden" id="00N4P000009WDIu" maxlength="255" name="00N4P000009WDIu" value="SS Website">
 			<input type="hidden" id="00N4P000009WDGc" name="00N4P000009WDGc" value="SS Contact Form 3">

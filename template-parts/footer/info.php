@@ -20,7 +20,7 @@ namespace WP_Rig\WP_Rig;
 												echo $uploadDir['baseurl'] . '/sbh_center_theme_images/icons/address_icon_white.png' ?>" alt="">
 					<div class="contact_information_content footer_address_content">
 						<a href="https://www.google.com/maps/place/Willow+Springs+Recovery+-+Inpatient+Drug+and+Alcohol+Rehab,+Texas+Rehab,+Dual+Diagnosis+Treatment+Center/@30.151904,-97.227223,15z/data=!4m5!3m4!1s0x0:0x8ef094c9da9bd044!8m2!3d30.151904!4d-97.227223">
-							<p><?php echo get_field('footer_contact_information_-_address', 'option') ?></p>
+							<p><?= get_field('footer_contact_information_-_address', 'option') ?></p>
 						</a>
 					</div>
 				</div>
@@ -33,14 +33,14 @@ namespace WP_Rig\WP_Rig;
 				<div class="footer_contact_email_container">
 					<img loading="lazy" src="<?php $uploadDir = wp_upload_dir();
 												echo $uploadDir['baseurl'] . '/sbh_center_theme_images/icons/email_icon_white.png' ?>" alt="">
-					<a class="contact_information_content" href="mailto:contact@<?php echo get_field('site_domain', 'option'); ?>.com">contact@<?php echo get_field('site_domain', 'option'); ?>.com</a>
+					<a class="contact_information_content" href="mailto:contact@<?= get_field('site_domain', 'option'); ?>.com">contact@<?= get_field('site_domain', 'option'); ?>.com</a>
 				</div>
 				<div class="privacy_links_container">
 					<div class="footer_home_terms_and_privacy">
 						<a href="/privacy-policy/">Privacy Policy</a>
 						<span>|</span>
 						<?php if (get_field('terms_of_service_link', 'option')) : ?>
-							<a href="<?php echo get_field('terms_of_service_link', 'option') ?>">Terms of Service</a>
+							<a href="<?= get_field('terms_of_service_link', 'option') ?>">Terms of Service</a>
 						<?php else :  ?>
 							<a href="/terms-of-use/">Terms of Service</a>
 						<?php endif; ?>
@@ -60,8 +60,8 @@ namespace WP_Rig\WP_Rig;
 				if (have_rows('social_media', 'option')) :
 					while (have_rows('social_media', 'option')) : the_row();
 				?>
-						<a href="<?php echo get_sub_field('link', 'option') ?>">
-							<img src="<?php echo get_sub_field('icon', 'option')['url'] ?>" alt="" loading="lazy">
+						<a href="<?= get_sub_field('link', 'option') ?>">
+							<img src="<?= get_sub_field('icon', 'option')['url'] ?>" alt="" loading="lazy">
 						</a>
 				<?php
 					endwhile;
@@ -72,7 +72,7 @@ namespace WP_Rig\WP_Rig;
 
 		<div class="footer_badges_container">
 			<div class="footer_badge">
-				<?php echo get_field('legitscript_html', 'option') ?>
+				<?= get_field('legitscript_html', 'option') ?>
 			</div>
 
 			<?php
@@ -80,7 +80,7 @@ namespace WP_Rig\WP_Rig;
 				while (have_rows('footer_badges', 'option')) : the_row();
 			?>
 					<div class="footer_badge">
-						<img loading="lazy" src="<?php echo get_sub_field('badge', 'option')['url']; ?>" alt="">
+						<img loading="lazy" src="<?= get_sub_field('badge', 'option')['url']; ?>" alt="">
 					</div>
 			<?php
 				endwhile;
@@ -90,7 +90,7 @@ namespace WP_Rig\WP_Rig;
 
 	</section>
 	<div class="copyright_container">
-		<p>&copy; <?php echo date("Y") ?> <?php echo get_field('site_name', 'option') ?> is a <a href="https://www.sunshinebehavioralhealth.com/">Sunshine Behavioral Health</a> location</p>
+		<p>&copy; <?= date("Y") ?> <?= get_field('site_name', 'option') ?> is a <a href="https://www.sunshinebehavioralhealth.com/">Sunshine Behavioral Health</a> location</p>
 	</div>
 
 
@@ -101,6 +101,6 @@ namespace WP_Rig\WP_Rig;
 <section class="mobile_bottom_cta_section hide_on_desktop">
 	<div class="mobile_bottom_cta_container">
 		<a href="tel:949-276-2886" class="invocaNumber cta_left mobileCtaPhone" onclick="dataLayer.push({'event': 'phone_click', 'shortcode_type' : 'mobileCtaPhone'});">949-276-2886</a>
-		<a class="cta_right mobileCtaInsurance" href="<?php echo get_field('insurance_url', 'option') ?>" onclick="dataLayer.push({'event': 'insurance_click', 'shortcode_type' : 'mobileCtaInsurance'});" href="<?php echo get_field('insurance_url', 'option') ?>">Verify Insurance</a>
+		<a class="cta_right mobileCtaInsurance" href="<?= get_field('insurance_url', 'option') ?>" onclick="dataLayer.push({'event': 'insurance_click', 'shortcode_type' : 'mobileCtaInsurance'});" href="<?= get_field('insurance_url', 'option') ?>">Verify Insurance</a>
 	</div>
 </section>

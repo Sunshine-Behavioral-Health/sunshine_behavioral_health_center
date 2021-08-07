@@ -8,11 +8,11 @@
                 $galleryItemHeight = get_sub_field('gallery_item_height');
         ?>
                 <div class="gallery_item_wrapper 
-                <?php echo get_sub_field('gallery_item_width'); ?> 
-                <?php echo get_sub_field('gallery_item_height') ?>">
+                <?= get_sub_field('gallery_item_width'); ?> 
+                <?= get_sub_field('gallery_item_height') ?>">
                     <div class="gallery_item">
                         <div class="image">
-                            <img src="<?php echo get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy">
+                            <img src="<?= get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy">
                         </div>
                     </div>
                 </div>

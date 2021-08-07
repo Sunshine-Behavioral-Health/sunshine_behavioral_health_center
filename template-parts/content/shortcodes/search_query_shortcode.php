@@ -1,9 +1,9 @@
 <section class="search_query_shortcode_section">
     <div class="search_query_shortcode_headline_wrapper">
         <?php if (get_field('search_query_title')) : ?>
-            <h5><?php echo get_field('search_query_title') ?></h5>
+            <h5><?= get_field('search_query_title') ?></h5>
         <?php else : ?>
-            <h5><?php echo get_field('search_value') ?> Related Articles</h5>
+            <h5><?= get_field('search_value') ?> Related Articles</h5>
         <?php endif; ?>
     </div>
     <div class="search_query_shortcode_container">
@@ -26,7 +26,7 @@
 
                         <li class="search_query_shortcode_element">
                             <a href="<?php the_permalink(); ?>">
-                                <h6><?php echo mb_strimwidth(get_the_title(), 0, 75, '...');  ?></h6>
+                                <h6><?= mb_strimwidth(get_the_title(), 0, 75, '...');  ?></h6>
                                 <img src='<?php the_post_thumbnail_url(); ?>' alt="">
                             </a>
 

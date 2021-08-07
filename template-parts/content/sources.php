@@ -18,9 +18,9 @@ endif;
 <?php if (get_field('references')) : ?>
     <section class="sources_section">
         <h4>Sources</h4>
-        <img class="sources_plus_icon" src="<?php echo $sitePlusIconUrl; ?>" alt="">
+        <img class="sources_plus_icon" src="<?= $sitePlusIconUrl; ?>" alt="">
         <div class="sources_wrapper hide">
-            <?php echo get_field('references') ?>
+            <?= get_field('references') ?>
         </div>
     </section>
 <?php endif; ?>

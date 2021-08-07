@@ -64,10 +64,10 @@
                                     <textarea placeholder="Additional Notes:" id="00N4P000009WDFw" name="00N4P000009WDFw" class="insurance_form_textarea" type="text"></textarea>
 
 
-                                    <input type="hidden" id="lead_source" name="lead_source" value="<?php echo get_field('site_name', 'option') ?>">
+                                    <input type="hidden" id="lead_source" name="lead_source" value="<?= get_field('site_name', 'option') ?>">
                                     <input type="hidden" id="00N4P000009WDIn" name="00N4P000009WDIn" value="Web">
                                     <input type="hidden" id="00N4P000009WDIu" name="00N4P000009WDIu" value="WSR Website">
-                                    <input type="hidden" id="00N4P000009WDGc" maxlength="255" name="00N4P000009WDGc" value="<?php echo get_field('site_name', 'option') ?> Insurance Form">
+                                    <input type="hidden" id="00N4P000009WDGc" maxlength="255" name="00N4P000009WDGc" value="<?= get_field('site_name', 'option') ?> Insurance Form">
 
                                     <input class="landingpageformsubmisison1 insurance_form_textarea_submit" type="submit" name="submit" value="Submit">
                                 </div>

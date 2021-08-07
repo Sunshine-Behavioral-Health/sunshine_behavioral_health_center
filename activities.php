@@ -43,24 +43,24 @@ sbh_center()->print_styles('sbh_center-content');
 	<div class="custom_page_noSideBar_wrapper">
 		<div class="activity_page_image_container">
 			<div class="page_image">
-				<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?php echo get_field('desktop_image')['url']; ?>">
-				<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?php echo get_field('mobile_image')['url']; ?>">
+				<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?= get_field('desktop_image')['url']; ?>">
+				<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?= get_field('mobile_image')['url']; ?>">
 				<div class="page_mobile_image_text_and_cta_container">
-					<h1><?php echo get_field('page_headline') ?></h1>
-					<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+					<h1><?= get_field('page_headline') ?></h1>
+					<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
 				</div>
 			</div>
 			<div class="hide_on_mobile">
-				<h1><?php echo get_field('page_headline') ?></h1>
-				<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+				<h1><?= get_field('page_headline') ?></h1>
+				<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
 			</div>
 		</div>
 
 		<div class="page_content_below_image">
 			<section class="activity_page_content_section">
 				<div class="top_activity_page_content">
-					<h2><?php echo get_field('page_headline'); ?></h2>
-					<p><?php echo get_field('page_paragraphs') ?></p>
+					<h2><?= get_field('page_headline'); ?></h2>
+					<p><?= get_field('page_paragraphs') ?></p>
 				</div>
 			</section>
 			<section class="activities_section">
@@ -71,17 +71,17 @@ sbh_center()->print_styles('sbh_center-content');
 						<?php if (get_sub_field('gallery_left_or_right') == "Right Gallery") : ?>
 							<div class="activity ">
 								<div class="text_left">
-									<h3><?php echo get_sub_field('gallery_text') ?></h3>
+									<h3><?= get_sub_field('gallery_text') ?></h3>
 								</div>
 								<div class="img_carousel_right">
-									<div class="glide carousel<?php echo get_sub_field('increment') ?>">
+									<div class="glide carousel<?= get_sub_field('increment') ?>">
 										<div class="glide__track" data-glide-el="track">
 											<ul class="glide__slides">
 												<?php
 												if (have_rows('gallery')) :
 													while (have_rows('gallery')) : the_row();
 												?>
-														<li class="glide__slide"><img src="<?php echo get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy"></li>
+														<li class="glide__slide"><img src="<?= get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy"></li>
 												<?php
 													endwhile;
 												endif;
@@ -96,18 +96,18 @@ sbh_center()->print_styles('sbh_center-content');
 							<div class="activity ">
 								<?php if (wp_is_mobile()) : ?>
 									<div class="text_right">
-										<h3><?php echo get_sub_field('gallery_text') ?></h3>
+										<h3><?= get_sub_field('gallery_text') ?></h3>
 									</div>
 								<?php endif; ?>
 								<div class="img_carousel_left">
-									<div class="glide carousel<?php echo get_sub_field('increment') ?>">
+									<div class="glide carousel<?= get_sub_field('increment') ?>">
 										<div class="glide__track" data-glide-el="track">
 											<ul class="glide__slides">
 												<?php
 												if (have_rows('gallery')) :
 													while (have_rows('gallery')) : the_row();
 												?>
-														<li class="glide__slide"><img src="<?php echo get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy"></li>
+														<li class="glide__slide"><img src="<?= get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy"></li>
 												<?php
 													endwhile;
 												endif;
@@ -118,7 +118,7 @@ sbh_center()->print_styles('sbh_center-content');
 								</div>
 								<?php if (!wp_is_mobile()) : ?>
 									<div class="text_right">
-										<h3><?php echo get_sub_field('gallery_text') ?></h3>
+										<h3><?= get_sub_field('gallery_text') ?></h3>
 									</div>
 								<?php endif; ?>
 							</div>
@@ -137,10 +137,10 @@ sbh_center()->print_styles('sbh_center-content');
 						while (have_rows('learn_more_section')) : the_row();
 					?>
 							<div class="acitivty_page_about_card">
-								<img src="<?php echo get_sub_field('card_image')['url'] ?>" alt="" loading="lazy">
+								<img src="<?= get_sub_field('card_image')['url'] ?>" alt="" loading="lazy">
 								<div class="acitivty_page_about_card_text">
-									<h5><?php echo get_sub_field('card_headline') ?></h5>
-									<p><?php echo get_sub_field('card_sentance') ?>: <a href="<?php echo get_sub_field('card_link') ?>">Read More</a> </p>
+									<h5><?= get_sub_field('card_headline') ?></h5>
+									<p><?= get_sub_field('card_sentance') ?>: <a href="<?= get_sub_field('card_link') ?>">Read More</a> </p>
 								</div>
 
 							</div>

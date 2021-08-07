@@ -17,6 +17,6 @@ namespace WP_Rig\WP_Rig;
 	<div class="dynamic_sidebar_container">
 		<?php get_template_part('template-parts/content/authorMedicalReviewSidebar'); ?>
 
-		<?php echo get_field('custom_sidebar') ?>
+		<?= get_field('custom_sidebar') ?>
 	</div>
 </aside><!-- #secondary -->

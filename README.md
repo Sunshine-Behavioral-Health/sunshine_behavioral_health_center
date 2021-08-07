@@ -20,4 +20,4 @@ All shortcodes are declared at `/template-parts/shortcodes.php`. Every shortcode
 
 # Universal Variables
 
-Some things such as the colors and site name are universally controlled via Theme Settings with Advanced Custom Fields. `<?php echo get_field('site_name', 'option') ?>` returns the site name.
+Some things such as the colors and site name are universally controlled via Theme Settings with Advanced Custom Fields. `<?= get_field('site_name', 'option') ?>` returns the site name.

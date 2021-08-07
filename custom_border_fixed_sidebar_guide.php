@@ -26,16 +26,16 @@ get_template_part('template-parts/javascript/fixedSidebarJs');
 <main id="primary" class="has_sidebar_border">
 	<div class="page_wrapper">
 		<div class="page_image">
-			<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?php echo get_field('desktop_image')['url']; ?>">
-			<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?php echo get_field('mobile_image')['url']; ?>">
+			<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?= get_field('desktop_image')['url']; ?>">
+			<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?= get_field('mobile_image')['url']; ?>">
 			<div class="page_mobile_image_text_and_cta_container">
-				<h1><?php echo get_field('page_headline') ?></h1>
-				<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+				<h1><?= get_field('page_headline') ?></h1>
+				<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
 			</div>
 		</div>
 		<div class="hide_on_mobile show_on_tablet page_headlines_desktop">
-			<h1><?php echo get_field('page_headline') ?></h1>
-			<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+			<h1><?= get_field('page_headline') ?></h1>
+			<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
 		</div>
 
 		<!-- Covid Notice -->
@@ -49,7 +49,7 @@ get_template_part('template-parts/javascript/fixedSidebarJs');
 		<!-- Page Content -->
 		<section class="page_content list_styling ">
 			<?php get_template_part('template-parts/content/googleTranslate'); ?>
-			<?php echo get_field('content') ?>
+			<?= get_field('content') ?>
 		</section>
 
 		<!-- Sources -->

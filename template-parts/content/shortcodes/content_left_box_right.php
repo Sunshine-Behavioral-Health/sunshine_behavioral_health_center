@@ -1,7 +1,7 @@
 <section class="content_left_box_right_section shortcode_section">
     <div class="content_left_box_right_container">
         <div class="CLBR_content_left">
-            <p><?php echo get_field('content_left_box_right_cta:_content_left') ?></p>
+            <p><?= get_field('content_left_box_right_cta:_content_left') ?></p>
         </div>
         <div class="CLBR_box_right">
             <h4>Are alcohol and drugs ruining your life?</h4>

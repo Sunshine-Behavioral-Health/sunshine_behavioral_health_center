@@ -13,13 +13,13 @@ $badgesBorderColor = get_sub_field('accreditation_border_color'); //color
             <div class="accreditation_and_testimonial--badges flex flex-column justify-center align-center" style="<?= !empty($badgesBorderColor) ? "border: 2px solid {$badgesBorderColor};" : "" ?>">
                 <h2 class="text-center"><?= $sectionHeadline ?></h2>
                 <div class="flex accreditation_and_testimonial--badges--wrapper">
-                    <?php echo get_field('legitscript_html', 'option') ?>
+                    <?= get_field('legitscript_html', 'option') ?>
 
                     <?php
                     if (have_rows('footer_badges', 'option')) :
                         while (have_rows('footer_badges', 'option')) : the_row();
                     ?>
-                            <img loading="lazy" src="<?php echo get_sub_field('badge', 'option')['url']; ?>" alt="">
+                            <img loading="lazy" src="<?= get_sub_field('badge', 'option')['url']; ?>" alt="">
                     <?php
                         endwhile;
                     endif;

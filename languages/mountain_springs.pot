@@ -1,13 +1,13 @@
-# Copyright (C) 2020 <?php echo get_field('site_name', 'option') ?>
-# This file is distributed under the same license as the <?php echo get_field('site_name', 'option') ?> package.
+# Copyright (C) 2020 <?= get_field('site_name', 'option') ?>
+# This file is distributed under the same license as the <?= get_field('site_name', 'option') ?> package.
 msgid ""
 msgstr ""
-"Project-Id-Version: <?php echo get_field('site_name', 'option') ?>\n"
+"Project-Id-Version: <?= get_field('site_name', 'option') ?>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: Michelle Lopez-Mckay and Nathan Wilson\n"
-"Report-Msgid-Bugs-To: <?php echo get_field('site_name', 'option') ?>\n"
+"Report-Msgid-Bugs-To: <?= get_field('site_name', 'option') ?>\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -54,17 +54,17 @@ msgstr ""
 
 #. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
 #: ../sbh_center/inc/back-compat.php:25
-msgid "<?php echo get_field('site_name', 'option') ?> requires at least WordPress version %1$s and PHP version %2$s. You are running versions %3$s and %3$s respectively. Please update and try again."
+msgid "<?= get_field('site_name', 'option') ?> requires at least WordPress version %1$s and PHP version %2$s. You are running versions %3$s and %3$s respectively. Please update and try again."
 msgstr ""
 
 #. translators: 1: required WP version number, 2: available WP version number
 #: ../sbh_center/inc/back-compat.php:30
-msgid "<?php echo get_field('site_name', 'option') ?> requires at least WordPress version %1$s. You are running version %2$s. Please update and try again."
+msgid "<?= get_field('site_name', 'option') ?> requires at least WordPress version %1$s. You are running version %2$s. Please update and try again."
 msgstr ""
 
 #. translators: 1: required PHP version number, 2: available PHP version number
 #: ../sbh_center/inc/back-compat.php:35
-msgid "<?php echo get_field('site_name', 'option') ?> requires at least PHP version %1$s. You are running version %2$s. Please update and try again."
+msgid "<?= get_field('site_name', 'option') ?> requires at least PHP version %1$s. You are running version %2$s. Please update and try again."
 msgstr ""
 
 #: ../sbh_center/inc/Comments/Component.php:132

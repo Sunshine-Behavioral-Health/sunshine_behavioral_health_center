@@ -23,7 +23,7 @@ sbh_center()->print_styles('sbh_center-content');
 ?>
 <main id="primary" class="site-main blog_collection">
 	<div>
-		<h1><?php echo get_field('site_name', 'option') ?> Blog</h1>
+		<h1><?= get_field('site_name', 'option') ?> Blog</h1>
 		<?php
 		if (have_posts()) {
 			while (have_posts()) {

@@ -6,7 +6,7 @@
             if (have_rows('learn_about')) :
                 while (have_rows('learn_about')) : the_row();
             ?>
-                    <a href="<?php echo get_sub_field('link')['url']; ?>"><?php echo get_sub_field('text'); ?></a>
+                    <a href="<?= get_sub_field('link')['url']; ?>"><?= get_sub_field('text'); ?></a>
                     <span> | </span>
             <?php
                 endwhile;

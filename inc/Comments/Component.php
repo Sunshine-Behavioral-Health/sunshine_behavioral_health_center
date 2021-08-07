@@ -112,14 +112,14 @@ class Component implements Component_Interface, Templating_Component_Interface
 			$poll_inverval     = MINUTE_IN_SECONDS * 1000;
 
 ?>
-			<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" <?php echo ('asc' === $comment_order) ? ' sort="ascending" ' : ''; ?> data-poll-interval="<?php echo esc_attr($poll_inverval); ?>" data-max-items-per-page="<?php echo esc_attr($comments_per_page); ?>">
+			<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" <?= ('asc' === $comment_order) ? ' sort="ascending" ' : ''; ?> data-poll-interval="<?= esc_attr($poll_inverval); ?>" data-max-items-per-page="<?= esc_attr($comments_per_page); ?>">
 			<?php
 
 			add_filter('navigation_markup_template', [$this, 'filter_add_amp_live_list_pagination_attribute']);
 		}
 
 			?>
-			<ol class="comment-list" <?php echo $amp_live_list ? ' items' : ''; ?>>
+			<ol class="comment-list" <?= $amp_live_list ? ' items' : ''; ?>>
 				<?php wp_list_comments($args); ?>
 			</ol><!-- .comment-list -->
 			<?php

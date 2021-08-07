@@ -6,9 +6,9 @@
                 while (have_rows('staff_repeater', 'option')) : the_row();
                     if (get_sub_field('on_home_page', 'option')) : ?>
                         <div class="staff_individual_card">
-                            <img src="<?php echo get_sub_field('staff_image')['url'] ?>" alt="">
-                            <h5 class="staff_name"><?php echo get_sub_field('staff_name'); ?></p>
-                                <p><?php echo get_sub_field('staff_title', 'option'); ?></p>
+                            <img src="<?= get_sub_field('staff_image')['url'] ?>" alt="">
+                            <h5 class="staff_name"><?= get_sub_field('staff_name'); ?></p>
+                                <p><?= get_sub_field('staff_title', 'option'); ?></p>
                         </div>
             <?php
                     endif;

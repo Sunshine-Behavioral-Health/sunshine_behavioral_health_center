@@ -30,7 +30,7 @@ $centerValue = get_field('center')
             <!-- Page Content -->
             <section class="page_content list_styling">
                 <?php get_template_part('template-parts/content/googleTranslate'); ?>
-                <?php echo get_field('content') ?>
+                <?= get_field('content') ?>
             </section>
 
             <?php get_template_part('template-parts/content/pageDisclaimer'); ?>

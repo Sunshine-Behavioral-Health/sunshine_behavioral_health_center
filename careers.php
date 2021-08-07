@@ -30,12 +30,12 @@ get_template_part('template-parts/javascript/navigationJs');
 			<!-- Page Content -->
 			<section class="page_content list_styling">
 				<?php get_template_part('template-parts/content/googleTranslate'); ?>
-				<?php echo get_field('content') ?>
+				<?= get_field('content') ?>
 			</section>
 
 			<section class="career_section">
 				<?php if (get_field('career_headline')) : ?>
-					<h2><?php echo get_field('career_headline') ?></h2>
+					<h2><?= get_field('career_headline') ?></h2>
 				<?php else : ?>
 					<h2>Career Opportunities</h2>
 				<?php endif; ?>
@@ -46,9 +46,9 @@ get_template_part('template-parts/javascript/navigationJs');
 						if (have_rows('job_tabs')) :
 							while (have_rows('job_tabs')) : the_row();
 						?>
-								<button class="tablinks" onclick="careerTabs(event, '<?php echo get_sub_field('job_id'); ?>')"><?php if (get_sub_field('urgent')) : ?>
+								<button class="tablinks" onclick="careerTabs(event, '<?= get_sub_field('job_id'); ?>')"><?php if (get_sub_field('urgent')) : ?>
 										<span class="urgent_hire">*</span>
-										<?php endif; ?><?php echo get_sub_field('job_name'); ?></button>
+										<?php endif; ?><?= get_sub_field('job_name'); ?></button>
 						<?php
 							endwhile;
 						endif;
@@ -58,12 +58,12 @@ get_template_part('template-parts/javascript/navigationJs');
 					if (have_rows('job_tabs')) :
 						while (have_rows('job_tabs')) : the_row();
 					?>
-							<div id="<?php echo get_sub_field('job_id'); ?>" class="tabcontent">
-								<h2><?php echo get_sub_field('job_name'); ?></h2>
+							<div id="<?= get_sub_field('job_id'); ?>" class="tabcontent">
+								<h2><?= get_sub_field('job_name'); ?></h2>
 								<p class="position_summary">Position Summary:</p>
-								<p><?php echo get_sub_field('job_content'); ?></p>
+								<p><?= get_sub_field('job_content'); ?></p>
 								<div class="job_apply_now">
-									<a href="<?php echo get_sub_field('apply_link') ?>">Apply with <?php echo get_field('site_name', 'option') ?></a>
+									<a href="<?= get_sub_field('apply_link') ?>">Apply with <?= get_field('site_name', 'option') ?></a>
 								</div>
 							</div>
 					<?php

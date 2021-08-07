@@ -6,7 +6,7 @@
             if (have_rows('learn_about_sidebar_links', 'option')) :
                 while (have_rows('learn_about_sidebar_links', 'option')) : the_row();
             ?>
-                    <a href="<?php echo get_sub_field('link', 'option'); ?>"><?php echo get_sub_field('text', 'option'); ?></a>
+                    <a href="<?= get_sub_field('link', 'option'); ?>"><?= get_sub_field('text', 'option'); ?></a>
                 <?php
                 endwhile;
             else :

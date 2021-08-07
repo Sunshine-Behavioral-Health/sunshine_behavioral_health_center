@@ -15,15 +15,15 @@
                         while (have_rows('accordions_with_toc-element_repeater')) : the_row();
                     ?>
                             <?php if (get_sub_field('is_group_headline')) : ?>
-                                <h2><?php echo get_sub_field('headline_text') ?></h2>
+                                <h2><?= get_sub_field('headline_text') ?></h2>
                             <?php else : ?>
                                 <div class="expandable_row_element">
                                     <div class="expandable_row_element_headline_img_wrapper">
-                                        <h3><?php echo get_sub_field('headline_text') ?></h3>
-                                        <img src="<?php echo get_field('plus_icon', 'option')['url'] ?>" loading="lazy" alt="">
+                                        <h3><?= get_sub_field('headline_text') ?></h3>
+                                        <img src="<?= get_field('plus_icon', 'option')['url'] ?>" loading="lazy" alt="">
                                     </div>
                                     <div class="expandable_row_content hide">
-                                        <p><?php echo get_sub_field('content') ?></p>
+                                        <p><?= get_sub_field('content') ?></p>
                                     </div>
                                 </div>
                             <?php endif; ?>

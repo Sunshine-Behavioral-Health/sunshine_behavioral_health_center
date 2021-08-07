@@ -38,7 +38,7 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
                     <p class="last-edited">Last Edited:</p>
                     <p class="date"><?= get_field('clinically_reviewed_date'); ?></p>
                     <p class="title">Medical Reviewer:</p>
-                    <p class="name"><?php echo $medicalReviewUser['display_name'] ?></p>
+                    <p class="name"><?= $medicalReviewUser['display_name'] ?></p>
                     <div class="bio hide">
                         <h6 class="">Meet <?= $medicalReviewUser['display_name'] ?></h6>
                         <div> <?= shorten_string($medicalReviewerMetaData['description'][0], 30); ?>...<a href="/contributors#<?= $medicalReviewerMetaData['first_name'][0] . '_' . $medicalReviewerMetaData['last_name'][0] ?>"> Read More</a></div>

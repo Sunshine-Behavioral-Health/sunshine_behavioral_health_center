@@ -23,17 +23,17 @@ sbh_center()->print_styles('sbh_center-custom-page-nosidebar', 'sbh_center-conte
             <!-- Headlines -->
             <section class="no_hero_no_sidebar_headlines_section">
                 <?php if (get_field('page_headline')) : ?>
-                    <h1><?php echo get_field('page_headline') ?></h1>
+                    <h1><?= get_field('page_headline') ?></h1>
                 <?php endif; ?>
 
                 <?php if (get_field('page_subheadline_paragraph')) : ?>
-                    <p class="headlines_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
+                    <p class="headlines_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
                 <?php endif; ?>
             </section>
 
             <!-- Page Content -->
             <?php get_template_part('template-parts/content/googleTranslate'); ?>
-            <?php echo get_field('content') ?>
+            <?= get_field('content') ?>
 
             <?php get_template_part('template-parts/content/pageDisclaimer'); ?>
             <?php get_template_part('template-parts/content/phoneTreatmentCta'); ?>

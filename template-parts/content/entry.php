@@ -13,7 +13,7 @@ namespace WP_Rig\WP_Rig;
 <article class="blog_page_article" id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
 	<div class="blog_page_article_thumbnail">
 		<div class="blog_page_article_thumbnail_date">
-			<?php echo get_the_date(); ?>
+			<?= get_the_date(); ?>
 		</div>
 		<div class="blog_page_article_thumbnail_image">
 			<?php get_template_part('template-parts/content/entry_thumbnail', get_post_type()); ?>
@@ -29,7 +29,7 @@ namespace WP_Rig\WP_Rig;
 		// get_template_part('template-parts/content/entry_footer', get_post_type());
 		?>
 		<div class="blog_page_readMore">
-			<a href="<?php echo the_permalink(); ?>"> Read More</a>
+			<a href="<?= the_permalink(); ?>"> Read More</a>
 
 		</div>
 	</div>
