@@ -157,7 +157,6 @@ if (is_home()) {
 		<h2 class="text-center">OUR SERVICES</h2>
 		<div class="flex">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
-				<h2>there is a service cards</h2>
 				<div class="col-xs-12 col-sm-6 col-md-12 flex flex-column align-center">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
 						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
@@ -208,7 +207,7 @@ if (is_home()) {
 
 	<!-- Blog Posts -->
 	<?php $uploadDir = wp_upload_dir(); ?>
-	<section class="blog-posts" <?= !empty(get_field('blog_background_image'))  ? get_field('blog_background_image')['url'] : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>style="">
+	<section class="blog-posts" style="<?= !empty(get_field('blog_background_image'))  ? 'background: url('. get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
 		<h2>OUR BLOG</h2>
 		<p>NEW</p>
 		<ul class="row">
