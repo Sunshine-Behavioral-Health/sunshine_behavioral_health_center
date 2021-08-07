@@ -154,20 +154,27 @@ if (is_home()) {
 
 	<!-- Services Cards -->
 	<section class="services-cards section-padding">
-		<h2 class="text-center">OUR SERVICES</h2>
+		<h2 class="text-center color-secondary">OUR SERVICES</h2>
 		<div class="flex">
-			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
-				<h2>there is a service card</h2>
-				<div class="col-xs-12 col-sm-6 col-md-12 flex flex-column align-center">
-					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
-						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
-						<h3 class="block"><?= $serviceCard['headline'] ?></h3>
-					</a>
-					<p>______</p>
-					<p class="text-center"><?= $serviceCard['card_content'] ?></p>
-					<a href="<?= $serviceCard['card_links']['url'] ?>" class="color-secondary bold text-center">Learn More</a>
-				</div>
-			<?php endforeach; ?>
+			<?php
+			if (have_rows('inpatient_cards')) :
+				while (have_rows('inpatient_cards')) : the_row();
+					$serviceCard = get_field('inpatient_cards');
+			?>
+					<h2>there is a service cards</h2>
+					<div class="col-xs-12 col-sm-6 col-md-12 flex flex-column align-center">
+						<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
+							<img loading="lazy" class="icon block" src="<? get_sub_field('icon')['url'] ?>" alt="">
+							<h3 class="block"><?= $serviceCard['headline'] ?></h3>
+						</a>
+						<p>______</p>
+						<p class="text-center"><?= $serviceCard['card_content'] ?></p>
+						<a href="<?= $serviceCard['card_links']['url'] ?>" class="color-secondary bold text-center">Learn More</a>
+					</div>
+			<?php
+				endwhile;
+			endif;
+			?>
 		</div>
 	</section>
 
