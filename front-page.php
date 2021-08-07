@@ -37,7 +37,7 @@ if (is_home()) {
 	});
 </script>
 
-<main id="primary" class="front_page">
+<main id="primary" class="front_page home-page">
 	<!-- HERO -->
 	<div class="hero_container row">
 		<img class="hide_on_mobile hide_on_tablet front_page_desktop_hero " src="<?= get_field('hero_image')['url'] ?>" alt="">
@@ -153,7 +153,7 @@ if (is_home()) {
 
 
 	<!-- Services Cards -->
-	<section class="section-padding">
+	<section class="services-cards section-padding">
 		<h2 class="text-center">OUR SERVICES</h2>
 		<div class="flex">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
