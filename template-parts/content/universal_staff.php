@@ -37,7 +37,7 @@ if (is_page_template('staff.php')) : ?>
     <section id="home_staff_section" class="">
         <div class="staff_container ">
             <h2 class="staff_headline"><?php the_field('staff_headline') ?></h2>
-            <div class="row staff_width">
+            <div class="staff_width">
                 <?php if (have_rows('staff_repeater', 'option')) :
                     while (have_rows('staff_repeater', 'option')) : the_row();
                         if (get_sub_field('on_home_page', 'option')) : ?>

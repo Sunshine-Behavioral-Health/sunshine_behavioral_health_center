@@ -183,11 +183,11 @@ if (is_home()) {
 	<?php $uploadDir = wp_upload_dir(); ?>
 	<section class="blog-posts background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
 		<h2 class="text-center color-white">OUR BLOG</h2>
-		<ul class="row">
+		<ul class="row flex flex-wrap space-between">
 			<?php $posts_query = new \WP_Query('posts_per_page=3');
 			while ($posts_query->have_posts()) : $posts_query->the_post();
 			?>
-				<li class="col-xs-12 col-sm-4 m-r-15 m-l-15">
+				<li class="col-xs-12 col-sm-3">
 					<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p><?php the_date(); ?></p>
 					<p><?php the_excerpt(); ?></p>
