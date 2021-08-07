@@ -73,16 +73,16 @@ if (is_home()) {
 
 	<!-- Inpatient Treatment -->
 	<h2>Before Cards</h2>
-	<section>
+	<section class="wrapper">
 		<h2 class=""><?= get_field('inpatient_treatment_headline') ?></h2>
 		<div class="row">
 			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
 				<div class="col-xs-12 col-sm-6 flex flex-column align-center">
 					<a href="<?= $column['link'] ?>">
-						<div class="icon_container"><img class="icon" src="<?= get_sub_field('icon')['url'] ?>"></div>
+						<div class="icon_container"><img class="icon" src="<?= $column['icon']['url'] ?>"></div>
 					</a>
 					<h3><?= $column['title'] ?></h3>
-					<p><?= $column['content'] ?></p>
+					<p class="text-center"><?= $column['content'] ?></p>
 				</div>
 			<?php endforeach; ?>
 		</div>
