@@ -76,11 +76,11 @@ if (is_home()) {
 		<h2 class="text-center"><?= get_field('inpatient_treatment_headline') ?></h2>
 		<div class="row">
 			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
-				<div class="col-xs-12 col-sm-6 flex flex-column align-center">
+				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column align-center">
 					<a href="<?= $column['link'] ?>">
 						<div class="icon_container"><img class="icon" src="<?= $column['icon']['url'] ?>"></div>
 					</a>
-					<h3><?= $column['title'] ?></h3>
+					<h3 class="text-center"><?= $column['title'] ?></h3>
 					<p class="text-center"><?= $column['content'] ?></p>
 				</div>
 			<?php endforeach; ?>
@@ -89,25 +89,25 @@ if (is_home()) {
 
 
 	<!-- CTA Banner -->
-	<section class="background-color-secondary p-t-20 p-b-20 flex flex-column justify-center align-center">
-		<h2 class="text-center"><?= get_field('interjection_cta_one_headline') ?></h2>
+	<section class="background-color-secondary cta-banner p-t-20 p-b-20 flex flex-column justify-center align-center">
+		<h2 class="text-center color-white m-b-25"><?= get_field('interjection_cta_one_headline') ?></h2>
 		<a href="tel:949-276-2886" class="invocaNumber button">949-276-2886</a>
 	</section>
 
 
 	<!-- Badges -->
-	<section class="flex flex-wrap">
-		<div class="flex flex-column">
+	<section class="flex flex-wrap justify-evenly">
+		<div class="flex flex-column align-center">
 			<?= get_field('legitscript_html', 'option') ?>
 			<p><?php echo get_field('badge_1_text'); ?></p>
 
 		</div>
-		<div class="flex flex-column">
+		<div class="flex flex-column align-center">
 			<img loading="lazy" src="<?php echo get_field('badge_2')['url'] ?>" alt="">
 			<p><?php echo get_field('badge_2_text'); ?></p>
 
 		</div>
-		<div class="flex flex-column">
+		<div class="flex flex-column align-center">
 			<img loading="lazy" src="<?php echo get_field('badge_3')['url'] ?>" alt="">
 			<p><?php echo get_field('badge_3_text'); ?></p>
 		</div>

@@ -38,6 +38,9 @@
 .justify-center {
     justify-content: center;
 }
+.justify-evenly{
+    justify-content: space-evenly;
+}
 .justify-start {
     justify-content: flex-start;
 }
@@ -181,6 +184,10 @@ $step: 5;
 
 .background-color-secondary{
     background-color: $secondaryColor;
+}
+
+.cta-banner{
+    padding: 25px 20px;    
 }
 
 @include mobile {
