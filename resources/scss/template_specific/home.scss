@@ -7,6 +7,10 @@
     }
 
     .services-cards {
-        border: 2px solid red;
+    }
+    .treatment-resources-columns {
+        &--column {
+            border-bottom: 2px solid #cdcdcd;
+        }
     }
 }

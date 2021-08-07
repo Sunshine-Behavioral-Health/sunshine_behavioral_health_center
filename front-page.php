@@ -172,7 +172,7 @@ if (is_home()) {
 	</section>
 
 
-	<section>
+	<!-- <section>
 		<div class="treatment_cards_container row ">
 			<h2 class="col-12"><?php echo get_field('inpatient_card_headline') ?></h2>
 			<div class="treatment_card_container row">
@@ -196,24 +196,18 @@ if (is_home()) {
 				?>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 
-
-	<!-- Insurance Coverage Interjection -->
-	<section class="healing_section">
-		<div class="">
-			<div class="row  healing_background">
-				<h2 class="section_headline insurance_verification_headling"><?= get_field('interjection_cta_two_headline') ?></h2>
-				<div class="cta_btn secondary_color_cta row interjection_cta"><a href="<?= get_field('interjection_cta_two_button')['url'] ?>" class="hpInsurance"><?= get_field('interjection_cta_two_button')['title'] ?></a></div>
-			</div>
-		</div>
+	<!-- CTA Banner -->
+	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center">
+		<h2 class="text-center color-white m-b-25"><?= get_field('interjection_cta_one_headline') ?></h2>
+		<a href="<?= get_field('interjection_cta_two_button')['url'] ?>" class="button"><?= get_field('interjection_cta_two_button')['title'] ?></a>
 	</section>
 
 
 	<!-- Blog Posts -->
 	<section class="blog_posts_section">
-
 		<div class=" row blog_container blog_bg" style="background-image: url(
 			<?php
 			if (get_field('blog_background_image')) {
@@ -247,6 +241,21 @@ if (is_home()) {
 	<!-- End Blog Posts -->
 
 	<!-- Treatment Resources -->
+	<section class="section-padding treatment-resources-columns">
+		<img src="" alt="">
+		<h2></h2>
+		<div class="row">
+			<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
+				<div class="col-xs-12 col-sm-6 treatment-resources-columns--column">
+					<h3><?= $treatmentColumns['headline'] ?></h3>
+					<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
+					<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary"></a>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</section>
+
+
 	<section class="treatment_resources_section">
 		<div class="treatment_resources_container ">
 			<div class="treatment_resources_container_headline">
