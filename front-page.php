@@ -243,8 +243,8 @@ if (is_home()) {
 	<!-- Treatment Resources -->
 	<section class="section-padding treatment-resources-columns">
 		<div class="wrapper">
-			<img src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>" alt="">
-			<h2><?= get_field('addiction_treatment_headline') ?></h2>
+			<img class="margin-auto" src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>" alt="">
+			<h4 class="text-center"><?= get_field('addiction_treatment_headline') ?></h4>
 			<div class="row">
 				<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
 					<div class="col-xs-12 col-sm-6 treatment-resources-columns--column">
@@ -261,8 +261,8 @@ if (is_home()) {
 	<section class="treatment_resources_section">
 		<div class="treatment_resources_container ">
 			<div class="treatment_resources_container_headline">
-				<div class="icon_container"><img loading="lazy" class="" src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>"></div>
-				<h4><?= get_field('addiction_treatment_headline') ?></h4>
+				<img loading="lazy" class="margin-auto" src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>">
+				<h4 class="text-center"><?= get_field('addiction_treatment_headline') ?></h4>
 			</div>
 			<div class="row">
 				<div class="col-md-6">

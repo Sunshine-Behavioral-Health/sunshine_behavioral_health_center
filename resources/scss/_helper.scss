@@ -198,6 +198,11 @@ $step: 5;
     font-style: italic;
 }
 
+.margin-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @include mobile {
     .mobile_full_width {
         width: 100%;

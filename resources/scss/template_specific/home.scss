@@ -11,6 +11,9 @@
     .treatment-resources-columns {
         &--column {
             border-bottom: 2px solid #cdcdcd;
+            @include mobile {
+                text-align: center;
+            }
         }
     }
 }
