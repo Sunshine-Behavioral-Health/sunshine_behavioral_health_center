@@ -12,6 +12,10 @@
     .treatment-resources-columns {
         &--column {
             border-bottom: 2px solid #cdcdcd;
+            @include desktop {
+                max-width: 48%;
+                margin: 0 auto;
+            }
             @include mobile {
                 text-align: center;
             }

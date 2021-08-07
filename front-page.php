@@ -159,7 +159,7 @@ if (is_home()) {
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
 				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column flex-wrap align-center">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
-						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
+						<img loading="lazy" class="icon block" src="<? $serviceCard['icon'] ?>" alt="">
 						<h3 class="block"><?= $serviceCard['headline'] ?></h3>
 					</a>
 					<p>______</p>
@@ -187,11 +187,11 @@ if (is_home()) {
 			<?php $posts_query = new \WP_Query('posts_per_page=3');
 			while ($posts_query->have_posts()) : $posts_query->the_post();
 			?>
-				<li class="col-xs-12 col-sm-3">
+				<li class="col-xs-12 col-sm-4">
 					<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p><?php the_date(); ?></p>
 					<p><?php the_excerpt(); ?></p>
-					<a class="blog_post_cta" href="<?php the_permalink(); ?>">Read More &#187;</a>
+					<a class="blog_post_cta button" href="<?php the_permalink(); ?>">Read More &#187;</a>
 				</li>
 			<?php endwhile;
 			wp_reset_query(); ?>
@@ -203,9 +203,9 @@ if (is_home()) {
 		<div class="wrapper flex flex-column">
 			<img class="margin-auto" src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>" alt="">
 			<h4 class="text-center m-b-50"><?= get_field('addiction_treatment_headline') ?></h4>
-			<div class="row">
+			<div class="row flex">
 				<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
-					<div class="treatment-resources-columns--column flex flex-column col-xs-12 col-sm-5 p-t-15 p-b-15">
+					<div class="treatment-resources-columns--column flex flex-column col-xs-12 col-sm-6 p-t-15 p-b-15">
 						<h3 class="color-secondary"><?= $treatmentColumns['headline'] ?></h3>
 						<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
 						<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary bold text-center">Learn More</a>

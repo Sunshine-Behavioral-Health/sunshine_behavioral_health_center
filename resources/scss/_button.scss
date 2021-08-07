@@ -1,11 +1,14 @@
 .button {
-    background-color: var(--primary_color);
+    background-color: $primaryColor;
     color: #fff;
     padding: 15px 20px;
     font-size: 24px;
     border-radius: 3px;
     text-align: center;
     &:hover {
-        background-color: var(--tertiary_color);
+        background-color: $tertiaryColor;
+    }
+    &--secondary {
+        background-color: $secondaryColor;
     }
 }
