@@ -157,7 +157,7 @@ if (is_home()) {
 		<h2 class="text-center">OUR SERVICES</h2>
 		<div class="flex">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
-				<div class="col-xs-12 col-sm-6 col-md-12 flex flex-column align-center">
+				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column flex-wrap align-center">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
 						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
 						<h3 class="block"><?= $serviceCard['headline'] ?></h3>
@@ -171,32 +171,6 @@ if (is_home()) {
 	</section>
 
 
-	<!-- <section>
-		<div class="treatment_cards_container row ">
-			<h2 class="col-12"><?php echo get_field('inpatient_card_headline') ?></h2>
-			<div class="treatment_card_container row">
-
-				<?php
-				if (have_rows('inpatient_cards')) :
-					while (have_rows('inpatient_cards')) : the_row();
-				?>
-						<div class="treatment_card_box">
-							<a href="<?php echo get_sub_field('card_links')['url'] ?>">
-								<div class="icon_container"><img loading="lazy" class="icon" src="<?php echo get_sub_field('icon')['url'] ?>" alt=""></div>
-								<h3><?php echo get_sub_field('headline') ?></h3>
-							</a>
-							<p>______</p>
-							<p class="treatment_card_paragraph"><?php echo get_sub_field('card_content') ?></p>
-							<div class="row treatment_card_cta_wrapper"><a href="<?php echo get_sub_field('card_links')['url'] ?>">Learn More</a></div>
-						</div>
-				<?php
-					endwhile;
-				endif;
-				?>
-			</div>
-		</div>
-	</section> -->
-
 
 	<!-- CTA Banner -->
 	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center">
@@ -207,15 +181,14 @@ if (is_home()) {
 
 	<!-- Blog Posts -->
 	<?php $uploadDir = wp_upload_dir(); ?>
-	<section class="blog-posts" style="<?= !empty(get_field('blog_background_image'))  ? 'background: url('. get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
-		<h2>OUR BLOG</h2>
-		<p>NEW</p>
+	<section class="blog-posts background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
+		<h2 class="text-center color-white">OUR BLOG</h2>
 		<ul class="row">
 			<?php $posts_query = new \WP_Query('posts_per_page=3');
 			while ($posts_query->have_posts()) : $posts_query->the_post();
 			?>
-				<li class="col-xs-12 col-sm-4">
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<li class="col-xs-12 col-sm-4 m-r-15 m-l-15">
+					<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p><?php the_date(); ?></p>
 					<p><?php the_excerpt(); ?></p>
 					<a class="blog_post_cta" href="<?php the_permalink(); ?>">Read More &#187;</a>
@@ -232,7 +205,7 @@ if (is_home()) {
 			<h4 class="text-center m-b-50"><?= get_field('addiction_treatment_headline') ?></h4>
 			<div class="row">
 				<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
-					<div class="treatment-resources-columns--column flex flex-column col-xs-12 col-sm-6 p-t-15 p-b-15">
+					<div class="treatment-resources-columns--column flex flex-column col-xs-12 col-sm-5 p-t-15 p-b-15">
 						<h3 class="color-secondary"><?= $treatmentColumns['headline'] ?></h3>
 						<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
 						<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary bold text-center">Learn More</a>
@@ -241,7 +214,6 @@ if (is_home()) {
 			</div>
 		</div>
 	</section>
-
 
 	<!-- STAFF -->
 	<?= do_shortcode('[staff_home]'); ?>
