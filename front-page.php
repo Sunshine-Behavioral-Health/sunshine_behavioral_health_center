@@ -250,58 +250,13 @@ if (is_home()) {
 					<div class="col-xs-12 col-sm-6 treatment-resources-columns--column">
 						<h3 class="color-secondary"><?= $treatmentColumns['headline'] ?></h3>
 						<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
-						<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary"><?= get_sub_field('link_text') ?></a>
+						<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary bold text-center">Learn More</a>
 					</div>
 				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
 
-
-	<section class="treatment_resources_section">
-		<div class="treatment_resources_container ">
-			<div class="treatment_resources_container_headline">
-				<img loading="lazy" class="margin-auto" src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>">
-				<h4 class="text-center"><?= get_field('addiction_treatment_headline') ?></h4>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<?php
-					if (have_rows('addiction_treatment_column_one')) :
-						while (have_rows('addiction_treatment_column_one')) : the_row();
-					?>
-							<div class="row resource_content">
-								<h3><?= get_sub_field('headline') ?></h3>
-								<p><?= get_sub_field('content') ?></p>
-								<div class="resource_content_cta"><a href="<?= get_sub_field('link') ?>"><?= get_sub_field('link_text') ?></a></div>
-							</div>
-							<div class="resource_content_spacer hide_on_desktop"></div>
-					<?php
-						endwhile;
-					endif;
-					?>
-				</div>
-				<div class="col-md-6">
-					<?php
-					if (have_rows('addiction_treatment_column_two')) :
-						while (have_rows('addiction_treatment_column_two')) : the_row();
-					?>
-							<div class="row resource_content">
-								<h3><?= get_sub_field('headline') ?></h3>
-								<p><?= get_sub_field('content') ?></p>
-								<div class="resource_content_cta"><a href="<?= get_sub_field('link') ?>"><?= get_sub_field('link_text') ?></a></div>
-							</div>
-							<div class="resource_content_spacer hide_on_desktop"></div>
-					<?php
-						endwhile;
-					endif;
-					?>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- End Treatment Resources -->
 
 	<!-- STAFF -->
 	<?= do_shortcode('[staff_home]'); ?>
