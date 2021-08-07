@@ -157,6 +157,7 @@ if (is_home()) {
 		<h2 class="text-center">OUR SERVICES</h2>
 		<div class="flex">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
+				<h2>there is a service card</h2>
 				<div class="col-xs-12 col-sm-6 col-md-12 flex flex-column align-center">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
 						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
@@ -169,6 +170,35 @@ if (is_home()) {
 			<?php endforeach; ?>
 		</div>
 	</section>
+
+
+	<section>
+		<div class="treatment_cards_container row ">
+			<h2 class="col-12"><?php echo get_field('inpatient_card_headline') ?></h2>
+			<div class="treatment_card_container row">
+
+				<?php
+				if (have_rows('inpatient_cards')) :
+					while (have_rows('inpatient_cards')) : the_row();
+				?>
+						<div class="treatment_card_box">
+							<a href="<?php echo get_sub_field('card_links')['url'] ?>">
+								<div class="icon_container"><img loading="lazy" class="icon" src="<?php echo get_sub_field('icon')['url'] ?>" alt=""></div>
+								<h3><?php echo get_sub_field('headline') ?></h3>
+							</a>
+							<p>______</p>
+							<p class="treatment_card_paragraph"><?php echo get_sub_field('card_content') ?></p>
+							<div class="row treatment_card_cta_wrapper"><a href="<?php echo get_sub_field('card_links')['url'] ?>">Learn More</a></div>
+						</div>
+				<?php
+					endwhile;
+				endif;
+				?>
+			</div>
+		</div>
+	</section>
+
+
 
 	<!-- Insurance Coverage Interjection -->
 	<section class="healing_section">
