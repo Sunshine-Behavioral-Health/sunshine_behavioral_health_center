@@ -17,10 +17,14 @@
             }
         }
     }
-
-    picture.margin-0-auto{
-        img{
-            margin: 0 auto;
+    .blog-posts {
+        li {
+            background-color: #fff;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }
