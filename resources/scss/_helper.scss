@@ -167,6 +167,14 @@ $step: 5;
     color: $secondaryColor;
 }
 
+.color-white {
+    color: #fff;
+}
+
+.color-black {
+    color: #000;
+}
+
 @include mobile {
     .mobile_full_width {
         width: 100%;

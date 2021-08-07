@@ -71,10 +71,9 @@ if (is_home()) {
 
 	<?php get_template_part('template-parts/content/homeCovidNotice'); ?>
 
-	<!-- Inpatient Treatment -->
-	<h2>Before Cards</h2>
+	<!-- Icon, Headline, Content  - Columns  - 50/50 -->
 	<section class="wrapper">
-		<h2 class=""><?= get_field('inpatient_treatment_headline') ?></h2>
+		<h2 class="text-center"><?= get_field('inpatient_treatment_headline') ?></h2>
 		<div class="row">
 			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
 				<div class="col-xs-12 col-sm-6 flex flex-column align-center">
@@ -87,7 +86,13 @@ if (is_home()) {
 			<?php endforeach; ?>
 		</div>
 	</section>
-	<h2>After cards</h2>
+
+
+	<!-- CTA Banner -->
+	<section>
+		<h2 class="text-center"><?php echo get_field('interjection_cta_one_headline') ?></h2>
+
+	</section>
 
 	<!-- Healing Interjection -->
 	<section>
