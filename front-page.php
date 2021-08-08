@@ -72,42 +72,41 @@ if (is_home()) {
 	<?php get_template_part('template-parts/content/homeCovidNotice'); ?>
 
 	<!-- Icon, Headline, Content  - Columns  - 50/50 -->
-	<section class="wrapper m-t-20">
+	<section class="wrapper section-padding">
 		<h2 class="text-center"><?= get_field('inpatient_treatment_headline') ?></h2>
 		<div class="row">
 			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
 				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column align-center">
-					<a href="<?= $column['link'] ?>">
+					<a href="<?= $column['link'] ?>" class="m-b-15">
 						<div class="icon_container"><img class="icon" src="<?= $column['icon']['url'] ?>"></div>
 					</a>
-					<h3 class="text-center"><?= $column['title'] ?></h3>
+					<h3 class="text-center m-b-5"><?= $column['title'] ?></h3>
 					<p class="text-center"><?= $column['content'] ?></p>
 				</div>
 			<?php endforeach; ?>
 		</div>
 	</section>
 
-
 	<!-- CTA Banner -->
-	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center">
+	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center wrapper">
 		<h2 class="text-center color-white m-b-25"><?= get_field('interjection_cta_one_headline') ?></h2>
 		<a href="tel:949-276-2886" class="invocaNumber button">949-276-2886</a>
 	</section>
 
 
 	<!-- Badges -->
-	<section class="flex flex-wrap justify-evenly section-padding">
-		<div class="flex flex-column align-center">
+	<section class="flex flex-wrap justify-evenly section-padding wrapper">
+		<div class="flex flex-column align-center flex-1">
 			<?= get_field('legitscript_html', 'option') ?>
 			<p><?= get_field('badge_1_text'); ?></p>
 
 		</div>
-		<div class="flex flex-column align-center">
+		<div class="flex flex-column align-center flex-1">
 			<img loading="lazy" src="<?= get_field('badge_2')['url'] ?>" alt="">
 			<p><?= get_field('badge_2_text'); ?></p>
 
 		</div>
-		<div class="flex flex-column align-center">
+		<div class="flex flex-column align-center flex-1">
 			<img loading="lazy" src="<?= get_field('badge_3')['url'] ?>" alt="">
 			<p><?= get_field('badge_3_text'); ?></p>
 		</div>
@@ -153,13 +152,14 @@ if (is_home()) {
 
 
 	<!-- Services Cards -->
-	<section class="services-cards section-padding">
+	<section class="services-cards section-padding wrapper">
 		<h2 class="text-center">OUR SERVICES</h2>
-		<div class="flex">
+		<div class="flex flex-wrap row">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
-				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column flex-wrap align-center">
+				<div class="col-xs-12 col-sm-6 col-md-4 flex flex-column flex-wrap align-center">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
-						<img loading="lazy" class="icon block" src="<? $serviceCard['icon'] ?>" alt="">
+						<img loading="lazy" class="icon block" src="something here <? $serviceCard['icon']['url'] ?>" alt="">
+						<img loading="lazy" class="icon block" src="something here <? get_sub_field('icon')['url'] ?>" alt="">
 						<h3 class="block"><?= $serviceCard['headline'] ?></h3>
 					</a>
 					<p>______</p>
@@ -173,7 +173,7 @@ if (is_home()) {
 
 
 	<!-- CTA Banner -->
-	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center">
+	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center wrapper">
 		<h2 class="text-center color-white m-b-25"><?= get_field('interjection_cta_one_headline') ?></h2>
 		<a href="<?= get_field('interjection_cta_two_button')['url'] ?>" class="button"><?= get_field('interjection_cta_two_button')['title'] ?></a>
 	</section>
@@ -188,10 +188,12 @@ if (is_home()) {
 			while ($posts_query->have_posts()) : $posts_query->the_post();
 			?>
 				<li class="col-xs-12 col-sm-4">
-					<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p><?php the_date(); ?></p>
-					<p><?php the_excerpt(); ?></p>
-					<a class="blog_post_cta button" href="<?php the_permalink(); ?>">Read More &#187;</a>
+					<div class="max-width-90">
+						<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<p><?php the_date(); ?></p>
+						<p><?php the_excerpt(); ?></p>
+						<a class="blog_post_cta button" href="<?php the_permalink(); ?>">Read More &#187;</a>
+					</div>
 				</li>
 			<?php endwhile;
 			wp_reset_query(); ?>
@@ -220,30 +222,25 @@ if (is_home()) {
 
 
 	<!-- Substance Information -->
-	<section>
-		<div class="substance_bg" style="background-image: url(<?= get_field('substance_abuse_background_image')['url'] ?>)">
-			<h2 class="substance_headline"><?= get_field('substance_abuse_information_headline'); ?></h2>
-			<div class="row substance_info_width">
-				<?php
-				if (have_rows('substance_abuse_cards')) :
-					while (have_rows('substance_abuse_cards')) : the_row();
-				?>
-						<div class="substance_individual_card">
-							<div class="substance_abuse_top">
-								<a href="<?= get_sub_field('link') ?>">
-									<div class="icon_container"><img loading="lazy" class="icon " src="<?= get_sub_field('icon')['url'] ?>"></div>
-								</a>
+	<section style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('blog_background_image')['url'] . ')'  : '' ?>">
+		<div class="wrapper">
+			<h2 class="color-white text-center"><?= get_field('substance_abuse_information_headline'); ?></h2>
 
-								<h3><?= get_sub_field('headline') ?></h3>
-								<p class="substance_headline_underline">______</p>
-							</div>
-							<p><?= get_sub_field('content') ?></p>
+			<?php foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
+				<div class="col-xs-1 col.sm-2 col-md-3">
+					<div class="max-width-90">
+						<div class="substance_abuse_top">
+							<a href="<?= $substanceColumn['link'] ?>">
+								<div class="icon_container"><img loading="lazy" class="icon " src="<?= $substanceColumn['icon']['url'] ?>"></div>
+							</a>
+							<h3><?= $substanceColumn['headline'] ?></h3>
+							<p class="substance_headline_underline">______</p>
 						</div>
-				<?php
-					endwhile;
-				endif;
-				?>
-			</div>
+						<p><?= $substanceColumn['content'] ?></p>
+					</div>
+
+				</div>
+			<?php endforeach ?>
 		</div>
 	</section>
 </main>

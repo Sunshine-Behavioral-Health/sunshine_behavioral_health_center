@@ -38,7 +38,7 @@
 .justify-center {
     justify-content: center;
 }
-.justify-evenly{
+.justify-evenly {
     justify-content: space-evenly;
 }
 .justify-start {
@@ -178,29 +178,38 @@ $step: 5;
     color: #000;
 }
 
-.background-color-primary{
+.background-color-primary {
     background-color: $primaryColor;
 }
 
-.background-color-secondary{
+.background-color-secondary {
     background-color: $secondaryColor;
 }
 
-.section-padding{
-    padding: 25px 0;    
+.section-padding {
+    padding: 25px 0;
 }
 
-.bold{
+.bold {
     font-weight: bolder;
 }
 
-.italic{
+.italic {
     font-style: italic;
 }
 
-.margin-auto{
+.margin-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+.max-width-90 {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.flex-1 {
+    flex: 1;
 }
 
 @include mobile {
