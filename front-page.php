@@ -186,22 +186,25 @@ if (is_home()) {
 	<!-- Blog Posts -->
 	<?php $uploadDir = wp_upload_dir(); ?>
 	<section class="blog-posts background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
-		<h2 class="text-center color-white">OUR BLOG</h2>
-		<ul class="row flex flex-wrap space-between">
-			<?php $posts_query = new \WP_Query('posts_per_page=3');
-			while ($posts_query->have_posts()) : $posts_query->the_post();
-			?>
-				<li class="col-xs-12 col-sm-4">
-					<div class="blog-posts--card flex flex-column">
-						<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p><?php the_date(); ?></p>
-						<p><?php the_excerpt(); ?></p>
-						<a class="blog_post_cta button" href="<?php the_permalink(); ?>">Read More &#187;</a>
-					</div>
-				</li>
-			<?php endwhile;
-			wp_reset_query(); ?>
-		</ul>
+		<div class="wrapper">
+			<h2 class="text-center color-white">OUR BLOG</h2>
+			<ul class="row flex flex-wrap space-between">
+				<?php $posts_query = new \WP_Query('posts_per_page=3');
+				while ($posts_query->have_posts()) : $posts_query->the_post();
+				?>
+					<li class="col-xs-12 col-sm-4">
+						<div class="blog-posts--card flex flex-column">
+							<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p><?php the_date(); ?></p>
+							<p><?php the_excerpt(); ?></p>
+							<a class="blog_post_cta button" href="<?php the_permalink(); ?>">Read More &#187;</a>
+						</div>
+					</li>
+				<?php endwhile;
+				wp_reset_query(); ?>
+			</ul>
+		</div>
+
 	</section>
 
 	<!-- Treatment Resources -->
@@ -229,18 +232,20 @@ if (is_home()) {
 	<section class="substance-information background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('substance_abuse_background_image')['url'] . ')'  : '' ?>">
 		<div class="wrapper">
 			<h2 class="color-white text-center"><?= get_field('substance_abuse_information_headline'); ?></h2>
-			<?php foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
-				<div class="col-xs-12 col-sm-6 col-md-3 p-10 flex flex-column align-center">
-					<div class="substance_abuse_top">
-						<a class="color-white" href="<?= $substanceColumn['link'] ?>">
-							<div class="icon_container"><img loading="lazy" class="icon " src="<?= $substanceColumn['icon']['url'] ?>"></div>
-						</a>
-						<h3 class="color-white text-center"><?= $substanceColumn['headline'] ?></h3>
-						<p class="color-white text-center">______</p>
+			<div class="row">
+				<?php foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
+					<div class="col-xs-12 col-sm-6 col-md-3 p-10 flex flex-column align-center">
+						<div class="substance_abuse_top">
+							<a class="color-white" href="<?= $substanceColumn['link'] ?>">
+								<div class="icon_container"><img loading="lazy" class="icon " src="<?= $substanceColumn['icon']['url'] ?>"></div>
+							</a>
+							<h3 class="color-white text-center"><?= $substanceColumn['headline'] ?></h3>
+							<p class="color-white text-center m-b-10">______</p>
+						</div>
+						<p class='color-white text-center'><?= $substanceColumn['content'] ?></p>
 					</div>
-					<p class='color-white text-center'><?= $substanceColumn['content'] ?></p>
-				</div>
-			<?php endforeach ?>
+				<?php endforeach ?>
+			</div>
 		</div>
 	</section>
 </main>
