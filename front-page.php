@@ -88,8 +88,8 @@ if (is_home()) {
 	</section>
 
 	<!-- CTA Banner -->
-	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center">
-		<div class="wrapper">
+	<section class="background-color-secondary section-padding p-t-20 p-b-20">
+		<div class="wrapper flex flex-column justify-center align-center">
 			<h2 class="text-center color-white m-b-25"><?= get_field('interjection_cta_one_headline') ?></h2>
 			<a href="tel:949-276-2886" class="invocaNumber button">949-276-2886</a>
 		</div>
@@ -175,8 +175,8 @@ if (is_home()) {
 
 
 	<!-- CTA Banner -->
-	<section class="background-color-secondary section-padding p-t-20 p-b-20 flex flex-column justify-center align-center">
-		<div class="wrapper">
+	<section class="background-color-secondary section-padding p-t-20 p-b-20">
+		<div class="wrapper flex flex-column justify-center align-center">
 			<h2 class="text-center color-white m-b-25"><?= get_field('interjection_cta_one_headline') ?></h2>
 			<a href="<?= get_field('interjection_cta_two_button')['url'] ?>" class="button"><?= get_field('interjection_cta_two_button')['title'] ?></a>
 		</div>
@@ -192,7 +192,7 @@ if (is_home()) {
 			while ($posts_query->have_posts()) : $posts_query->the_post();
 			?>
 				<li class="col-xs-12 col-sm-4">
-					<div class="max-width-90 blog-posts--card flex flex-column">
+					<div class="blog-posts--card flex flex-column">
 						<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p><?php the_date(); ?></p>
 						<p><?php the_excerpt(); ?></p>
@@ -226,11 +226,11 @@ if (is_home()) {
 
 
 	<!-- Substance Information -->
-	<section style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('substance_abuse_background_image')['url'] . ')'  : '' ?>">
+	<section class="substance-information background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('substance_abuse_background_image')['url'] . ')'  : '' ?>">
 		<div class="wrapper">
 			<h2 class="color-white text-center"><?= get_field('substance_abuse_information_headline'); ?></h2>
 			<?php foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
-				<div class="col-xs-1 col-sm-6 col-md-3 p-10 flex flex-column align-center">
+				<div class="col-xs-12 col-sm-6 col-md-3 p-10 flex flex-column align-center">
 					<div class="substance_abuse_top">
 						<a class="color-white" href="<?= $substanceColumn['link'] ?>">
 							<div class="icon_container"><img loading="lazy" class="icon " src="<?= $substanceColumn['icon']['url'] ?>"></div>
