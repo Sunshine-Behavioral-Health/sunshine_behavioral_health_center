@@ -132,6 +132,40 @@ $step: 5;
     }
 }
 
+@for $i from 1 through (ceil($max/$step) + $step) {
+    $value: ($i - 1) * $step;
+    .neg-m-#{$value} {
+        margin: -#{$value}px !important;
+    }
+    .neg-m-t-#{$value} {
+        margin-top: -#{$value}px !important;
+    }
+    .neg-m-r-#{$value} {
+        margin-right: -#{$value}px !important;
+    }
+    .neg-m-b-#{$value} {
+        margin-bottom: -#{$value}px !important;
+    }
+    .neg-m-l-#{$value} {
+        margin-left: -#{$value}px !important;
+    }
+    .neg-p-#{$value} {
+        padding: -#{$value}px !important;
+    }
+    .neg-p-t-#{$value} {
+        padding-top: -#{$value}px !important;
+    }
+    .neg-p-r-#{$value} {
+        padding-right: -#{$value}px !important;
+    }
+    .neg-p-b-#{$value} {
+        padding-bottom: -#{$value}px !important;
+    }
+    .neg-p-l-#{$value} {
+        padding-left: -#{$value}px !important;
+    }
+}
+
 .absolute-top-left {
     top: 0;
     left: 0;

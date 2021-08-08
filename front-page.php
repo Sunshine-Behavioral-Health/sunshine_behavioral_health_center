@@ -100,17 +100,17 @@ if (is_home()) {
 	<section class="flex flex-wrap justify-evenly section-padding wrapper">
 		<div class="flex flex-column align-center flex-1">
 			<?= get_field('legitscript_html', 'option') ?>
-			<p><?= get_field('badge_1_text'); ?></p>
+			<p class="text-center"><?= get_field('badge_1_text'); ?></p>
 
 		</div>
 		<div class="flex flex-column align-center flex-1">
 			<img loading="lazy" src="<?= get_field('badge_2')['url'] ?>" alt="">
-			<p><?= get_field('badge_2_text'); ?></p>
+			<p class="text-center"><?= get_field('badge_2_text'); ?></p>
 
 		</div>
 		<div class="flex flex-column align-center flex-1">
 			<img loading="lazy" src="<?= get_field('badge_3')['url'] ?>" alt="">
-			<p><?= get_field('badge_3_text'); ?></p>
+			<p class="text-center"><?= get_field('badge_3_text'); ?></p>
 		</div>
 	</section>
 
@@ -188,11 +188,11 @@ if (is_home()) {
 	<section class="blog-posts background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
 		<div class="wrapper">
 			<h2 class="text-center color-white">OUR BLOG</h2>
-			<ul class="row flex flex-wrap space-between">
+			<ul class="row flex flex-wrap space-between neg-m-t-15">
 				<?php $posts_query = new \WP_Query('posts_per_page=3');
 				while ($posts_query->have_posts()) : $posts_query->the_post();
 				?>
-					<li class="col-xs-12 col-sm-4">
+					<li class="col-xs-12 col-sm-4 m-t-15">
 						<div class="blog-posts--card flex flex-column">
 							<h3 class="color-primary text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							<p><?php the_date(); ?></p>
