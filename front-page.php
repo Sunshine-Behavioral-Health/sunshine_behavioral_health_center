@@ -73,7 +73,7 @@ if (is_home()) {
 
 	<!-- Icon, Headline, Content  - Columns  - 50/50 -->
 	<section class="wrapper section-padding">
-		<h2 class="text-center"><?= get_field('inpatient_treatment_headline') ?></h2>
+		<h2 class="text-center m-b-15"><?= get_field('inpatient_treatment_headline') ?></h2>
 		<div class="row">
 			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
 				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column align-center">
@@ -115,7 +115,7 @@ if (is_home()) {
 	</section>
 
 	<!-- Testimonial Carousel -->
-	<section>
+	<section class="testimonial">
 		<div class="testimonial_bg" style="background-image: url(<?= get_field('testimonial_carousel_background_image')['url'] ?>)">
 			<div class="">
 				<h4><?= get_field('testimonial_headline') ?></h4>
@@ -155,7 +155,7 @@ if (is_home()) {
 
 	<!-- Services Cards -->
 	<section class="services-cards section-padding wrapper">
-		<h2 class="text-center">OUR SERVICES</h2>
+		<h2 class="text-center m-b-15">OUR SERVICES</h2>
 		<div class="flex flex-wrap row">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
 				<div class="col-xs-12 col-sm-6 col-md-4 flex flex-column flex-wrap align-center">
@@ -187,7 +187,7 @@ if (is_home()) {
 	<?php $uploadDir = wp_upload_dir(); ?>
 	<section class="blog-posts background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('blog_background_image')['url'] . ')'  : $uploadDir['baseurl'] . '/sbh_center_theme_images/ocean_background.jpg'; ?>">
 		<div class="wrapper">
-			<h2 class="text-center color-white">OUR BLOG</h2>
+			<h2 class="text-center color-white m-b-15">OUR BLOG</h2>
 			<ul class="row flex flex-wrap space-between neg-m-t-15">
 				<?php $posts_query = new \WP_Query('posts_per_page=3');
 				while ($posts_query->have_posts()) : $posts_query->the_post();
@@ -231,7 +231,7 @@ if (is_home()) {
 	<!-- Substance Information -->
 	<section class="substance-information background-image-cover flex flex-column section-padding" style="<?= !empty(get_field('blog_background_image'))  ? 'background-image: url(' . get_field('substance_abuse_background_image')['url'] . ')'  : '' ?>">
 		<div class="wrapper">
-			<h2 class="color-white text-center"><?= get_field('substance_abuse_information_headline'); ?></h2>
+			<h2 class="color-white text-center m-b-15"><?= get_field('substance_abuse_information_headline'); ?></h2>
 			<div class="row">
 				<?php foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
 					<div class="col-xs-12 col-sm-6 col-md-3 p-10 flex flex-column align-center">
