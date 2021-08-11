@@ -65,7 +65,7 @@ $testimonialSlideNumber = 0;
         <!-- Expandable Row and Map -->
         <section class="about_page_expandable_row_section">
             <div class="about_page_expandable_row_container">
-                <div class="about_page_expandable_row_wrapper">
+                <div class="about_page_expandable_row_wrapper m-b-10">
                     <?php
                     if (have_rows('about_page_expandable_rows')) :
                         while (have_rows('about_page_expandable_rows')) : the_row();
@@ -93,18 +93,14 @@ $testimonialSlideNumber = 0;
                         <a href="<?= get_field('about_page_address_url')['url'] ?>" target="<?= get_field('about_page_address_url')['target'] ?>"><span>Address: </span><?= get_field('center_address', 'option') ?></a>
                     </div>
                 </div>
-            </div>`
+            </div>
         </section>
 
         <!-- Treatment Step Carousel -->
         <?= do_shortcode('[treatment_step_carousel]') ?>
 
 
-        <?php
-
-        $about_testimonials = get_field('about_page_testimonials');
-
-        ?>
+        <?php $about_testimonials = get_field('about_page_testimonials'); ?>
         <!-- Accreditation and Testimonial -->
         <section class="about_page_testimonial_section accreditation_and_testimonial--testimonial">
             <div class="about_page_badge_container">
