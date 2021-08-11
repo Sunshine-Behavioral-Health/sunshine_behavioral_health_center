@@ -16,7 +16,7 @@ $grey-light: #ededed;
 }
 
 .treatment-step--sticky {
-    position: fixed;
+    position: sticky;
     z-index: 99;
     top: 130px;
     margin-left: -20px;
