@@ -24,14 +24,14 @@
         width: 100%;
         justify-content: center;
         h3 {
-          margin: 0 0 15px 50px;
+          margin: 0 0 5px 0px;
           @include desktop {
             margin: 0 0 15px 0;
           }
         }
 
         h4 {
-          margin: 15px 0 0 50px;
+          margin: 15px 0 0 0;
           @include desktop {
             margin: 0 0 15px 0;
           }
@@ -43,14 +43,14 @@
           letter-spacing: calc(0.35vw + 1.75px);
         }
         p {
-          margin: 0 0 15px 50px;
+          margin: 0 0 15px 0;
           @include desktop {
             margin: 0 0 15px 0;
           }
           line-height: calc(0.5vw + 20px);
         }
         a {
-          margin: 0 0 15px 50px;
+          margin: 0 0 15px 0;
           @include desktop {
             margin: 0 0 15px 0;
           }
@@ -72,6 +72,11 @@
         background-repeat: no-repeat;
         background-position: 50%;
         height: 100%;
+        &--mobile {
+          height: 150px;
+          width: 350;
+          border: 2px solid blue;
+        }
       }
     }
     .treatment_step_carousel_arrows {
@@ -135,9 +140,8 @@
   .next_arrow {
     cursor: pointer;
     position: absolute;
-    top: 42.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 38%;
     width: auto;
     padding: 0;
     color: #000;

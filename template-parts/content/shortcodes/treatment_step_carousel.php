@@ -14,8 +14,8 @@
                             <p><?= get_sub_field('step_paragraph', 'option') ?></p>
                             <a href="<?= get_sub_field('step_url', 'option') ?>"><?= get_sub_field('step_cta_text', 'option') ?><img src="<?= get_template_directory_uri() . '/icons/right_arrow.png' ?>" alt=""></a>
                         </div>
-                        <div class="treatment_step_carousel_element_image" style="background-image: url(' <?= get_sub_field('step_image', 'option')['url'] ?>');">
-                        </div>
+                        <div class="treatment_step_carousel_element_image treatment_step_carousel_element_image--mobile hide_on_desktop hide_on_tablet" style="background-image: url(' <?= get_sub_field('step_image_mobile', 'option')['url'] ?>');"></div>
+                        <div class="treatment_step_carousel_element_image treatment_step_carousel_element_image--desktop hide_on_mobile show_on_tablet" style="background-image: url(' <?= get_sub_field('step_image', 'option')['url'] ?>');"></div>
                     </div>
                 <?php endwhile; ?>
 
