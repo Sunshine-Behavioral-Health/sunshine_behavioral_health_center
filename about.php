@@ -107,8 +107,8 @@ $about_testimonials = get_field('about_page_testimonials');
                 <div class="about_page_expandable_row_location_container">
                     <iframe src="<?= get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-                    <div class="about_page_location_address">
-                        <a href="<?= get_field('about_page_address_url')['url'] ?>" target="<?= get_field('about_page_address_url')['target'] ?>"><span>Address: </span><?= get_field('center_address') ?></a>
+                    <div class="about_page_location_address p-15 background-color-secondary">
+                        <a class="color-white" href="<?= get_field('about_page_address_url')['url'] ?>" target="<?= get_field('about_page_address_url')['target'] ?>"><span class="color-white bold">Address: </span><?= get_field('center_address') ?></a>
                     </div>
                 </div>
             </div>
@@ -151,15 +151,14 @@ $about_testimonials = get_field('about_page_testimonials');
                             <?php endforeach; ?>
                         </ul>
                     </div>
-
+                    <?php if (count($about_testimonials) > 1) : ?>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow arrow--left" data-glide-dir="<"><</button>
+                            <button class="glide__arrow arrow--right" data-glide-dir=">">></button>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <img class="margin-0-auto" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
-                <?php if (count($about_testimonials) > 1) : ?>
-                    <div class="arrows" data-glide-el="controls">
-                        <button class="arrow--left" data-glide-dir="<"><</button>
-                        <button class="arrow--right" data-glide-dir=">">></button>
-                    </div>
-                <?php endif; ?>
             </div>
         </section>
     </div>
