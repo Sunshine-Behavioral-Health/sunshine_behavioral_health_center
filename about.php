@@ -137,7 +137,7 @@ $about_testimonials = get_field('about_page_testimonials');
         </script>
         <section class="about_page_testimonial background-color-secondary">
             <div class="about_page_testimonial_container wrapper">
-
+                <h2 class="text-center text-white">Testimonials</h2>
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
@@ -148,8 +148,12 @@ $about_testimonials = get_field('about_page_testimonials');
                             <?php endforeach; ?>
                         </ul>
                     </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                    </div>
                 </div>
-                <img src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
+                <img class="margin-0-auto" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
                 <?php if (count($about_testimonials) > 1) : ?>
                     <div style="text-align:center">
                         <a class="prev m-r-150" onclick="plusSlides(-1)">&#10094;</a>
