@@ -60,7 +60,7 @@ $about_testimonials = get_field('about_page_testimonials');
         </section>
 
         <!-- Treatment List -->
-        <section class="about_page_treatment_list_section" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+        <section class="about_page_treatment_list_section p-t-10 p-b-10" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
             <div class="about_page_treatment_list_container wrapper">
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
@@ -138,7 +138,7 @@ $about_testimonials = get_field('about_page_testimonials');
         </section>
 
 
-        <section class="about_page_testimonial background-color-secondary">
+        <section class="about_page_testimonial background-color-secondary p-t-10 p-b-10">
             <div class="about_page_testimonial_container wrapper">
                 <h2 class="text-center color-white">Testimonials</h2>
                 <div class="glide">
@@ -153,8 +153,9 @@ $about_testimonials = get_field('about_page_testimonials');
                     </div>
                     <?php if (count($about_testimonials) > 1) : ?>
                         <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow arrow--left" data-glide-dir="<"><</button>
-                            <button class="glide__arrow arrow--right" data-glide-dir=">">></button>
+                            <button class="glide__arrow arrow--left" data-glide-dir="<">
+                                << /button>
+                                    <button class="glide__arrow arrow--right" data-glide-dir=">">></button>
                         </div>
                     <?php endif; ?>
                 </div>
