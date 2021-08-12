@@ -20,6 +20,8 @@ get_template_part('template-parts/javascript/about');
 $centerValue = get_field('site_name', 'option');
 $testimonialSlideNumber = 0;
 
+$about_testimonials = get_field('about_page_testimonials');
+
 ?>
 
 <main id="primary" class="maxWidth about_page">
@@ -99,13 +101,11 @@ $testimonialSlideNumber = 0;
         <!-- Treatment Step Carousel -->
         <?= do_shortcode('[treatment_step_carousel]') ?>
 
-
-        <?php $about_testimonials = get_field('about_page_testimonials'); ?>
         <!-- Accreditation and Testimonial -->
         <section class="about_page_accreditations">
             <div class="wrapper">
                 <h2 class="text-center">Our Accreditation</h2>
-                <div class="flex flex-wrap space-between">
+                <div class="flex flex-wrap space-around">
                     <?= get_field('legitscript_html', 'option') ?>
 
                     <?php
@@ -120,14 +120,35 @@ $testimonialSlideNumber = 0;
                 </div>
             </div>
         </section>
-        <section class="about_page_testimonial">
-            <div class="about_page_testimonial_container wrapper">
-                <?php foreach ($about_testimonials as $testimonial) : ?>
-                    <div class="carousel-slide color-white">
-                        <?= $testimonial['testimonial']; ?>
-                    </div>
-                <?php endforeach; ?>
 
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                var sliders = document.querySelectorAll('.glide');
+
+                for (var i = 0; i < sliders.length; i++) {
+                    var glide = new Glide(sliders[i], {
+                        perView: 1,
+                        keyboard: true,
+                    });
+
+                    glide.mount();
+                }
+            });
+        </script>
+        <section class="about_page_testimonial background-color-secondary">
+            <div class="about_page_testimonial_container wrapper">
+
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <?php foreach ($about_testimonials as $testimonial) : ?>
+                                <div class="glide__slide color-white">
+                                    <?= $testimonial['testimonial']; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
                 <img src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
                 <?php if (count($about_testimonials) > 1) : ?>
                     <div style="text-align:center">
