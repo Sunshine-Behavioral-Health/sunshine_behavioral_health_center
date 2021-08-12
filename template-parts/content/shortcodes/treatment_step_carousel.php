@@ -1,5 +1,5 @@
 <section class="treatment_step_carousel_section">
-    <div class="treatment_step_carousel_container custom_carousel">
+    <div class="treatment_step_carousel_container custom_carousel wrapper">
         <?php
         if (have_rows('treatment_steps', 'option')) : ?>
             <h2>Our Treatment Steps</h2>

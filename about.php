@@ -24,10 +24,10 @@ $testimonialSlideNumber = 0;
 
 <main id="primary" class="maxWidth about_page">
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
-    <div class="content_container wrapper">
+    <div class="content_container">
         <!-- Content Left Drawing Right -->
         <section class="about_page_location_section">
-            <div class="about_page_location_container">
+            <div class="about_page_location_container wrapper">
                 <h2><?= get_field('about_page_-_location_headline') ?></h2>
                 <div class="about_page_location_wrapper">
                     <div class="about_page_location_content_wrapper">
