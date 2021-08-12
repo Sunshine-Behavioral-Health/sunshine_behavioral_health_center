@@ -24,6 +24,22 @@ $about_testimonials = get_field('about_page_testimonials');
 
 ?>
 
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var sliders = document.querySelectorAll('.glide');
+
+        for (var i = 0; i < sliders.length; i++) {
+            var glide = new Glide(sliders[i], {
+                perView: 1,
+                keyboard: true,
+            });
+
+            glide.mount();
+        }
+    });
+</script>
+
+
 <main id="primary" class="maxWidth about_page">
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
     <div class="content_container">
@@ -121,20 +137,7 @@ $about_testimonials = get_field('about_page_testimonials');
             </div>
         </section>
 
-        <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                var sliders = document.querySelectorAll('.glide');
 
-                for (var i = 0; i < sliders.length; i++) {
-                    var glide = new Glide(sliders[i], {
-                        perView: 1,
-                        keyboard: true,
-                    });
-
-                    glide.mount();
-                }
-            });
-        </script>
         <section class="about_page_testimonial background-color-secondary">
             <div class="about_page_testimonial_container wrapper">
                 <h2 class="text-center text-white">Testimonials</h2>
@@ -148,19 +151,13 @@ $about_testimonials = get_field('about_page_testimonials');
                             <?php endforeach; ?>
                         </ul>
                     </div>
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                    </div>
+
                 </div>
                 <img class="margin-0-auto" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
                 <?php if (count($about_testimonials) > 1) : ?>
-                    <div style="text-align:center">
-                        <a class="prev m-r-150" onclick="plusSlides(-1)">&#10094;</a>
-                        <?php foreach ($about_testimonials as $testimonial) : ?>
-                            <span class="dot" onclick="currentSlide(<?= $testimonialSlideNumber++ ?>)"></span>
-                        <?php endforeach; ?>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="arrows" data-glide-el="controls">
+                        <button class="arrow--left" data-glide-dir="<"><</button>
+                        <button class="arrow--right" data-glide-dir=">">></button>
                     </div>
                 <?php endif; ?>
             </div>
