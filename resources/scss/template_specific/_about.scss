@@ -563,3 +563,20 @@ h5 {
     margin: 0 100px;
   }
 }
+
+
+.about_page_testimonial{
+  .glide__arrows{
+    .glide_arrow{
+      top: 100%;
+    }
+    .arrow{
+      &--left{
+        left: 30%;
+      }
+      &--right{
+        right: 30%
+      }
+    }
+  }
+}

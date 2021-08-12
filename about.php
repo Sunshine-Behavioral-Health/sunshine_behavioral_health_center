@@ -140,7 +140,7 @@ $about_testimonials = get_field('about_page_testimonials');
 
         <section class="about_page_testimonial background-color-secondary">
             <div class="about_page_testimonial_container wrapper">
-                <h2 class="text-center text-white">Testimonials</h2>
+                <h2 class="text-center color-white">Testimonials</h2>
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
