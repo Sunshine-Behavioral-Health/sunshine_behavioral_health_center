@@ -102,10 +102,10 @@ $testimonialSlideNumber = 0;
 
         <?php $about_testimonials = get_field('about_page_testimonials'); ?>
         <!-- Accreditation and Testimonial -->
-        <section class="about_page_testimonial_section accreditation_and_testimonial--testimonial">
-            <div class="about_page_badge_container wrapper">
-                <h2>Our Accreditation</h2>
-                <div class="center_page_badges_wrapper">
+        <section class="about_page_accreditations">
+            <div class="wrapper">
+                <h2 class="text-center">Our Accreditation</h2>
+                <div class="flex flex-wrap space-between">
                     <?= get_field('legitscript_html', 'option') ?>
 
                     <?php
@@ -119,9 +119,11 @@ $testimonialSlideNumber = 0;
                     ?>
                 </div>
             </div>
-            <div class="about_page_testimonial_container">
+        </section>
+        <section class="about_page_testimonial">
+            <div class="about_page_testimonial_container wrapper">
                 <?php foreach ($about_testimonials as $testimonial) : ?>
-                    <div class="carousel-slide">
+                    <div class="carousel-slide color-white">
                         <?= $testimonial['testimonial']; ?>
                     </div>
                 <?php endforeach; ?>
