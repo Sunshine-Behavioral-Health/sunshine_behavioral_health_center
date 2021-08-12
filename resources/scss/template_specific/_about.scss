@@ -11,21 +11,18 @@
 
 .about_page .content_container {
   max-width: 100%;
-
-  section {
-    margin-bottom: 45px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
   section:last-child {
     margin-bottom: 0;
   }
 }
 
 .about_page_treatment_list_container {
+  @include desktop{
+    min-height: 300px;
+  }
   h2 {
     text-align: center;
+    color: $black
   }
 
   ul {
@@ -37,7 +34,8 @@
     li {
       width: 100%;
       display: flex;
-      margin: 5px 0;
+      margin: 10px 0;
+      font-size: 20px;
       @include mobile {
         display: none;
         &:nth-child(-n + 4) {
@@ -119,6 +117,15 @@
 .about_page_expandable_row_section {
   max-width: 1250px;
   margin: 0 auto;
+}
+
+.about_page_expandable_row_section {
+  .about_page_expandable_row_location_container {
+    iframe {
+      width: 100% !important;
+      border: 2px solid red;
+    }
+  }
 }
 
 .about_page_location_container {

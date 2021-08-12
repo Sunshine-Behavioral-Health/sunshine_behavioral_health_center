@@ -24,7 +24,7 @@ $testimonialSlideNumber = 0;
 
 <main id="primary" class="maxWidth about_page">
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
-    <div class="content_container">
+    <div class="content_container wrapper">
         <!-- Content Left Drawing Right -->
         <section class="about_page_location_section">
             <div class="about_page_location_container">
@@ -42,8 +42,8 @@ $testimonialSlideNumber = 0;
         </section>
 
         <!-- Treatment List -->
-        <section class="about_page_treatment_list_section">
-            <div class="about_page_treatment_list_container" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat centerurl(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+        <section class="about_page_treatment_list_section" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+            <div class="about_page_treatment_list_container wrapper">
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
@@ -64,7 +64,7 @@ $testimonialSlideNumber = 0;
 
         <!-- Expandable Row and Map -->
         <section class="about_page_expandable_row_section">
-            <div class="about_page_expandable_row_container">
+            <div class="about_page_expandable_row_container wrapper">
                 <div class="about_page_expandable_row_wrapper m-b-10">
                     <?php
                     if (have_rows('about_page_expandable_rows')) :
@@ -90,7 +90,7 @@ $testimonialSlideNumber = 0;
                     <iframe src="<?= get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
                     <div class="about_page_location_address">
-                        <a href="<?= get_field('about_page_address_url')['url'] ?>" target="<?= get_field('about_page_address_url')['target'] ?>"><span>Address: </span><?= get_field('center_address', 'option') ?></a>
+                        <a href="<?= get_field('about_page_address_url')['url'] ?>" target="<?= get_field('about_page_address_url')['target'] ?>"><span>Address: </span><?= get_field('center_address') ?></a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@ $testimonialSlideNumber = 0;
         <?php $about_testimonials = get_field('about_page_testimonials'); ?>
         <!-- Accreditation and Testimonial -->
         <section class="about_page_testimonial_section accreditation_and_testimonial--testimonial">
-            <div class="about_page_badge_container">
+            <div class="about_page_badge_container wrapper">
                 <h2>Our Accreditation</h2>
                 <div class="center_page_badges_wrapper">
                     <?= get_field('legitscript_html', 'option') ?>
