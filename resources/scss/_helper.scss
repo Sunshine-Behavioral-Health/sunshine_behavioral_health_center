@@ -246,7 +246,7 @@ $step: 5;
     flex: 1;
 }
 
-.margin-0-auto{
+.margin-0-auto {
     margin: 0 auto;
 }
 
@@ -259,5 +259,23 @@ $step: 5;
 @media (max-width: 768px) {
     .mobile_full_width {
         width: 100%;
+    }
+}
+
+@include desktop {
+    .hide-on-desktop {
+        display: none;
+    }
+}
+
+@include mobile-and-tablet {
+    .hide-on-mobile-and-tablet {
+        display: none;
+    }
+}
+
+@include mobile {
+    .hide-on-mobile {
+        display: none;
     }
 }

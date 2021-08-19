@@ -153,7 +153,8 @@ $about_testimonials = get_field('about_page_testimonials');
                     </div>
                     <?php if (count($about_testimonials) > 1) : ?>
                         <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow arrow--left" data-glide-dir="<"> < </button>
+                            <button class="glide__arrow arrow--left" data-glide-dir="<">
+                                < </button>
                                     <button class="glide__arrow arrow--right" data-glide-dir=">"> > </button>
                         </div>
                     <?php endif; ?>
@@ -164,12 +165,22 @@ $about_testimonials = get_field('about_page_testimonials');
 
         <section class="content-with-insurance-form" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background: no-repeat center url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
             <div class="wrapper ">
-
-            <?php 
-            /* gravity form id
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <a class="hide-on-desktop" href="<?= get_field('insurance_url', 'option') ?>">Verify Insurance</a>
+                        <?= get_field('content_with_insurance_form_content') ?>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="form-wrapper">
+                            <?= do_shortcode('[gravityform id='. get_field('content_with_insurance_form_gravity_form_id') . ' title="false" description="false"]') ?>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                /* gravity form id
             * content_with_insurance_form_gravity_form_id 
             */
-            ?>
+                ?>
             </div>
         </section>
     </div>
