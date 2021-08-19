@@ -167,7 +167,7 @@ $about_testimonials = get_field('about_page_testimonials');
             <div class="wrapper ">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <a class="hide-on-desktop button" href="#about_insurance_form">Verify Insurance</a>
+                        <a class="hide-on-desktop button inline-block m-t-15" href="#about_insurance_form">Verify Insurance</a>
                         <?= get_field('content_with_insurance_form_content') ?>
                     </div>
                     <div class="col-xs-12 col-sm-6">
