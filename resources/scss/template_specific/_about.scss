@@ -34,7 +34,7 @@
     li {
       width: 100%;
       display: flex;
-      margin: 10px 0;
+      margin: 5px 0;
       font-size: 20px;
       @include mobile {
         display: none;
@@ -116,7 +116,7 @@
   .about_page_expandable_row_location_container {
     iframe {
       width: 100% !important;
-      border: 2px solid red;
+      height: 250px !important
     }
   }
 }

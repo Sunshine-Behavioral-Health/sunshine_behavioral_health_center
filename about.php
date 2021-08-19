@@ -153,9 +153,8 @@ $about_testimonials = get_field('about_page_testimonials');
                     </div>
                     <?php if (count($about_testimonials) > 1) : ?>
                         <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow arrow--left" data-glide-dir="<">
-                                << /button>
-                                    <button class="glide__arrow arrow--right" data-glide-dir=">">></button>
+                            <button class="glide__arrow arrow--left" data-glide-dir="<"> < </button>
+                                    <button class="glide__arrow arrow--right" data-glide-dir=">"> > </button>
                         </div>
                     <?php endif; ?>
                 </div>
