@@ -167,20 +167,15 @@ $about_testimonials = get_field('about_page_testimonials');
             <div class="wrapper ">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <a class="hide-on-desktop" href="<?= get_field('insurance_url', 'option') ?>">Verify Insurance</a>
+                        <a class="hide-on-desktop button" href="#about_insurance_form">Verify Insurance</a>
                         <?= get_field('content_with_insurance_form_content') ?>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                        <div class="form-wrapper">
+                        <div id="about_insurance_form" class="form-wrapper">
                             <?= do_shortcode('[gravityform id='. get_field('content_with_insurance_form_gravity_form_id') . ' title="false" description="false"]') ?>
                         </div>
                     </div>
                 </div>
-                <?php
-                /* gravity form id
-            * content_with_insurance_form_gravity_form_id 
-            */
-                ?>
             </div>
         </section>
     </div>
