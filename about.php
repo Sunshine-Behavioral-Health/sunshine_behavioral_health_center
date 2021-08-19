@@ -44,7 +44,7 @@ $about_testimonials = get_field('about_page_testimonials');
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
     <div class="content_container">
         <!-- Content Left Drawing Right -->
-        <section class="about_page_location_section">
+        <section class="about_page_location_section m-b-45">
             <div class="about_page_location_container wrapper">
                 <h2><?= get_field('about_page_-_location_headline') ?></h2>
                 <div class="about_page_location_wrapper">
@@ -60,8 +60,8 @@ $about_testimonials = get_field('about_page_testimonials');
         </section>
 
         <!-- Treatment List -->
-        <section class="about_page_treatment_list_section p-t-10 p-b-10" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
-            <div class="about_page_treatment_list_container wrapper">
+        <section class="about_page_treatment_list_section m-b-45" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
+            <div class="about_page_treatment_list_container wrapper flex flex-column justify-center">
                 <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
@@ -117,8 +117,8 @@ $about_testimonials = get_field('about_page_testimonials');
         <!-- Treatment Step Carousel -->
         <?= do_shortcode('[treatment_step_carousel]') ?>
 
-        <!-- Accreditation and Testimonial -->
-        <section class="about_page_accreditations">
+        <!-- Accreditation -->
+        <section class="about_page_accreditations m-b-45">
             <div class="wrapper">
                 <h2 class="text-center">Our Accreditation</h2>
                 <div class="flex flex-wrap space-around">
@@ -137,7 +137,7 @@ $about_testimonials = get_field('about_page_testimonials');
             </div>
         </section>
 
-
+        <!-- Testimonial -->
         <section class="about_page_testimonial background-color-secondary p-t-10 p-b-10">
             <div class="about_page_testimonial_container wrapper">
                 <h2 class="text-center color-white">Testimonials</h2>
@@ -160,6 +160,17 @@ $about_testimonials = get_field('about_page_testimonials');
                     <?php endif; ?>
                 </div>
                 <img class="margin-0-auto" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
+            </div>
+        </section>
+
+        <section class="content-with-insurance-form" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background: no-repeat center url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
+            <div class="wrapper ">
+
+            <?php 
+            /* gravity form id
+            * content_with_insurance_form_gravity_form_id 
+            */
+            ?>
             </div>
         </section>
     </div>

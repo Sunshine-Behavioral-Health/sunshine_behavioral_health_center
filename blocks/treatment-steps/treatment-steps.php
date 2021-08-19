@@ -1,4 +1,4 @@
-<section class="treatment_step_carousel_section">
+<section class="treatment_step_carousel_section m-b-45">
     <div class="treatment_step_carousel_container custom_carousel">
         <?php
         if (have_rows('treatment_steps', 'option')) : ?>
