@@ -46,7 +46,7 @@ $about_testimonials = get_field('about_page_testimonials');
         <!-- Content Left Drawing Right -->
         <section class="about_page_location_section m-b-45">
             <div class="about_page_location_container wrapper">
-                <h2><?= get_field('about_page_-_location_headline') ?></h2>
+                <h2 class="m-b-20"><?= get_field('about_page_-_location_headline') ?></h2>
                 <div class="about_page_location_wrapper">
                     <div class="about_page_location_content_wrapper">
                         <?= get_field('about_page_-_location_content_wysiwyg') ?>
@@ -62,7 +62,7 @@ $about_testimonials = get_field('about_page_testimonials');
         <!-- Treatment List -->
         <section class="about_page_treatment_list_section m-b-45" style="<?= !empty(get_field('about_page_treatment_list_background_image')) ? 'background: no-repeat center url(' . get_field('about_page_treatment_list_background_image')['url'] .  ');' : '' ?>">
             <div class="about_page_treatment_list_container wrapper flex flex-column justify-center">
-                <h2><?= get_field('about_page_treatment_list_items_headline') ?></h2>
+                <h2 class="m-b-20"><?= get_field('about_page_treatment_list_items_headline') ?></h2>
                 <ul>
                     <?php
                     if (have_rows('about_page_treatment_list_items')) :
@@ -120,7 +120,7 @@ $about_testimonials = get_field('about_page_testimonials');
         <!-- Accreditation -->
         <section class="about_page_accreditations m-b-45">
             <div class="wrapper">
-                <h2 class="text-center">Our Accreditation</h2>
+                <h2 class="text-center m-b-20">Our Accreditation</h2>
                 <div class="flex flex-wrap space-around">
                     <?= get_field('legitscript_html', 'option') ?>
 
@@ -140,7 +140,7 @@ $about_testimonials = get_field('about_page_testimonials');
         <!-- Testimonial -->
         <section class="about_page_testimonial background-color-secondary p-t-10 p-b-10">
             <div class="about_page_testimonial_container wrapper">
-                <h2 class="text-center color-white">Testimonials</h2>
+                <h2 class="text-center color-white m-b-20">Testimonials</h2>
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
@@ -164,10 +164,10 @@ $about_testimonials = get_field('about_page_testimonials');
         </section>
 
         <section class="content-with-insurance-form" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background-image: url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
-            <div class="wrapper ">
+            <div class="wrapper p-t-40 p-b-40">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <a class="hide-on-desktop button" href="#about_insurance_form">Verify Insurance</a>
+                        <a class="hide-on-desktop button m-b-15" href="#about_insurance_form">Verify Insurance</a>
                         <?= get_field('content_with_insurance_form_content') ?>
                     </div>
                     <div class="col-xs-12 col-sm-6">
