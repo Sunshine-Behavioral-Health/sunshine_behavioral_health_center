@@ -163,7 +163,7 @@ $about_testimonials = get_field('about_page_testimonials');
             </div>
         </section>
 
-        <section class="content-with-insurance-form" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background: no-repeat center url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
+        <section class="content-with-insurance-form" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background-image: url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
             <div class="wrapper ">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
