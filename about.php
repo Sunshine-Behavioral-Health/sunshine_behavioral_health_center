@@ -81,7 +81,7 @@ $about_testimonials = get_field('about_page_testimonials');
 
 
         <!-- Expandable Row and Map -->
-        <section class="about_page_expandable_row_section">
+        <section class="about_page_expandable_row_section m-b-45">
             <div class="about_page_expandable_row_container wrapper">
                 <div class="about_page_expandable_row_wrapper m-b-10">
                     <?php
@@ -163,11 +163,11 @@ $about_testimonials = get_field('about_page_testimonials');
             </div>
         </section>
 
-        <section class="content-with-insurance-form" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background-image: url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
+        <section class="content-with-insurance-form p-t-20" style="<?= !empty(get_field('content_with_insurance_form_background_image')) ? 'background-image: url(' . get_field('content_with_insurance_form_background_image')['url'] .  ');' : '' ?>">
             <div class="wrapper ">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <a class="hide-on-desktop button inline-block m-t-15" href="#about_insurance_form">Verify Insurance</a>
+                        <a class="hide-on-desktop button block max-content margin-0-auto m-t-15" href="/#about_insurance_form" target="">Verify Insurance</a>
                         <?= get_field('content_with_insurance_form_content') ?>
                     </div>
                     <div class="col-xs-12 col-sm-6">

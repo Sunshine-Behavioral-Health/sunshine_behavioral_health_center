@@ -116,7 +116,7 @@
   .about_page_expandable_row_location_container {
     iframe {
       width: 100% !important;
-      height: 250px !important
+      height: 250px !important;
     }
   }
 }
@@ -564,41 +564,23 @@ h5 {
   }
 }
 
-
-.about_page_testimonial{
-  .glide__arrows{
-    .glide__arrow{
-      top: 100%;
+.about_page_testimonial {
+  .glide__arrows {
+    .glide__arrow {
+      top: 90%;
     }
-    .arrow{
-      &--left{
+    .arrow {
+      &--left {
         left: 30%;
       }
-      &--right{
-        right: 30%
+      &--right {
+        right: 30%;
       }
     }
   }
 }
 
-
-
-
-.content-with-insurance-form{
+.content-with-insurance-form {
   background-size: cover;
   background-repeat: no-repeat;
-  form{
-    max-height: 600px;
-    overflow-y: auto;
-    &:-webkit-scrollbar {
-      width: 10px;
-      margin-right: 5px;
-    }
-    &:-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    &:-webkit-scrollbar-thumb {
-      background: var(--primary_color);
-    }
-  }
 }
