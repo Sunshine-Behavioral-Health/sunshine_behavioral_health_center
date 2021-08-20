@@ -63,7 +63,13 @@
 .accordion_with_toc_container {
   .accordion_with_toc_toc_section {
     position: sticky;
-    top: 150px;
+    top: 140px;
+    @include mobile{
+      top: 123px;
+      h5{
+        font-size: 18px;
+      }
+    }
   }
   .expandable_row_element {
     &:first-of-type {
