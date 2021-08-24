@@ -144,7 +144,7 @@ $about_testimonials = get_field('about_page_testimonials');
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
-                            <?php foreach ($about_testimonials as $testimonial) : ?>
+                            <?php foreach ($about_testimonials as $index => $testimonial) : ?>
                                 <div class="glide__slide color-white">
                                     <?= $testimonial['testimonial']; ?>
                                 </div>
@@ -152,10 +152,14 @@ $about_testimonials = get_field('about_page_testimonials');
                         </ul>
                     </div>
                     <?php if (count($about_testimonials) > 1) : ?>
-                        <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow arrow--left" data-glide-dir="<">
-                                < </button>
-                                    <button class="glide__arrow arrow--right" data-glide-dir=">"> > </button>
+
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <?php foreach ($about_testimonials as $testimonial) : ?>
+                                <div class="glide__slide color-white">
+                                <button class="glide__bullet" data-glide-dir="=<?= $index + 1 ?>"></button>
+                                </div>
+                            <?php endforeach; ?>
+                            
                         </div>
                     <?php endif; ?>
                 </div>
@@ -172,7 +176,7 @@ $about_testimonials = get_field('about_page_testimonials');
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <div id="about_insurance_form" class="form-wrapper">
-                            <?= do_shortcode('[gravityform id='. get_field('content_with_insurance_form_gravity_form_id') . ' title="false" description="false"]') ?>
+                            <?= do_shortcode('[gravityform id=' . get_field('content_with_insurance_form_gravity_form_id') . ' title="false" description="false"]') ?>
                         </div>
                     </div>
                 </div>
