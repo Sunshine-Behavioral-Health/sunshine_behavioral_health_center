@@ -138,7 +138,7 @@ $about_testimonials = get_field('about_page_testimonials');
         </section>
 
         <!-- Testimonial -->
-        <section class="about_page_testimonial background-color-secondary p-t-10 p-b-10">
+        <section class="about_page_testimonial background-color-secondary p-t-10 p-b-10 relative">
             <div class="about_page_testimonial_container wrapper">
                 <h2 class="text-center color-white">Testimonials</h2>
                 <div class="glide">
@@ -147,22 +147,23 @@ $about_testimonials = get_field('about_page_testimonials');
                             <?php foreach ($about_testimonials as $index => $testimonial) : ?>
                                 <div class="glide__slide color-white">
                                     <?= $testimonial['testimonial']; ?>
+                                    <img class="margin-0-auto m-b-25" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
                                 </div>
                             <?php endforeach; ?>
                         </ul>
                     </div>
-
+                    <?php if (count($about_testimonials) > 1) : ?>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <?php foreach ($about_testimonials as $testimonial) : ?>
+                                <div class="glide__slide color-white">
+                                    <button class="glide__bullet" data-glide-dir="=<?= $index + 1 ?>"></button>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <img class="margin-0-auto" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
-                <?php if (count($about_testimonials) > 1) : ?>
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <?php foreach ($about_testimonials as $testimonial) : ?>
-                            <div class="glide__slide color-white">
-                                <button class="glide__bullet" data-glide-dir="=<?= $index + 1 ?>"></button>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+
+
             </div>
         </section>
 

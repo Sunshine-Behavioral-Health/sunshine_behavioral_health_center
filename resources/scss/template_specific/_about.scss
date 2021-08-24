@@ -2,10 +2,13 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-
-  .glide__bullet{
-    &--active{
-      background-color: $primaryColor;
+  .glide__bullets {
+    .glide__bullet {
+      border: 2px solid red;
+      &--active {
+        background-color: $primaryColor;
+        border: 2px solid red;
+      }
     }
   }
 }
