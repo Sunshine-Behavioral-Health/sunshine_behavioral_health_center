@@ -151,19 +151,18 @@ $about_testimonials = get_field('about_page_testimonials');
                             <?php endforeach; ?>
                         </ul>
                     </div>
-                    <?php if (count($about_testimonials) > 1) : ?>
 
-                        <div class="glide__bullets" data-glide-el="controls[nav]">
-                            <?php foreach ($about_testimonials as $testimonial) : ?>
-                                <div class="glide__slide color-white">
-                                <button class="glide__bullet" data-glide-dir="=<?= $index + 1 ?>"></button>
-                                </div>
-                            <?php endforeach; ?>
-                            
-                        </div>
-                    <?php endif; ?>
                 </div>
                 <img class="margin-0-auto" src="<?= get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
+                <?php if (count($about_testimonials) > 1) : ?>
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <?php foreach ($about_testimonials as $testimonial) : ?>
+                            <div class="glide__slide color-white">
+                                <button class="glide__bullet" data-glide-dir="=<?= $index + 1 ?>"></button>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </section>
 

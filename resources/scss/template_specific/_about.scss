@@ -2,6 +2,12 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+
+  .glide__bullet{
+    &--active{
+      background-color: $primaryColor;
+    }
+  }
 }
 
 .about_page#primary + footer {
