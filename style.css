@@ -1,14 +1,13 @@
 /*!
-Theme Name: SBH Center 3.3
+Theme Name: SBH Center 3.4
 Theme URI: https://sunshinebehavioralhealth.com/
 Developer:  Nathan Wilson
 Designer:   Michelle Lopez-McKay
 Author URI: https://sunshinebehavioralhealth.com/
 Description: An evolving theme for Sunshine Behavioral Health Centers.
-Version: 3.0.0
+Version: 3.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: <?= get_field('site_name', 'option') ?> Theme
 Tags: translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
