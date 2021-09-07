@@ -84,7 +84,7 @@ sbh_center()->print_styles('sbh_center-content');
 						<?php else : ?>
 							<div class="activity ">
 								<?php if (wp_is_mobile()) : ?>
-									<div class="text_right">
+									<div class="text_right flex flex-column">
 										<h3><?= get_sub_field('gallery_text') ?></h3>
 										<p><?= get_sub_field('gallery_subheadline') ?></p>
 									</div>
@@ -107,7 +107,7 @@ sbh_center()->print_styles('sbh_center-content');
 									</div>
 								</div>
 								<?php if (!wp_is_mobile()) : ?>
-									<div class="text_right">
+									<div class="text_right flex flex-column">
 										<h3><?= get_sub_field('gallery_text') ?></h3>
 										<p><?= get_sub_field('gallery_subheadline') ?></p>
 									</div>
