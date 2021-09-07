@@ -39,24 +39,12 @@ sbh_center()->print_styles('sbh_center-content');
 </script>
 
 <?php get_template_part('template-parts/content/googleTranslate'); ?>
-<main id="primary" class="maxWidth thank_you_page">
-	<div class="custom_page_noSideBar_wrapper">
-		<div class="activity_page_image_container">
-			<div class="page_image">
-				<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?= get_field('desktop_image')['url']; ?>">
-				<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?= get_field('mobile_image')['url']; ?>">
-				<div class="page_mobile_image_text_and_cta_container">
-					<h1><?= get_field('page_headline') ?></h1>
-					<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
-				</div>
-			</div>
-			<div class="hide_on_mobile">
-				<h1><?= get_field('page_headline') ?></h1>
-				<p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>
-			</div>
-		</div>
+<main id="primary" class="maxWidth activites_page">
+	<?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width'); ?>
 
-		<div class="page_content_below_image">
+	<div class="content_container">
+		<div class="page_wrapper">
+			<!-- Page Content -->
 			<section class="activity_page_content_section">
 				<div class="top_activity_page_content">
 					<h2><?= get_field('page_headline'); ?></h2>
@@ -70,8 +58,9 @@ sbh_center()->print_styles('sbh_center-content');
 				?>
 						<?php if (get_sub_field('gallery_left_or_right') == "Right Gallery") : ?>
 							<div class="activity ">
-								<div class="text_left">
+								<div class="text_left flex flex-column">
 									<h3><?= get_sub_field('gallery_text') ?></h3>
+									<p><?= get_sub_field('gallery_subheadline') ?></p>
 								</div>
 								<div class="img_carousel_right">
 									<div class="glide carousel<?= get_sub_field('increment') ?>">
@@ -97,6 +86,7 @@ sbh_center()->print_styles('sbh_center-content');
 								<?php if (wp_is_mobile()) : ?>
 									<div class="text_right">
 										<h3><?= get_sub_field('gallery_text') ?></h3>
+										<p><?= get_sub_field('gallery_subheadline') ?></p>
 									</div>
 								<?php endif; ?>
 								<div class="img_carousel_left">
@@ -119,6 +109,7 @@ sbh_center()->print_styles('sbh_center-content');
 								<?php if (!wp_is_mobile()) : ?>
 									<div class="text_right">
 										<h3><?= get_sub_field('gallery_text') ?></h3>
+										<p><?= get_sub_field('gallery_subheadline') ?></p>
 									</div>
 								<?php endif; ?>
 							</div>
@@ -154,9 +145,6 @@ sbh_center()->print_styles('sbh_center-content');
 
 			<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
 		</div>
-
-
-
 	</div>
 </main>
 <?php

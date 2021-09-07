@@ -162,8 +162,6 @@ $about_testimonials = get_field('about_page_testimonials');
                         </div>
                     <?php endif; ?>
                 </div>
-
-
             </div>
         </section>
 
