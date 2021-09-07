@@ -156,9 +156,9 @@ if (is_home()) {
 	<!-- Services Cards -->
 	<section class="services-cards section-padding wrapper">
 		<h2 class="text-center m-b-15">OUR SERVICES</h2>
-		<div class="flex flex-wrap row">
+		<div class="flex flex-wrap row neg-m-t-15">
 			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
-				<div class="col-xs-12 col-sm-6 col-md-4 flex flex-column flex-wrap align-center">
+				<div class="col-xs-12 col-sm-6 col-md-4 flex flex-column flex-wrap align-center m-t-15">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
 						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
 						<img loading="lazy" class="icon block" src="<? get_sub_field('icon')['url'] ?>" alt="">
