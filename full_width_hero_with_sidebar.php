@@ -37,7 +37,7 @@ $centerValue = get_field('center')
 
             <?php get_template_part('template-parts/content/phoneTreatmentCta'); ?>
         </div>
-        <?php get_sidebar('dynamic'); ?>
+        <?php get_sidebar(''); ?>
     </div>
 </main> <?php
         get_footer();

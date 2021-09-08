@@ -33,7 +33,7 @@ namespace WP_Rig\WP_Rig;
 
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-WPTVN6M"></script>
 	<!-- Google Tag Manager -->
 	<script async>
 		setTimeout(function() {

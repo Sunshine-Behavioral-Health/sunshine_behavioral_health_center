@@ -97,10 +97,11 @@ namespace WP_Rig\WP_Rig;
 </div>
 
 
-
-<section class="mobile_bottom_cta_section hide_on_desktop">
-	<div class="mobile_bottom_cta_container">
-		<a href="tel:949-276-2886" class="invocaNumber cta_left mobileCtaPhone" onclick="dataLayer.push({'event': 'phone_click', 'shortcode_type' : 'mobileCtaPhone'});">949-276-2886</a>
-		<a class="cta_right mobileCtaInsurance" href="<?= get_field('insurance_url', 'option') ?>" onclick="dataLayer.push({'event': 'insurance_click', 'shortcode_type' : 'mobileCtaInsurance'});" href="<?= get_field('insurance_url', 'option') ?>">Verify Insurance</a>
-	</div>
-</section>
+<?php if (get_field('hide_mobile_buttons')) : ?>
+	<section class="mobile_bottom_cta_section hide_on_desktop">
+		<div class="mobile_bottom_cta_container">
+			<a href="tel:949-276-2886" class="invocaNumber cta_left mobileCtaPhone" onclick="dataLayer.push({'event': 'phone_click', 'shortcode_type' : 'mobileCtaPhone'});">949-276-2886</a>
+			<a class="cta_right mobileCtaInsurance" href="<?= get_field('insurance_url', 'option') ?>" onclick="dataLayer.push({'event': 'insurance_click', 'shortcode_type' : 'mobileCtaInsurance'});" href="<?= get_field('insurance_url', 'option') ?>">Verify Insurance</a>
+		</div>
+	</section>
+<?php endif; ?>

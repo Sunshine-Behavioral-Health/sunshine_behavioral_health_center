@@ -39,7 +39,7 @@ if (is_home()) {
 
 <main id="primary" class="front_page home-page">
 	<!-- HERO -->
-	<div class="hero_container row">
+	<div class="hero_container">
 		<img class="hide_on_mobile hide_on_tablet front_page_desktop_hero " src="<?= get_field('hero_image')['url'] ?>" alt="">
 		<img class="hide_on_desktop show_on_tablet front_page_mobile_hero" src="<?= get_field('hero_mobile_image')['url'] ?>" alt="">
 		<!-- Headline -->
