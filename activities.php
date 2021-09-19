@@ -39,19 +39,19 @@ sbh_center()->print_styles('sbh_center-content');
 </script>
 
 <?php get_template_part('template-parts/content/googleTranslate'); ?>
-<main id="primary" class="maxWidth activites_page">
+<main id="primary" class="activites_page">
 	<?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width'); ?>
 
 	<div class="content_container">
 		<div class="page_wrapper">
 			<!-- Page Content -->
-			<section class="activity_page_content_section">
+			<section class="activity_page_content_section wrapper">
 				<div class="top_activity_page_content">
 					<h2><?= get_field('page_headline'); ?></h2>
 					<p><?= get_field('page_paragraphs') ?></p>
 				</div>
 			</section>
-			<section class="activities_section">
+			<section class="activities_section wrapper">
 				<?php
 				if (have_rows('text_and_image_carousel')) :
 					while (have_rows('text_and_image_carousel')) : the_row();
@@ -121,7 +121,7 @@ sbh_center()->print_styles('sbh_center-content');
 
 
 			</section>
-			<section class="activity_page_about_section">
+			<section class="activity_page_about_section wrapper">
 				<div class="activity_page_about_container">
 					<?php
 					if (have_rows('learn_more_section')) :

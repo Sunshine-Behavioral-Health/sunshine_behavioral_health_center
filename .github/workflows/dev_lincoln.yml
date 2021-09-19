@@ -17,4 +17,4 @@ jobs:
           server: ftp.dev.mountainspringsrecovery.com
           username: ${{ secrets.dev_ftp_username }}
           password: ${{ secrets.dev_ftp_password }}
-          server-dir: /dev.lincolnrecovery.com/wp-content/themes/sbh_center_3.2/
+          server-dir: /dev.lincolnrecovery.com/maintenance/wp-content/themes/sunshine_bh_center_3.4/
