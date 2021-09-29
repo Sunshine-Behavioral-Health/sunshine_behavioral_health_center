@@ -11,17 +11,7 @@
 
     <div class="hero_banner_headlines_container">
         <div class="hero_banner_headlines_wrapper">
-            <?php if ($centerValue == "Chapters Capistrano") : ?>
-                <img class="hero_center_logo" src="<?= get_field('chapters_capistrano_logo', 'option')['url']; ?>" alt="">
-            <?php elseif ($centerValue == "Lincoln Recovery") : ?>
-                <img class="hero_center_logo" src="<?= get_field('lincoln_recovery_logo', 'option')['url']; ?>" alt="">
-            <?php elseif ($centerValue == "Monarch Shores") : ?>
-                <img class="hero_center_logo" src="<?= get_field('monarch_shores_logo', 'option')['url']; ?>" alt="">
-            <?php elseif ($centerValue == "Mountain Springs") : ?>
-                <img class="hero_center_logo" src="<?= get_field('mountain_springs_logo', 'option')['url']; ?>" alt="">
-            <?php elseif ($centerValue == "Willow Springs") : ?>
-                <img class="hero_center_logo" src="<?= get_field('willow_springs_logo', 'option')['url']; ?>" alt="">
-            <?php endif; ?>
+            <img class="hero_center_logo" src="<?= get_field('center_logo', 'option')['url']; ?>" alt="">
             <h1><?= get_field('page_headline') ?></h1>
             <?php if (get_field('page_subheadline_paragraph')) : ?>
                 <p class="hero_subheadline"><?= get_field('page_subheadline_paragraph') ?></p>

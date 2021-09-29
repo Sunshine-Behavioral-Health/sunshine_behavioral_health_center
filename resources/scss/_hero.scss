@@ -73,7 +73,7 @@
   position: relative;
   text-align: center;
   height: 300px;
-  img{
+  img {
     margin: 0 auto;
   }
 }
@@ -154,9 +154,7 @@
   }
 }
 
-.desktop_and_mobile_hero_image_wrapper
-  .hero_banner_headlines_container
-  .hero_banner_headlines_wrapper {
+.desktop_and_mobile_hero_image_wrapper .hero_banner_headlines_container .hero_banner_headlines_wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -180,15 +178,11 @@
     margin: 0 0 20px 0;
   }
 
-  .insurance_verification_page
-    .desktop_and_mobile_hero_image_wrapper
-    .hero_banner_headlines_container {
+  .insurance_verification_page .desktop_and_mobile_hero_image_wrapper .hero_banner_headlines_container {
     margin: 0;
   }
 
-  .desktop_and_mobile_hero_image_wrapper
-    .hero_banner_headlines_container
-    .hero_banner_headlines_wrapper {
+  .desktop_and_mobile_hero_image_wrapper .hero_banner_headlines_container .hero_banner_headlines_wrapper {
     width: 100%;
     max-width: 1250px;
     margin: 0 auto;
@@ -202,7 +196,9 @@
   }
 
   .desktop_and_mobile_hero_image_wrapper p {
-    width: 75%;
+    width: 50%;
     margin: 0;
+    @include screenQuery(1024);
+      width: 75%
   }
 }

@@ -6,7 +6,7 @@
     <?php if (get_field('mobile_image')) : ?>
         <img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?= get_field('mobile_image')['url']; ?>">
     <?php endif; ?>
-    <div class="hero_banner_headlines_container wrapper">
+    <div class="hero_banner_headlines_container">
         <div class="hero_banner_headlines_wrapper">
             <img class="hero_center_logo" src="<?= get_field('navigation_logo', 'option')['url']; ?>" alt="">
 

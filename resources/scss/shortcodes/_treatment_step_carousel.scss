@@ -14,7 +14,7 @@
     .treatment_step_carousel_element {
       display: none;
       flex-direction: column;
-      height: 400px;
+      height: 350px;
       @include mobile {
         height: 315px;
       }
@@ -39,7 +39,7 @@
             margin: 0 0 15px 0;
           }
           text-transform: uppercase;
-          font-size: 10px;
+          font-size: 15px;
           font-weight: 500;
           line-height: 16px;
           color: #563268;
@@ -74,13 +74,14 @@
         }
       }
       .treatment_step_carousel_element_image {
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: 50%;
         height: 100%;
         &--mobile {
           height: 150px;
-          width: 350;
+          width: 350px;
+          margin: 0 auto;
         }
       }
     }
