@@ -75,7 +75,7 @@ if (is_home()) {
 	<section class="wrapper section-padding">
 		<h2 class="text-center m-b-15"><?= get_field('inpatient_treatment_headline') ?></h2>
 		<div class="row">
-			<?php foreach (get_field('inpatient_treatment_programs') as $column) : ?>
+			<?php if(get_field('inpatient_treatment_programs')) : foreach (get_field('inpatient_treatment_programs') as $column) : ?>
 				<div class="col-xs-12 col-sm-6 col-md-3 flex flex-column align-center">
 					<a href="<?= $column['link'] ?>" class="m-b-15">
 						<div class="icon_container"><img class="icon" src="<?= $column['icon']['url'] ?>"></div>
@@ -83,7 +83,7 @@ if (is_home()) {
 					<h3 class="text-center m-b-5"><?= $column['title'] ?></h3>
 					<p class="text-center"><?= $column['content'] ?></p>
 				</div>
-			<?php endforeach; ?>
+			<?php endforeach; endif;?>
 		</div>
 	</section>
 
@@ -157,7 +157,9 @@ if (is_home()) {
 	<section class="services-cards section-padding wrapper">
 		<h2 class="text-center m-b-15">OUR SERVICES</h2>
 		<div class="flex flex-wrap row neg-m-t-15">
-			<?php foreach (get_field('inpatient_cards') as $serviceCard) : ?>
+			<?php 
+			if(get_field('inpatient_cards')) :
+			foreach (get_field('inpatient_cards') as $serviceCard) : ?>
 				<div class="col-xs-12 col-sm-6 col-md-4 flex flex-column flex-wrap align-center m-t-15">
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="text-center block">
 						<img loading="lazy" class="icon block" src="<? $serviceCard['icon']['url'] ?>" alt="">
@@ -168,7 +170,7 @@ if (is_home()) {
 					<p class="text-center"><?= $serviceCard['card_content'] ?></p>
 					<a href="<?= $serviceCard['card_links']['url'] ?>" class="color-secondary bold text-center">Learn More</a>
 				</div>
-			<?php endforeach; ?>
+			<?php endforeach; endif; ?>
 		</div>
 	</section>
 
@@ -213,13 +215,15 @@ if (is_home()) {
 			<img class="margin-auto" src="<?= get_field('addiction_treatment_headline_icon')['url'] ?>" alt="">
 			<h4 class="text-center m-b-25"><?= get_field('addiction_treatment_headline') ?></h4>
 			<div class="row flex">
-				<?php foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
+				<?php 
+				if(get_field('addiction_treatment_column_one')) :
+				foreach (get_field('addiction_treatment_column_one') as $treatmentColumns) : ?>
 					<div class="treatment-resources-columns--column flex flex-column col-xs-12 col-sm-6 p-t-15 p-b-15">
 						<h3 class="color-secondary"><?= $treatmentColumns['headline'] ?></h3>
 						<p class="m-b-15"><?= $treatmentColumns['content'] ?></p>
 						<a href="<?= $treatmentColumns['link'] ?>" class="color-secondary bold text-center">Learn More</a>
 					</div>
-				<?php endforeach; ?>
+				<?php endforeach; endif; ?>
 			</div>
 		</div>
 	</section>
@@ -233,7 +237,9 @@ if (is_home()) {
 		<div class="wrapper">
 			<h2 class="color-white text-center m-b-15"><?= get_field('substance_abuse_information_headline'); ?></h2>
 			<div class="row">
-				<?php foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
+				<?php 
+				if(get_field('substance_abuse_cards')) :
+				foreach (get_field('substance_abuse_cards') as $substanceColumn) : ?>
 					<div class="col-xs-12 col-sm-6 col-md-3 p-10 flex flex-column align-center">
 						<div class="substance_abuse_top">
 							<a class="color-white" href="<?= $substanceColumn['link'] ?>">
@@ -244,7 +250,7 @@ if (is_home()) {
 						</div>
 						<p class='color-white text-center'><?= $substanceColumn['content'] ?></p>
 					</div>
-				<?php endforeach ?>
+				<?php endforeach; endif; ?>
 			</div>
 		</div>
 	</section>

@@ -4,7 +4,7 @@
   "description": "Custom theme developed by Nathan Wilson for <?= get_field('site_name', 'option') ?>.",
   "main": "index.js",
   "scripts": {
-    "bundle": "dir-archiver --src ../ --dest ../../sunshine_bh_3.4.zip --exclude .DS_Store  .git .github .gitignore README.md  composer.lock node_modules package-lock.json package.json .travis.yml phpcs.xml.dist scss style.css.map"
+    "bundle": "dir-archiver --src ../ --dest ../../sunshine_bh_center_3.4.zip --exclude .DS_Store  .git .github .gitignore README.md  composer.lock node_modules package-lock.json package.json .travis.yml phpcs.xml.dist scss style.css.map"
   },
   "repository": {
     "type": "git",

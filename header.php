@@ -28,9 +28,11 @@ namespace WP_Rig\WP_Rig;
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<?= get_field('meta') ?>
-	<?= get_field('google_header_meta', 'option') ?>
+	<?= !empty(get_field('meta')) ? get_field('meta') : ''; ?>
+	<?= !empty(get_field('google_header_meta', 'option')) ? get_field('google_header_meta', 'option'): '';  ?>
 
+
+	<?= !empty($thing) ? : '' ; ?>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
